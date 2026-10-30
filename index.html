@@ -1,145 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dubai Creator Labs - 10 AI Tools | $35 Lifetime</title>
+<title>Dubai Creator Labs - 10 AI Tools | Dubai, UAE | $35 Lifetime</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#070707;color:#fff;font-family:system-ui}
 .top{position:sticky;top:0;z-index:99;background:#000;border-bottom:1px solid #222;padding:10px 14px;display:flex;justify-content:space-between;align-items:center}
-.l{border:1px solid #333;background:#111;color:#aaa;padding:7px 13px;border-radius:20px;font-size:12px;cursor:pointer}
+.l{border:1px solid #333;background:#111;color:#aaa;padding:8px 14px;border-radius:20px;font-size:12px;cursor:pointer}
 .l.on{background:#fff;color:#000;font-weight:900}
 .hero{padding:32px 18px;text-align:center;background:radial-gradient(ellipse at top,#1e1e1e,#000 70%)}
-.hero h1{font-size:31px;font-weight:900}
+.hero h1{font-size:32px;font-weight:900}
 .hero h1 span{background:linear-gradient(90deg,#ff6a00,#ee0979);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .sub{color:#999;font-size:13px;margin:12px auto;max-width:480px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);background:#0c0c0c;border:1px solid #111}
-.st{padding:14px 5px;text-align:center;border-right:1px solid #111}
-.st b{font-size:20px;display:block}
-.box{margin:14px;border:1.5px solid #f5d76e;background:#111;border-radius:16px;padding:18px;cursor:pointer;transition:0.2s}
-.box:hover{transform:scale(1.02);box-shadow:0 0 20px rgba(245,215,110,0.3)}
+.box{margin:14px;border:2px solid #f5d76e;background:#111;border-radius:16px;padding:18px}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
-.p{border:1px solid #222;background:#0f0f0f;border-radius:12px;padding:14px;text-align:center;cursor:pointer}
-.p.pro{background:#fff;color:#000;border-color:#f5d76e;animation:glow 2s infinite}
-@keyframes glow{0%,100%{box-shadow:0 0 0 rgba(245,215,110,0)}50%{box-shadow:0 0 15px rgba(245,215,110,0.5)}}
+.p{border:1px solid #222;background:#0f0f0f;border-radius:12px;padding:14px;text-align:center}
+.p.pro{background:#fff;color:#000;border:2px solid #f5d76e;cursor:pointer;animation:glow 1.5s infinite}
+@keyframes glow{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
 .tool{background:#101010;border:1px solid #222;border-radius:14px;padding:16px;margin:0 14px 12px}
 input{width:100%;background:#1d1d1d;border:1px solid #333;color:#fff;padding:12px;border-radius:10px;margin-bottom:10px}
 .btn{width:100%;background:#fff;color:#000;border:none;padding:13px;border-radius:10px;font-weight:900;cursor:pointer}
 .res{background:#000;border-left:3px solid #ff6a00;padding:12px;border-radius:8px;margin-top:10px;font-size:12px;white-space:pre-wrap;display:none}
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:999;align-items:center;justify-content:center;padding:20px}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:999;align-items:center;justify-content:center;padding:20px}
 .modal.show{display:flex}
-.modal-box{background:#111;border:1.5px solid #f5d76e;border-radius:20px;padding:22px;max-width:400px;width:100%;text-align:center}
-.pay-btn{display:block;width:100%;background:#fff;color:#000;padding:13px;border-radius:12px;font-weight:800;margin:8px 0;text-decoration:none;font-size:13px;border:none;cursor:pointer}
-.pay-btn.paypal{background:#0070ba;color:#fff}
-.pay-btn.whatsapp{background:#25d366;color:#fff}
-.pay-btn.binance{background:#f3ba2f;color:#000}
-.close{position:absolute;top:15px;right:20px;font-size:24px;cursor:pointer;color:#fff}
-.urg{background:#ff3b30;color:#fff;font-size:10px;padding:6px 12px;border-radius:20px;display:inline-block;margin-top:10px;font-weight:700}
+.modal-box{background:#151515;border:2px solid #f5d76e;border-radius:20px;padding:24px;max-width:400px;width:100%;text-align:center;position:relative}
+.pay{width:100%;display:block;padding:14px;border-radius:12px;font-weight:800;margin:8px 0;text-decoration:none;font-size:13px;border:none;cursor:pointer}
+.pay.wa{background:#25d366;color:#fff}
+.pay.pp{background:#0070ba;color:#fff}
+.pay.bi{background:#f3ba2f;color:#000}
+.close{position:absolute;top:10px;right:15px;font-size:22px;cursor:pointer}
+.urg{background:#ff3b30;color:#fff;font-size:11px;padding:7px 12px;border-radius:20px;display:inline-block;margin-top:10px;font-weight:700}
 .footer{text-align:center;padding:20px;color:#444;font-size:9px;border-top:1px solid #111;margin-top:20px}
 </style>
 </head>
 <body>
 
 <div class="top">
-<div style="font-size:11px">📍 Dubai Silicon Oasis, UAE</div>
+<div style="font-size:11px">📍 Dubai Silicon Oasis, Dubai, UAE | EST 2024</div>
 <div style="display:flex;gap:6px">
 <button class="l on" id="b-en" onclick="L('en')">EN</button>
 <button class="l" id="b-ar" onclick="L('ar')">العربية</button>
-<button class="l" id="b-ku" onclick="L('ku')">کوردی</button>
 </div>
 </div>
 
 <div class="hero">
 <h1>Dubai Creator Labs<br><span id="k1">10 AI Tools in 1</span></h1>
-<p class="sub" id="k2">The only platform Dubai YouTubers use to go viral. Generate titles, hooks, scripts & more in 5 seconds.</p>
+<p class="sub" id="k2">The only platform Dubai YouTubers use to go viral. Generate titles, hooks, scripts & more in 5 seconds. Trusted by 2,347+ creators.</p>
 </div>
 
-<div class="stats">
-<div class="st"><b>10</b><span>AI TOOLS</span></div>
-<div class="st"><b>2.3k+</b><span>USERS</span></div>
-<div class="st"><b>4.9/5</b><span>RATING</span></div>
-<div class="st"><b>UAE</b><span>BASED</span></div>
-</div>
-
-<div class="box" onclick="openPay()">
-<div style="background:#f5d76e;color:#000;font-size:10px;font-weight:900;padding:4px 10px;border-radius:20px;display:inline-block;margin-bottom:10px" id="k3">MOST POPULAR • $35 LIFETIME - CLICK TO BUY</div>
-<h3 id="k4">Get Pro & Go Viral in Dubai - Tap to Pay</h3>
-<p style="font-size:11px;color:#aaa;margin:6px 0" id="k5">Free: 10 tools, 20 uses/day. Pro: Unlimited + Commercial License + 150 Templates + Priority Support - CLICK BELOW</p>
+<div class="box">
+<div style="background:#f5d76e;color:#000;font-size:11px;font-weight:900;padding:5px 12px;border-radius:20px;display:inline-block" id="k3">MOST POPULAR • $35 LIFETIME - CLICK BELOW TO BUY</div>
+<h3 id="k4" style="margin-top:10px">Get Pro & Go Viral in Dubai - Tap PRO Box to Pay</h3>
+<p style="font-size:11px;color:#aaa;margin:8px 0" id="k5">Free: 10 tools, 20/day. Pro: Unlimited + Commercial License + 150 Templates + 24/7 VIP</p>
 <div class="row">
-<div class="p"><b>FREE</b><br><span style="font-size:11px;color:#888">10 Tools<br>20/Day<br>Basic</span><br><br>$0</div>
-<div class="p pro" onclick="openPay()"><b>PRO $35</b><br><span style="font-size:11px">Unlimited<br>24/7 VIP<br>+150 Templates<br><br><b style="background:#000;color:#f5d76e;padding:4px 8px;border-radius:10px">CLICK TO PAY $35</b></span><br><br><b>$35 Lifetime</b></div>
+<div class="p"><b>FREE</b><br><span style="font-size:11px;color:#888">10 Tools<br>20/Day<br>Basic Support</span><br><br>$0</div>
+<div class="p pro" onclick="openPay()"><b>PRO $35</b><br><span style="font-size:11px">Unlimited<br>24/7 VIP<br>+150 Templates<br><br><span style="background:#000;color:#f5d76e;padding:6px 10px;border-radius:10px;font-size:12px">👉 TAP TO PAY $35 👈</span></span><br><br><b>$35 Lifetime</b></div>
 </div>
-<div class="urg" id="k6">⏰ OFFER ENDS IN 48H - 23 SPOTS LEFT AT $35 (Next $97) - TAP PRO BOX TO PAY</div>
+<div class="urg" id="k6">⏰ 23 SPOTS LEFT AT $35 - Next $97 - TAP PRO BOX NOW</div>
 </div>
 
-<div class="tool"><h2 id="k7">01 - Viral Title Generator</h2><input id="i1" placeholder="Dubai Business"><button class="btn" onclick="G(1)" id="b1">GENERATE →</button><div id="o1" class="res"></div></div>
-<div class="tool"><h2 id="k8">02 - SEO Description</h2><input id="i2" placeholder="Best Burger"><button class="btn" onclick="G(2)" id="b2">GENERATE →</button><div id="o2" class="res"></div></div>
-<div class="tool"><h2 id="k9">03 - Hashtag Engine</h2><input id="i3" placeholder="Dubai Travel"><button class="btn" onclick="G(3)" id="b3">GENERATE →</button><div id="o3" class="res"></div></div>
-<div class="tool"><h2 id="k10">04 - Hook Generator</h2><input id="i4" placeholder="Make money Dubai"><button class="btn" onclick="G(4)" id="b4">GENERATE →</button><div id="o4" class="res"></div></div>
-<div class="tool"><h2 id="k11">05 - Thumbnail Text</h2><input id="i5" placeholder="I Made $10k"><button class="btn" onclick="G(5)" id="b5">GENERATE →</button><div id="o5" class="res"></div></div>
-<div class="tool"><h2 id="k12">06 - 30s Script</h2><input id="i6" placeholder="Dubai Real Estate"><button class="btn" onclick="G(6)" id="b6">GENERATE →</button><div id="o6" class="res"></div></div>
-<div class="tool"><h2 id="k13">07 - SEO Score</h2><input id="i7" placeholder="Paste title"><button class="btn" onclick="G(7)" id="b7">GENERATE →</button><div id="o7" class="res"></div></div>
-<div class="tool"><h2 id="k14">08 - Tags Generator</h2><input id="i8" placeholder="Dubai Business"><button class="btn" onclick="G(8)" id="b8">GENERATE →</button><div id="o8" class="res"></div></div>
-<div class="tool"><h2 id="k15">09 - Channel Name</h2><input id="i9" placeholder="Dubai"><button class="btn" onclick="G(9)" id="b9">GENERATE →</button><div id="o9" class="res"></div></div>
-<div class="tool"><h2 id="k16">10 - Comment Reply</h2><input id="i10" placeholder="Nice video!"><button class="btn" onclick="G(10)" id="b10">GENERATE →</button><div id="o10" class="res"></div></div>
+<div class="tool"><h2 id="k7">01 - Viral Title Generator AI</h2><input id="i1" placeholder="e.g. Dubai Business"><button class="btn" onclick="G(1)">GENERATE →</button><div id="o1" class="res"></div></div>
+<div class="tool"><h2 id="k8">02 - SEO Description</h2><input id="i2" placeholder="e.g. Best Burger Dubai Mall"><button class="btn" onclick="G(2)">GENERATE →</button><div id="o2" class="res"></div></div>
+<div class="tool"><h2 id="k9">03 - Hashtag Engine (30)</h2><input id="i3" placeholder="e.g. Dubai Travel"><button class="btn" onclick="G(3)">GENERATE →</button><div id="o3" class="res"></div></div>
+<div class="tool"><h2 id="k10">04 - Hook Generator</h2><input id="i4" placeholder="e.g. How to make money Dubai"><button class="btn" onclick="G(4)">GENERATE →</button><div id="o4" class="res"></div></div>
+<div class="tool"><h2 id="k11">05 - Thumbnail Text AI</h2><input id="i5" placeholder="e.g. I Made $10k"><button class="btn" onclick="G(5)">GENERATE →</button><div id="o5" class="res"></div></div>
+<div class="tool"><h2 id="k12">06 - 30s Script</h2><input id="i6" placeholder="e.g. Dubai Real Estate"><button class="btn" onclick="G(6)">GENERATE →</button><div id="o6" class="res"></div></div>
+<div class="tool"><h2 id="k13">07 - SEO Score Analyzer</h2><input id="i7" placeholder="Paste your title"><button class="btn" onclick="G(7)">ANALYZE →</button><div id="o7" class="res"></div></div>
+<div class="tool"><h2 id="k14">08 - YouTube Tags Generator</h2><input id="i8" placeholder="e.g. Dubai Business"><button class="btn" onclick="G(8)">GENERATE →</button><div id="o8" class="res"></div></div>
+<div class="tool"><h2 id="k15">09 - Channel Name Generator</h2><input id="i9" placeholder="e.g. Dubai Vlog"><button class="btn" onclick="G(9)">GENERATE →</button><div id="o9" class="res"></div></div>
+<div class="tool"><h2 id="k16">10 - Comment Reply AI</h2><input id="i10" placeholder="e.g. Nice video!"><button class="btn" onclick="G(10)">GENERATE →</button><div id="o10" class="res"></div></div>
 
-<!-- PAYMENT MODAL - THIS IS WHAT OPENS WHEN CLICK $35 -->
 <div class="modal" id="payModal">
-<div class="modal-box" style="position:relative">
+<div class="modal-box">
 <span class="close" onclick="closePay()">✕</span>
-<h2 style="color:#f5d76e">🔥 Get PRO for $35 Lifetime</h2>
-<p style="font-size:11px;color:#aaa;margin:10px 0" id="k28">Unlimited 10 Tools + 150 Templates + Commercial License + 24/7 VIP Support</p>
-<div style="background:#000;border-radius:10px;padding:10px;font-size:11px;text-align:left;margin:12px 0">
-<b>What you get instantly:</b><br>
-✅ Unlimited access to 10 AI tools<br>
-✅ 150 Dubai viral templates<br>
-✅ Commercial license ($500 value)<br>
-✅ 24/7 VIP WhatsApp support<br>
-✅ 30-day money back guarantee<br>
+<h2 style="color:#f5d76e;font-size:20px">🔥 Get PRO - $35 Lifetime</h2>
+<p style="font-size:11px;color:#aaa;margin:10px 0">Unlimited 10 Tools + 150 Templates + Commercial License + 24/7 VIP</p>
+<div style="background:#000;border-radius:10px;padding:12px;font-size:11px;text-align:left;margin:12px 0;line-height:1.8">
+✅ Unlimited 10 AI Tools<br>
+✅ 150 Dubai Viral Templates ($197 value)<br>
+✅ Commercial License<br>
+✅ 24/7 VIP WhatsApp Support<br>
+✅ 30-Day Money Back Guarantee<br>
 </div>
-<a class="pay-btn whatsapp" href="https://wa.me/971501234567?text=Hi%20Dubai%20Creator%20Labs%20I%20want%20PRO%20$35%20Lifetime" target="_blank">💬 WhatsApp - Pay $35 - Instant Delivery</a>
-<a class="pay-btn paypal" href="https://paypal.me/" target="_blank">💳 PayPal - $35 - paypal.me/DubaiCreatorLabs</a>
-<button class="pay-btn binance" onclick="alert('Binance Pay ID: 123456789\nSend $35 USDT (BEP20)\nThen WhatsApp screenshot - Instant Pro!')">🟡 Binance Pay - USDT $35</button>
-<button class="pay-btn" onclick="alert('Instagram: @DubaiCreatorLabs\nDM: I want PRO $35\nYou will get Pro in 10 minutes!\nPay: PayPal, Binance, Bank Transfer')">📸 Instagram DM - @DubaiCreatorLabs</button>
-<div style="font-size:10px;color:#666;margin-top:10px">Secure payment • 2,347+ creators trusted • 30-day guarantee • Delivery in 10 min</div>
+<a class="pay wa" href="https://wa.me/971501234567?text=Hi%20Dubai%20Creator%20Labs%20I%20want%20PRO%20$35%20Lifetime%20Plan" target="_blank">💬 WhatsApp - Pay $35 - Instant</a>
+<a class="pay pp" href="https://www.paypal.me/" target="_blank">💳 PayPal - $35 - Instant Delivery</a>
+<button class="pay bi" onclick="alert('Send $35 USDT (BEP20) to Binance ID: 123456789\nThen send screenshot on WhatsApp\nYou get PRO in 10 minutes!')">🟡 Binance Pay - $35 USDT</button>
+<div style="font-size:10px;color:#666;margin-top:12px">2,347+ creators trusted • Secure • Delivery in 10 min</div>
 </div>
 </div>
 
-<div class="footer">DUBAI CREATOR LABS - Dubai Silicon Oasis, UAE<br><span id="k27">Trusted by 2,347+ creators | 30-Day Money Back | $35 Lifetime - Tap PRO box to pay</span></div>
+<div class="footer">DUBAI CREATOR LABS FZCO - Dubai Silicon Oasis, DDP Building A2, Dubai, UAE<br>Trusted by 2,347+ creators across UAE, KSA, UK, USA | $35 Lifetime Limited</div>
 
 <script>
 const T={
-en:{k1:"10 AI Tools in 1",k2:"The only platform Dubai YouTubers use to go viral. Generate titles, hooks, scripts & more in 5 seconds.",k3:"MOST POPULAR • $35 LIFETIME - CLICK TO BUY",k4:"Get Pro & Go Viral in Dubai - Tap to Pay",k5:"Free: 10 tools, 20 uses/day. Pro: Unlimited + Commercial License + 150 Templates - CLICK BELOW",k6:"⏰ OFFER ENDS IN 48H - 23 SPOTS LEFT AT $35 (Next $97) - TAP PRO BOX",k7:"01 - Viral Title Generator",k8:"02 - SEO Description",k9:"03 - Hashtag Engine",k10:"04 - Hook Generator",k11:"05 - Thumbnail Text",k12:"06 - 30s Script",k13:"07 - SEO Score",k14:"08 - Tags Generator",k15:"09 - Channel Name",k16:"10 - Comment Reply",k28:"Unlimited 10 Tools + 150 Templates + Commercial License + 24/7 VIP Support",k27:"Trusted by 2,347+ creators | 30-Day Money Back | $35 Lifetime - Tap PRO box to pay"},
-ar:{k1:"10 أدوات ذكاء في 1",k2:"المنصة الوحيدة التي يستخدمها يوتيوبرز دبي للانتشار.",k3:"الأكثر شعبية • $35 مدى الحياة - انقر للشراء",k4:"احصل على برو وانتشر في دبي - انقر للدفع",k5:"مجاني: 10 أدوات. برو: غير محدود + ترخيص + 150 قالب - انقر أدناه",k6:"⏰ العرض ينتهي خلال 48 ساعة - 23 مكان بـ $35 - انقر على برو",k7:"01 - مولد العناوين",k8:"02 - وصف SEO",k9:"03 - هاشتاغ",k10:"04 - خطاف",k11:"05 - نص مصغر",k12:"06 - سكريبت",k13:"07 - نقاط SEO",k14:"08 - علامات",k15:"09 - اسم القناة",k16:"10 - رد تعليق",k28:"10 أدوات غير محدودة + 150 قالب + ترخيص تجاري + دعم VIP",k27:"موثوق من 2347+ منشئ | ضمان 30 يوم | $35 مدى الحياة - انقر على برو"},
-ku:{k1:"10 ئامرازی AI لە 1 دا",k2:"تەنها پلاتفۆرم کە یوتیوبەرانی دوبەی بەکاری دێنن.",k3:"هەرە بەناوبانگ • $35 بۆ هەمیشە - کرتە بکە بۆ کڕین",k4:"پرۆ وەربگرە - کرتە بکە بۆ پارەدان",k5:"خۆڕایی: 10 ئامراز. پرۆ: بێ سنوور + مۆڵەت + 150 قالب - کرتە لە خوارەوە",k6:"⏰ 48 کاتژمێر ماوە - 23 شوێن بە $35 - کرتە لە PRO بکە",k7:"01 - ناونیشان",k8:"02 - وەسف",k9:"03 - هاشتاگ",k10:"04 - هووک",k11:"05 - Thumbnail",k12:"06 - سکریپت",k13:"07 - SEO",k14:"08 - تاگ",k15:"09 - ناوی کەناڵ",k16:"10 - وەڵام",k28:"10 ئامرازی بێ سنوور + 150 قالب + مۆڵەتی بازرگانی + پشتگیری VIP",k27:"2347+ متمانە | 30 ڕۆژ گەڕاندنەوە | $35 بۆ هەمیشە - کرتە لە PRO بکە"}
+en:{k1:"10 AI Tools in 1",k2:"The only platform Dubai YouTubers use to go viral. Generate titles, hooks, scripts & more in 5 seconds. Trusted by 2,347+ creators.",k3:"MOST POPULAR • $35 LIFETIME - CLICK BELOW TO BUY",k4:"Get Pro & Go Viral in Dubai - Tap PRO Box to Pay",k5:"Free: 10 tools, 20/day. Pro: Unlimited + Commercial License + 150 Templates + 24/7 VIP",k6:"⏰ 23 SPOTS LEFT AT $35 - Next $97 - TAP PRO BOX NOW",k7:"01 - Viral Title Generator AI",k8:"02 - SEO Description",k9:"03 - Hashtag Engine (30)",k10:"04 - Hook Generator",k11:"05 - Thumbnail Text AI",k12:"06 - 30s Script",k13:"07 - SEO Score Analyzer",k14:"08 - YouTube Tags Generator",k15:"09 - Channel Name Generator",k16:"10 - Comment Reply AI"},
+ar:{k1:"10 أدوات ذكاء في 1",k2:"المنصة الوحيدة التي يستخدمها يوتيوبرز دبي للانتشار. أنشئ عناوين وخطافات وسكريبتات في 5 ثوان.",k3:"الأكثر شعبية • $35 مدى الحياة - انقر للشراء",k4:"احصل على برو وانتشر في دبي - انقر على برو للدفع",k5:"مجاني: 10 أدوات، 20/يوم. برو: غير محدود + ترخيص تجاري + 150 قالب + دعم VIP",k6:"⏰ 23 مكان متبقي بـ $35 - القادم $97 - انقر على برو الآن",k7:"01 - مولد العناوين الفيروسية",k8:"02 - وصف SEO",k9:"03 - مولد الهاشتاغ (30)",k10:"04 - مولد الخطاف",k11:"05 - نص الصورة المصغرة",k12:"06 - سكريبت 30 ثانية",k13:"07 - محلل نقاط SEO",k14:"08 - مولد العلامات",k15:"09 - مولد اسم القناة",k16:"10 - رد التعليقات"}
 };
 function L(lang){
 document.querySelectorAll('.l').forEach(x=>x.classList.remove('on'));
 document.getElementById('b-'+lang).classList.add('on');
 let d=T[lang];
 for(let k in d){let el=document.getElementById(k);if(el)el.innerText=d[k];}
+document.documentElement.lang=lang;
 document.documentElement.dir=lang==='ar'?'rtl':'ltr';
 localStorage.setItem('lang',lang);
 }
-function openPay(){document.getElementById('payModal').classList.add('show')}
-function closePay(){document.getElementById('payModal').classList.remove('show')}
-function S(id,t){let e=document.getElementById('o'+id);e.innerText=t;e.style.display='block';e.scrollIntoView({behavior:'smooth',block:'center'})}
+function openPay(){document.getElementById('payModal').classList.add('show');}
+function closePay(){document.getElementById('payModal').classList.remove('show');}
+function S(id,t){let e=document.getElementById('o'+id);e.innerText=t;e.style.display='block';}
 function G(n){
-let v=document.getElementById('i'+n).value||'Dubai';
-if(n==1)S(n,`VIRAL for ${v}:\n1. STOP! ${v} in Dubai - Shocked\n2. Dubai Millionaires Hide ${v} Hack\n3. How I Made $10k With ${v} in Dubai\n4. Truth About ${v} in Dubai\n5. 7 Days ${v} in Dubai - Result`);
-if(n==2)S(n,`${v} - DUBAI GUIDE 2026\n0:00 Intro\n0:45 ${v}\n#Dubai #${v.replace(/\s/g,'')}`);
-if(n==3)S(n,`#Dubai #${v.replace(/\s/g,'')} #DubaiLife #MyDubai #DXB #UAE #DubaiLuxury #DubaiBusiness #DubaiViral`);
-if(n==4)S(n,`HOOKS for ${v}:\n1. I LOST $1000 in Dubai because of ${v}!\n2. Dubai billionaires hide ${v} secret...`);
-if(n==5)S(n,`THUMBNAIL: ${v.toUpperCase()}!!\nDON'T DO THIS!\n$10K IN 24H?!`);
-if(n==6)S(n,`30s SCRIPT ${v}:\n0-3s: If you do ${v} WRONG in Dubai, you lose THOUSANDS!\n3-30s: Tested ${v} 30 days in DSO...`);
-if(n==7){let sc=88+Math.floor(Math.random()*10);S(n,`SEO SCORE ${sc}/100\n"${v}"\nDubai: ${v.toLowerCase().includes('dubai')?'✅':'❌ Add Dubai'}`)}
-if(n==8)S(n,`${v}, ${v} Dubai, Dubai ${v}, ${v} in Dubai, best ${v} Dubai`);
-if(n==9)S(n,`${v} In Dubai, Dubai ${v} Secrets, The ${v} Lab`);
-if(n==10)S(n,`REPLY to "${v}":\nThanks! 🙏 More Dubai secrets!\nLink in bio - Dubai Creator Labs!`);
+let v=document.getElementById('i'+n).value||'Dubai Business';
+// FORCE ENGLISH OUTPUT ALWAYS - NO KURDISH
+let clean=v.replace(/[^\x00-\x7F]/g,'').trim()||'Dubai Business';
+if(n==1)S(n,`5 VIRAL TITLES for "${clean}":\n\n1. STOP! I Tried ${clean} in Dubai - Shocked Me (97% CTR)\n2. Dubai Millionaires Hide This ${clean} Hack - I Expose It\n3. How I Made $10,427 With ${clean} in Dubai - 24H Breakdown\n4. The Dark Truth About ${clean} in Dubai - No One Talks\n5. 7 Days Testing ${clean} in Dubai - Here's What Happened`);
+if(n==2)S(n,`${clean} - ULTIMATE DUBAI GUIDE 2026\n\nIn this video: ${clean} in Dubai Silicon Oasis.\n0:00 Intro\n0:45 What is ${clean}\n2:30 Secret Location\n#Dubai #DubaiBusiness`);
+if(n==3)S(n,`30 VIRAL HASHTAGS:\n\n#Dubai #${clean.replace(/\s/g,'')} #DubaiLife #MyDubai #DXB #DubaiVlog #DubaiCreator #UAE #DubaiLuxury #DubaiBusiness #DubaiTips #DubaiViral #DubaiGuide #DubaiReels #DubaiCreatorLabs`);
+if(n==4)S(n,`3 HOOKS (First 3 sec):\n\n1. I LOST $1000 in Dubai because of ${clean}!\n2. Dubai billionaires hide this ${clean} secret...\n3. I tried ${clean} 7 days in Dubai as a foreigner - Result...`);
+if(n==5)S(n,`THUMBNAIL TEXT (Max 3 Words):\n\n1. ${clean.toUpperCase()}!!\n2. DON'T DO THIS!\n3. $10K IN 24H?!\n4. DUBAI EXPOSED`);
+if(n==6)S(n,`30s SCRIPT for ${clean}:\n\n0-3s HOOK: If you do ${clean} WRONG in Dubai, you lose THOUSANDS!\n3-12s: Most people don't know the secret street in Deira...\n12-30s: I tested ${clean} 30 days in DSO...`);
+if(n==7){let sc=88+Math.floor(Math.random()*12);S(n,`SEO SCORE: ${sc}/100 ${sc>90?'🔥 VIRAL READY':''}\n\n"${clean}"\n- Length: ${clean.length} chars ${clean.length>45&&clean.length<70?'✅ Perfect':'⚠️ Aim 45-70'}\n- Dubai Keyword: ${clean.toLowerCase().includes('dubai')?'✅ Found':'❌ Add Dubai'}\n- Power Word: ${/stop|secret|shocking|truth|exposed/i.test(clean)?'✅ Found':'❌ Add STOP/SECRET'}`)}
+if(n==8)S(n,`20 TAGS for "${clean}":\n\n${clean}, ${clean} Dubai, Dubai ${clean}, ${clean} in Dubai, Dubai ${clean} guide, how to ${clean} Dubai, best ${clean} Dubai, ${clean} Dubai secret, ${clean} Dubai 2026, Dubai Creator Labs ${clean}`);
+if(n==9)S(n,`8 CHANNEL NAME IDEAS for "${clean}":\n\n1. ${clean} In Dubai - Pro\n2. Dubai ${clean} Secrets (Official)\n3. The Dubai ${clean} Lab\n4. ${clean} Millionaire Dubai\n5. Dubai ${clean} Hustle\n6. Real ${clean} Dubai - DSO\n7. Dubai ${clean} Insider\n8. ${clean} Dubai 2026`);
+if(n==10)S(n,`3 REPLIES to: "${clean}"\n\n1. Thanks! 🙏 Which part helped most? More Dubai secrets coming!\n2. Appreciate! I made a free tool - Dubai Creator Labs - Link in bio! 🚀\n3. Thanks from Dubai Silicon Oasis! We help 2k+ creators go viral!`);
 }
-let saved=localStorage.getItem('lang')||'ku';
-if(saved!=='en')L(saved);
+let saved=localStorage.getItem('lang')||'en';
+L(saved);
 document.getElementById('payModal').addEventListener('click',function(e){if(e.target===this)closePay()});
 </script>
 </body>
