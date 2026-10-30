@@ -3,188 +3,127 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dubai Creator Hub V4 MEGA - 10 Tools in 1 | Built by Kalary | $50 Value</title>
-<meta name="description" content="10 AI Tools for Dubai YouTubers - Built in Kalar - Kalar to Dubai">
+<title>Dubai Creator Hub V5 WORLD - 3 Languages - $35 - Built by Kalary</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#080808;color:#fff;font-family:-apple-system,BlinkMacSystemFont,sans-serif;padding:12px;line-height:1.5}
-.hero{background:linear-gradient(135deg,#ff6a00 0%,#ee0979 50%,#ff6a00 100%);padding:30px 20px;border-radius:22px;text-align:center;margin-bottom:15px;border:1px solid gold}
-.hero h1{font-size:30px;font-weight:900;letter-spacing:-1px}
-.hero p{font-size:14px;margin:8px 0;opacity:0.95}
-.badges{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:12px}
-.badge{background:rgba(0,0,0,0.4);backdrop-filter:blur(10px);padding:6px 14px;border-radius:20px;font-size:11px;border:1px solid rgba(255,255,255,0.2)}
-.stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:15px}
-.stat{background:#141414;border:1px solid #222;padding:12px;border-radius:12px;text-align:center}
-.stat b{color:#ff6a00;font-size:18px;display:block}
-.stat span{font-size:10px;color:#888}
-.pro{background:linear-gradient(135deg,#fff 0%,#f6d365 100%);color:#000;padding:22px;border-radius:16px;margin-bottom:16px;border:3px solid gold;position:relative;overflow:hidden}
-.pro::before{content:'BESTSELLER';position:absolute;top:10px;right:-30px;background:red;color:#fff;font-size:9px;padding:4px 35px;transform:rotate(45deg);font-weight:bold}
-.tool{background:linear-gradient(145deg,#151515,#111);border:1px solid #2a2a2a;border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 4px 20px rgba(0,0,0,0.5)}
-.tool-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-.tool h2{color:#ff6a00;font-size:16px}
-.tool-num{background:#ff6a00;color:#fff;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold}
-input,textarea,select{width:100%;background:#1f1f1f;border:1.5px solid #333;color:#fff;padding:13px;border-radius:10px;margin-bottom:10px;font-size:14px;transition:0.3s}
-input:focus{border-color:#ff6a00;outline:none;box-shadow:0 0 0 3px rgba(255,106,0,0.1)}
-.btn{width:100%;background:linear-gradient(135deg,#ff6a00,#ee0979);color:#fff;border:none;padding:14px;border-radius:10px;font-weight:800;cursor:pointer;font-size:14px;letter-spacing:0.5px;transition:0.2s}
-.btn:active{transform:scale(0.98)}
-.result{background:#0a0a0a;border:1px solid #222;border-left:4px solid #ff6a00;padding:14px;border-radius:10px;margin-top:12px;font-size:13px;line-height:1.7;white-space:pre-wrap;display:none;position:relative}
-.copy{position:absolute;top:8px;right:8px;background:#2a2a2a;border:none;color:#fff;padding:6px 10px;border-radius:6px;font-size:11px;cursor:pointer}
-.tip{background:rgba(255,106,0,0.1);border:1px dashed #ff6a00;padding:10px;border-radius:8px;font-size:11px;margin-top:10px;color:#ffb07a}
-.faq{background:#121212;border-radius:12px;padding:15px;margin-bottom:10px;border:1px solid #222}
-.footer{text-align:center;color:#444;font-size:10px;margin-top:25px;padding:20px;line-height:1.8}
-.price-table{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
-.price-card{background:#1a1a1a;border-radius:10px;padding:12px;text-align:center;border:1px solid #333}
-.price-card.pro-card{border:2px solid gold;background:#222}
+body{background:#070707;color:#fff;font-family:system-ui;padding:10px}
+.lang-switch{display:flex;gap:8px;justify-content:center;margin-bottom:12px;position:sticky;top:5px;z-index:99}
+.lang-btn{background:#1a1a1a;border:1px solid #333;color:#fff;padding:8px 16px;border-radius:20px;font-size:12px;cursor:pointer}
+.lang-btn.active{background:linear-gradient(135deg,#ff6a00,#ee0979);border-color:gold;font-weight:bold}
+.hero{background:linear-gradient(135deg,#ff6a00,#ee0979);padding:28px 18px;border-radius:22px;text-align:center;margin-bottom:12px;border:1.5px solid gold}
+.hero h1{font-size:26px;font-weight:900}
+.badges{display:flex;flex-wrap:wrap;justify-content:center;gap:5px;margin-top:10px}
+.badge{background:rgba(0,0,0,0.35);padding:5px 12px;border-radius:20px;font-size:10px;border:1px solid rgba(255,255,255,0.15)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:12px}
+.stat{background:#141414;border:1px solid #222;padding:10px;border-radius:10px;text-align:center}
+.stat b{color:#ff6a00;font-size:16px;display:block}
+.stat span{font-size:9px;color:#888}
+.pro{background:linear-gradient(135deg,#fff,#f6d365);color:#000;padding:20px;border-radius:16px;margin-bottom:14px;border:3px solid gold;text-align:center}
+.tool{background:#121212;border:1px solid #2a2a2a;border-radius:14px;padding:16px;margin-bottom:12px}
+.tool h2{color:#ff6a00;font-size:15px;margin-bottom:10px}
+input,select,textarea{width:100%;background:#1e1e1e;border:1px solid #333;color:#fff;padding:12px;border-radius:9px;margin-bottom:9px;font-size:13px}
+.btn{width:100%;background:linear-gradient(135deg,#ff6a00,#ee0979);color:#fff;border:none;padding:13px;border-radius:9px;font-weight:800;cursor:pointer}
+.result{background:#0a0a0a;border-left:4px solid #ff6a00;padding:12px;border-radius:8px;margin-top:10px;font-size:12px;white-space:pre-wrap;display:none;line-height:1.6}
+.detail-box{background:#0f0f0f;border:1px dashed #333;padding:12px;border-radius:10px;margin:10px 0;font-size:11px;color:#aaa}
+.footer{text-align:center;color:#444;font-size:10px;margin-top:20px;padding:15px;line-height:1.7}
 </style>
 </head>
 <body>
 
+<div class="lang-switch">
+<button class="lang-btn active" onclick="setLang('ku')">کوردی</button>
+<button class="lang-btn" onclick="setLang('en')">English</button>
+<button class="lang-btn" onclick="setLang('ar')">العربية - الإمارات</button>
+</div>
+
 <div class="hero">
-<h1>🚀 DUBAI CREATOR HUB<br>V4 MEGA ULTRA</h1>
-<p>10 AI Tools in 1 Platform - Built for Dubai Millionaires - Made in Kalar</p>
+<h1 id="heroTitle">🚀 DUBAI CREATOR HUB V5 WORLD</h1>
+<p id="heroSub">10 ئامرازی AI لە 1 پلاتفۆرم - 3 زمان - بۆ دوبەی و کوردستان - لە کەلارەوە</p>
 <div class="badges">
 <span class="badge">🔥 10 Tools in 1</span>
+<span class="badge">🌍 3 Languages</span>
 <span class="badge">💎 Made in Kalar</span>
-<span class="badge">⚡ V4 MEGA</span>
-<span class="badge">💰 Value $50</span>
-<span class="badge">🌍 Dubai + Kurdistan</span>
-<span class="badge">👑 By Kalary 17Y</span>
+<span class="badge">💰 $35 Only</span>
+<span class="badge">👑 Kalary 17Y</span>
 </div>
 </div>
 
 <div class="stats">
-<div class="stat"><b>10</b><span>AI TOOLS</span></div>
-<div class="stat"><b>$50</b><span>VALUE</span></div>
-<div class="stat"><b>1000+</b><span>GOAL USERS</span></div>
+<div class="stat"><b>10</b><span>TOOLS</span></div>
+<div class="stat"><b>3</b><span>LANGUAGES</span></div>
+<div class="stat"><b>$35</b><span>PRICE</span></div>
+<div class="stat"><b>1000</b><span>GOAL</span></div>
 </div>
 
 <div class="pro">
-<h3 style="font-size:18px">🚀 GET PRO V4 - $50 LIFETIME</h3>
-<div class="price-table">
-<div class="price-card"><b>FREE</b><br>7 Tools<br>20 Gen/Day<br>Basic</div>
-<div class="price-card pro-card"><b>PRO $50</b><br>10 Tools<br>Unlimited<br>+Bonus 100 Templates<br>+Thumbnail AI<br>+Commercial License</div>
+<h3 id="proTitle">🚀 PRO V5 WORLD - تەنها $35 بۆ هەمیشە</h3>
+<p id="proDesc" style="font-size:12px;margin:6px 0">FREE: 10 ئامراز، 20 جار/ڕۆژ | PRO: بێ سنوور + 150 قالب + مۆڵەتی بازرگانی + پشتگیری 24/7</p>
+<div class="detail-box" style="color:#000;background:rgba(0,0,0,0.05);border-color:gold">
+<b id="payTitle">چۆن پارە بدەیت - بۆ خوار 18 ساڵ:</b><br>
+🇦🇪 UAE: PayPal / Binance / Instagram Pay<br>
+🇮🇶 Kurdistan: FastPay / ZainCash / FIB<br>
+👨‍👦 بە جنسی باوکت: Binance + Payoneer - یاساییە<br>
+📸 Instagram: @Kalary - وەڵامی خێرا - 10 خولەک
 </div>
-<p style="font-size:12px;margin:8px 0"><b>How to Pay (Under 18 Friendly):</b><br>
-📸 Instagram: @Kalary | 💳 FastPay / ZainCash | 💰 Binance (Father's ID) | PayPal Family</p>
-<p style="font-size:11px">⚡ Instant Delivery | 🛡️ 30-Day Money Back | 👑 For Dubai & Kurdistan Creators</p>
-</div>
-
-<!-- TOOL 1 -->
-<div class="tool">
-<div class="tool-header"><h2>1️⃣ Viral Title Generator (AI)</h2><div class="tool-num">1</div></div>
-<select id="t1style"><option>Style: Shocking</option><option>Style: Luxury Dubai</option><option>Style: Money Making</option><option>Style: Kurdish + Dubai</option></select>
-<input id="t1" placeholder="Ex: Kalar | Fitness | Burger | Business in Dubai">
-<button class="btn" onclick="gen1()">🔥 GENERATE 5 VIRAL TITLES</button>
-<div id="r1" class="result"></div>
-<div class="tip">💡 Tip: Titles with number + Dubai + power word get 3x more views!</div>
+<p style="font-size:10px" id="proNote">⚡ گەیاندنی خێرا | 🛡️ گەڕاندنەوەی پارە 30 ڕۆژ | 🌍 بۆ دوبەی و کوردستان</p>
 </div>
 
-<!-- TOOL 2 -->
-<div class="tool">
-<div class="tool-header"><h2>2️⃣ SEO Description + Timestamps</h2><div class="tool-num">2</div></div>
-<input id="t2" placeholder="Ex: Best Burger in Dubai Mall">
-<button class="btn" onclick="gen2()">📝 GENERATE SEO DESCRIPTION</button>
-<div id="r2" class="result"></div>
-</div>
+<!-- TOOLS -->
+<div class="tool"><h2>1️⃣ <span class="t1">دروستکەری ناونیشانی ڤایرال / Viral Title / مولد العناوين</span></h2><select id="s1"><option>Style: Shocking / شۆک / صادم</option><option>Luxury Dubai / لۆکسی / فاخر</option><option>Money / پارە / مال</option></select><input id="t1" placeholder="Kalar | Fitness | Dubai Business"><button class="btn" onclick="gen1()" id="b1">🔥 GENERATE / دروست بکە / توليد</button><div id="r1" class="result"></div><div class="detail-box" id="tip1">💡 Tip: ناونیشانی ژمارە + دوبەی + وشەی بەهێز = 3 هێندە بینەر!</div></div>
 
-<!-- TOOL 3 -->
-<div class="tool">
-<div class="tool-header"><h2>3️⃣ Hashtag Generator (30 Viral)</h2><div class="tool-num">3</div></div>
-<input id="t3" placeholder="Ex: Dubai Travel | Kalar to Dubai">
-<button class="btn" onclick="gen3()">#️⃣ GENERATE 30 HASHTAGS</button>
-<div id="r3" class="result"></div>
-</div>
+<div class="tool"><h2>2️⃣ <span class="t2">وەسفی SEO / SEO Description / وصف SEO</span></h2><input id="t2" placeholder="Best Burger in Dubai Mall / باشترین بەرگر لە دوبەی"><button class="btn" onclick="gen2()">📝 GENERATE</button><div id="r2" class="result"></div></div>
 
-<!-- TOOL 4 -->
-<div class="tool">
-<div class="tool-header"><h2>4️⃣ Hook Generator (First 3 Sec)</h2><div class="tool-num">4</div></div>
-<input id="t4" placeholder="Ex: How to get rich in Dubai">
-<button class="btn" onclick="gen4()">🎣 GENERATE 3 HOOKS</button>
-<div id="r4" class="result"></div>
-</div>
+<div class="tool"><h2>3️⃣ <span class="t3">هاشتاگ (30) / Hashtags / هاشتاغ</span></h2><input id="t3" placeholder="Dubai Travel / گەشتی دوبەی / سياحة دبي"><button class="btn" onclick="gen3()">#️⃣ GENERATE</button><div id="r3" class="result"></div></div>
 
-<!-- TOOL 5 -->
-<div class="tool">
-<div class="tool-header"><h2>5️⃣ Thumbnail Text (NEW)</h2><div class="tool-num">5</div></div>
-<input id="t5" placeholder="Ex: I Made $10k in Dubai">
-<button class="btn" onclick="gen5()">🖼️ GENERATE THUMBNAIL TEXT</button>
-<div id="r5" class="result"></div>
-<div class="tip">💡 Thumbnail text must be max 3 words - BIG & BOLD!</div>
-</div>
+<div class="tool"><h2>4️⃣ <span class="t4">هووکی سەرەتا / Hook / خطاف</span></h2><input id="t4" placeholder="How to get rich / چۆن دەوڵەمەند بم / كيف تصبح غنيا"><button class="btn" onclick="gen4()">🎣 GENERATE</button><div id="r4" class="result"></div></div>
 
-<!-- TOOL 6 -->
-<div class="tool">
-<div class="tool-header"><h2>6️⃣ 30s Video Script Opener</h2><div class="tool-num">6</div></div>
-<input id="t6" placeholder="Ex: Dubai Real Estate Secrets">
-<button class="btn" onclick="gen6()">🎬 GENERATE 30s SCRIPT</button>
-<div id="r6" class="result"></div>
-</div>
+<div class="tool"><h2>5️⃣ <span class="t5">نووسینی Thumbnail / Thumbnail Text / نص مصغر</span></h2><input id="t5" placeholder="I Made $10k"><button class="btn" onclick="gen5()">🖼️ GENERATE</button><div id="r5" class="result"></div></div>
 
-<!-- TOOL 7 -->
-<div class="tool">
-<div class="tool-header"><h2>7️⃣ SEO Score Checker (NEW)</h2><div class="tool-num">7</div></div>
-<input id="t7" placeholder="Paste your Title: e.g. My Dubai Vlog">
-<button class="btn" onclick="gen7()">📊 CHECK SEO SCORE</button>
-<div id="r7" class="result"></div>
-</div>
+<div class="tool"><h2>6️⃣ <span class="t6">سکریپتی 30 چرکە / 30s Script / سكريبت 30 ث</span></h2><input id="t6" placeholder="Dubai Real Estate"><button class="btn" onclick="gen6()">🎬 GENERATE</button><div id="r6" class="result"></div></div>
 
-<!-- TOOL 8 -->
-<div class="tool">
-<div class="tool-header"><h2>8️⃣ Tags Generator (NEW)</h2><div class="tool-num">8</div></div>
-<input id="t8" placeholder="Ex: Dubai Business">
-<button class="btn" onclick="gen8()">🏷️ GENERATE 20 TAGS</button>
-<div id="r8" class="result"></div>
-</div>
+<div class="tool"><h2>7️⃣ <span class="t7">نمرەی SEO / SEO Score / نقاط SEO</span></h2><input id="t7" placeholder="Paste Title"><button class="btn" onclick="gen7()">📊 CHECK</button><div id="r7" class="result"></div></div>
 
-<!-- TOOL 9 -->
-<div class="tool">
-<div class="tool-header"><h2>9️⃣ Channel Name Generator (NEW)</h2><div class="tool-num">9</div></div>
-<input id="t9" placeholder="Ex: Dubai | Kalar | Fitness">
-<button class="btn" onclick="gen9()">👑 GENERATE CHANNEL NAMES</button>
-<div id="r9" class="result"></div>
-</div>
+<div class="tool"><h2>8️⃣ <span class="t8">تاگ / Tags / علامات</span></h2><input id="t8" placeholder="Dubai Business"><button class="btn" onclick="gen8()">🏷️ GENERATE</button><div id="r8" class="result"></div></div>
 
-<!-- TOOL 10 -->
-<div class="tool">
-<div class="tool-header"><h2>🔟 Comment Reply Generator (NEW)</h2><div class="tool-num">10</div></div>
-<input id="t10" placeholder="Ex: Nice video bro!">
-<button class="btn" onclick="gen10()">💬 GENERATE REPLY</button>
-<div id="r10" class="result"></div>
-</div>
+<div class="tool"><h2>9️⃣ <span class="t9">ناوی کەناڵ / Channel Name / اسم القناة</span></h2><input id="t9" placeholder="Dubai | Kalar"><button class="btn" onclick="gen9()">👑 GENERATE</button><div id="r9" class="result"></div></div>
 
-<div class="faq">
-<b>❓ FAQ - بۆ خەڵکی کوردستان:</b><br><br>
-<b>Q: من خوار 18 ساڵم چۆن پارە وەربگرم؟</b><br>
-A: بە جنسی باوکت Binance بکەرەوە، یان FastPay بەکاربهێنە، یان لە ئینستا پارە وەربگرە - یاساییە!<br><br>
-<b>Q: ئایا ئەمە بەڕاستی دەفرۆشرێت؟</b><br>
-A: بەڵێ! یوتیوبەرێک لە دوبەی $50 هیچ نیە بۆی - 1 قاوە $15 ە لە دوبەی!<br><br>
-<b>Q: Kalar to Dubai چیە؟</b><br>
-A: چیرۆکی تۆ! لە کەلارەوە دەچی بۆ دوبەی - بە $1000 لە مانگێک!
+<div class="tool"><h2>🔟 <span class="t10">وەڵامی کۆمێنت / Comment Reply / رد التعليق</span></h2><input id="t10" placeholder="Nice video bro!"><button class="btn" onclick="gen10()">💬 GENERATE</button><div id="r10" class="result"></div></div>
+
+<div class="detail-box">
+<b id="faqTitle">❓ FAQ - 3 زمان:</b><br><br>
+<span id="faq1"><b>کوردی:</b> من 17 ساڵم، چۆن پارە وەربگرم؟<br>وەڵام: بە جنسی باوکت Binance، یان FastPay، یان لە ئینستا - یاساییە و ئاسانە!<br><br></span>
+<span id="faq2"><b>English:</b> I am under 18, how to get paid?<br>Answer: Use father's ID for Binance/Payoneer, or FastPay/ZainCash, or Instagram Pay - Legal & Easy!<br><br></span>
+<span id="faq3"><b>العربية - الإمارات:</b> عمري 17، كيف أستلم المال؟<br>الجواب: استخدم هوية والدك لـ Binance، أو FastPay، أو دفع انستغرام - قانوني وسهل!<br></span>
 </div>
 
 <div class="footer">
-🚀 Dubai Creator Hub V4 MEGA ULTRA<br>
-Built by Kalary | Age 17 | Kalar City | Kalar to Dubai 2026<br>
-Value: $50 | Goal: $1000/month | Tools: 10 in 1 | Users Goal: 1000<br>
-All Tools Work Offline - No API Needed - 100% Free to Use - PRO $50 Lifetime<br>
-Made with ❤️ in Kalar, Iraq - For Dubai Creators Worldwide<br>
-<br>
-Contact: Instagram | GitHub: kalarykalary20122012-web | FastPay Available<br>
-© 2026 Kalar to Dubai - All Rights Reserved - Under 18 Friendly Business
+🚀 Dubai Creator Hub V5 WORLD EDITION<br>
+Built by Kalary | 17 Years Old | Kalar City | Kalar to Dubai 2026<br>
+Value: $35 Lifetime | 10 Tools in 1 | 3 Languages: Kurdish + English + Arabic UAE<br>
+Goal: $1000/month | 1000 Users | Made in Kalar, Iraq - For Dubai World<br>
+All Offline - No API - Free to Use - PRO $35<br>
+Contact: Instagram | GitHub: kalarykalary20122012-web | FastPay / Binance<br>
+© 2026 Kalar to Dubai - Under 18 Friendly Business - 3 Languages Support
 </div>
 
 <script>
-function show(id,text){let e=document.getElementById(id);e.innerHTML='<button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.innerText.replace(/Copy/g,\'\'));alert(\'Copied! ✅\')">Copy</button>'+text;e.style.display='block';window.scrollTo(0,e.offsetTop-100)}
-function gen1(){let v=document.getElementById('t1').value||'Dubai Secret';let s=document.getElementById('t1style').value;show('r1',`Style: ${s}\n\n1. STOP! Don't Try ${v} in Dubai Before This Secret! [95/100 SEO]\n2. I Tried ${v} For 24H in Dubai - SHOCKING $10k Result\n3. Dubai Millionaires Hide This ${v} Hack - I Expose It!\n4. How I Made $10k With ${v} in Dubai - Full Breakdown 2026\n5. The TRUTH About ${v} in Dubai - Kalar Boy Exposes!`)}
-function gen2(){let v=document.getElementById('t2').value||'Dubai';show('r2',`🔥 ${v} - ULTIMATE DUBAI GUIDE 2026!\n\nIn this video: Everything about ${v} in Dubai - Hidden gems, luxury hacks, money secrets.\n\nTIMESTAMPS:\n0:00 - Intro - Why ${v}?\n0:45 - What is ${v} in Dubai?\n2:30 - My Kalar to Dubai Story\n4:00 - Secret Location in Dubai\n6:30 - How Much Money?\n8:00 - Final Tips\n\n🔗 Dubai Creator Hub: Link in Bio\n#Dubai #${v.replace(/\s/g,'')} \n\nSUBSCRIBE for Dubai secrets from Kalar boy!`)}
-function gen3(){let v=document.getElementById('t3').value||'Dubai';show('r3',`#Dubai #${v.replace(/\s/g,'')} #DubaiLife #MyDubai #DXB #DubaiVlog #DubaiCreator #Dubai2026 #VisitDubai #DubaiLuxury #UAE #DubaiReels #DubaiTips #DubaiBusiness #DubaiInfluencer #DubaiLifestyle #DubaiBlogger #DubaiViral #DubaiDaily #DubaiHustle #DubaiEntrepreneur #DubaiMarketing #KalarToDubai #Kalary #MadeInKalar #DubaiSecret #DubaiMoney #DubaiHack #DubaiGuide #DubaiLifeStyle`)}
-function gen4(){let v=document.getElementById('t4').value||'This';show('r4',`HOOK 1 - SHOCK (0-3s): "I LOST $1000 in Dubai because of ${v}! Don't do this!"\n\nHOOK 2 - CURIOSITY: "Dubai billionaires don't want you to know this ${v} secret - I'm telling it anyway..."\n\nHOOK 3 - RESULT: "I tried ${v} for 7 days in Dubai as a Kalar boy - Here's what happened to my bank account..."`)}
-function gen5(){let v=document.getElementById('t5').value||'DUBAI SECRET';show('r5',`THUMBNAIL TEXT - MAX 3 WORDS - BIG & YELLOW:\n\n1. ${v.toUpperCase()}!!\n2. DON'T DO THIS!\n3. $10K IN 24H?!\n4. DUBAI EXPOSED\n5. I WAS WRONG\n\nColors: Yellow text + Black stroke + Red arrow\nFont: Bebas Neue Bold`)}
-function gen6(){let v=document.getElementById('t6').value||'Dubai';show('r6',`30s SCRIPT for "${v}":\n\n[0-3s HOOK - LOUD] "If you're doing ${v} in Dubai WRONG, you're losing THOUSANDS every month!"\n[3-12s PROBLEM] "Most Kalar guys think ${v} is expensive... but they don't know Deira secret street..."\n[12-25s STORY] "I came from Kalar with $0, tried ${v} in Dubai, and this happened..."\n[25-30s TEASE] "In next 30 sec, I'll show exact steps - Stay till end for free template!"`)}
-function gen7(){let v=document.getElementById('t7').value||'';let score=Math.floor(Math.random()*15)+85;show('r7',`SEO SCORE: ${score}/100 ${score>90?'🔥 VIRAL READY!':'✅ GOOD'}\n\nAnalyzing: "${v}"\n- Length: ${v.length} chars ${v.length>45 && v.length<70?'✅ Perfect':'⚠️ Aim 45-70'}\n- Keyword Dubai: ${v.toLowerCase().includes('dubai')?'✅':'❌ Add Dubai'}\n- Power Word: ${/stop|secret|shocking|truth|exposed|hack|million/i.test(v)?'✅':'❌ Add STOP/SECRET'}\n- Number: ${/\d/.test(v)?'✅':'⚠️ Add number like $10k or 24H'}\n- Emotion: ${/!/i.test(v)?'✅':'⚠️ Add !'}\n\nTo get 95+: "STOP! My Dubai ${v} Made $10k in 24H!"`)}
-function gen8(){let v=document.getElementById('t8').value||'Dubai';show('r8',`20 YOUTUBE TAGS for "${v}":\n\n${v}, ${v} Dubai, Dubai ${v}, ${v} in Dubai, Dubai ${v} guide, how to ${v} Dubai, ${v} Dubai 2026, best ${v} Dubai, Dubai ${v} secret, ${v} Dubai vlog, Kalar to Dubai ${v}, Kalary ${v}, Dubai luxury ${v}, Dubai business ${v}, ${v} tips Dubai, ${v} hack Dubai, Dubai millionaire ${v}, cheap ${v} Dubai, Dubai ${v} cost`)}
-function gen9(){let v=document.getElementById('t9').value||'Dubai';show('r9',`CHANNEL NAME IDEAS for "${v}":\n\n1. ${v} In Dubai - Kalar Boy\n2. Dubai ${v} Secrets\n3. Kalar To Dubai: ${v}\n4. The Dubai ${v} Guy\n5. ${v} Millionaire Dubai\n6. Kalary's ${v} Dubai\n7. Dubai ${v} Hustle\n8. Real ${v} Dubai`)}
-function gen10(){let v=document.getElementById('t10').value||'Nice video';show('r10',`REPLY to: "${v}"\n\nREPLY 1 (Friendly): "Thanks bro! ❤️ More Dubai secrets coming from Kalar boy! Subscribe?"\n\nREPLY 2 (Engaging): "Appreciate it! Which part you liked most? The ${v} hack? 😉"\n\nREPLY 3 (CTA): "Thanks! 🙏 I made free tool for this - Link in bio - Dubai Creator Hub!"`)}
+let lang='ku';
+function setLang(l){lang=l;document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));event.target.classList.add('active');
+if(l=='ku'){document.getElementById('heroSub').innerText='10 ئامرازی AI لە 1 پلاتفۆرم - 3 زمان - بۆ دوبەی و کوردستان - لە کەلارەوە';document.getElementById('proTitle').innerText='🚀 PRO V5 WORLD - تەنها $35 بۆ هەمیشە';}
+if(l=='en'){document.getElementById('heroSub').innerText='10 AI Tools in 1 Platform - 3 Languages - For Dubai & Kurdistan - From Kalar';document.getElementById('proTitle').innerText='🚀 PRO V5 WORLD - Only $35 Lifetime';}
+if(l=='ar'){document.getElementById('heroSub').innerText='10 أدوات ذكاء في منصة واحدة - 3 لغات - لدبي وكردستان - من كلار';document.getElementById('proTitle').innerText='🚀 برو V5 - فقط $35 مدى الحياة';}
+}
+function show(id,t){let e=document.getElementById(id);e.innerText=t;e.style.display='block';e.scrollIntoView({behavior:'smooth',block:'center'})}
+function gen1(){let v=document.getElementById('t1').value||'Dubai';let tr=lang=='ar'?`1. توقف! لا تجرب ${v} في دبي قبل هذا السر!\n2. جربت ${v} لـ 24 ساعة في دبي - نتيجة صادمة\n3. أثرياء دبي يخفون حيلة ${v} هذه\n4. كيف ربحت $10k بـ ${v} في دبي\n5. حقيقة ${v} في دبي - ولد كلار يكشف!`:lang=='ku'?`1. وەستە! ${v} لە دوبەی مەیکە پێش ئەم نهێنیە!\n2. من ${v} م تاقی کردەوە 24 کاتژمێر لە دوبەی - ئەنجامی شۆک\n3. دەوڵەمەندەکانی دوبەی ئەم فێڵەی ${v} دەشارنەوە\n4. چۆن $10k م بە ${v} لە دوبەی پەیدا کرد\n5. ڕاستی ${v} لە دوبەی - کوڕی کەلار ئاشکرای دەکات!`:`1. STOP! Don't Try ${v} Before This Dubai Secret!\n2. I Tried ${v} 24H in Dubai - SHOCKING Result\n3. Dubai Millionaires Hide This ${v} Hack\n4. How I Made $10k With ${v} in Dubai\n5. Truth About ${v} in Dubai - Kalar Boy Exposes!`;show('r1',tr)}
+function gen2(){let v=document.getElementById('t2').value||'Dubai';show('r2',`🔥 ${v} - دبي 2026 / Dubai Guide 2026 / ڕێبەری دوبەی\n\nIn this video: ${v} in Dubai - من كەلار الى دبي - From Kalar to Dubai\n\n0:00 Intro / مقدمة / دەستپێک\n0:45 ${v}\n3:00 Secret / سر / نهێنی\n5:00 Money / مال / پارە\n\n#Dubai #${v.replace(/\s/g,'')} #KalarToDubai`)}
+function gen3(){let v=document.getElementById('t3').value||'Dubai';show('r3',`#Dubai #${v.replace(/\s/g,'')} #DubaiLife #MyDubai #DXB #DubaiVlog #دبي #DubaiCreator #Dubai2026 #VisitDubai #الامارات #DubaiLuxury #DubaiTips #KalarToDubai #Kalary #كلار #DubaiBusiness #DubaiMoney #DubaiHack #DubaiGuide #DubaiInfluencer #DubaiReels #DubaiViral #DubaiDaily #DubaiEntrepreneur #DubaiLifestyle #DubaiSecret #DubaiBlogger #DubaiCommunity`)}
+function gen4(){let v=document.getElementById('t4').value||'This';show('r4',`HOOK / هووک / خطاف:\n\n1. خسرت $1000 في دبي بسبب ${v}! / $1000م لە دوبەی لەدەست دا بەهۆی ${v} / I lost $1000 in Dubai because of ${v}!\n2. أثرياء دبي يخفون سر ${v} / دەوڵەمەندانی دوبەی نهێنی ${v} دەشارنەوە\n3. جربت ${v} 7 أيام في دبي / ${v}م تاقی کردەوە 7 ڕۆژ لە دوبەی`)}
+function gen5(){let v=document.getElementById('t5').value||'DUBAI';show('r5',`THUMBNAIL / وێنەی ڤیدیۆ / صورة مصغرة:\n\n1. ${v.toUpperCase()}!!\n2. لا تفعل هذا! / مەیکە! / DON'T!\n3. $10k في 24 ساعة؟! / لە 24 کاتژمێر؟! / IN 24H?!\n4. دبي مكشوفة / دوبەی ئاشکرا / EXPOSED`)}
+function gen6(){let v=document.getElementById('t6').value||'Dubai';show('r6',`SCRIPT / سکریپت / سكريبت - 30s for ${v}:\n\n0-3s: اذا تفعل ${v} خطأ في دبي، تخسر آلاف! / ئەگەر ${v} لە دوبەی بە هەڵە بکەیت، هەزاران لەدەست دەدەیت!\n3-12s: معظم الناس لا يعرفون شارع ديرة السري...\n12-30s: أنا من كلار، جربت ${v}، وهذا ما حدث...`)}
+function gen7(){let v=document.getElementById('t7').value||'';let sc=Math.floor(Math.random()*10)+88;show('r7',`SEO SCORE: ${sc}/100 ${sc>90?'🔥 VIRAL!' : '✅ GOOD'}\n\n"${v}"\nDubai: ${v.toLowerCase().includes('dubai')||v.includes('دبي')?'✅':'❌ Add Dubai/دبي'}\nNumber: ${/\d/.test(v)?'✅':'❌ Add $10k/24H'}\nPower: ${/stop|secret|توقف|سر|شۆک/i.test(v)?'✅':'❌ Add STOP/سر/نهێنی'}`)}
+function gen8(){let v=document.getElementById('t8').value||'Dubai';show('r8',`20 TAGS for ${v} / تاگ بۆ ${v}:\n\n${v}, ${v} Dubai, Dubai ${v}, ${v} في دبي, ${v} دبي 2026, كيف ${v} دبي, best ${v} Dubai, Dubai ${v} secret, ${v} Dubai vlog, كلار الى دبي ${v}, Kalary ${v}, ${v} دبي رخيص, ${v} Dubai cost, ${v} Dubai guide, ${v} Dubai tips, ${v} Dubai business, ${v} Dubai luxury, ${v} Dubai hack`)}
+function gen9(){let v=document.getElementById('t9').value||'Dubai';show('r9',`CHANNEL NAMES / ناوی کەناڵ / اسماء القنوات:\n\n1. ${v} في دبي - ولد كلار / ${v} لە دوبەی - کوڕی کەلار / ${v} In Dubai - Kalar Boy\n2. أسرار ${v} دبي / نهێنیەکانی ${v} دوبەی / Dubai ${v} Secrets\n3. من كلار الى دبي: ${v} / لە کەلارەوە بۆ دوبەی\n4. Dubai ${v} Millionaire / مليونير ${v} دبي`)}
+function gen10(){let v=document.getElementById('t10').value||'Nice video';show('r10',`REPLY to "${v}":\n\nكوردی: سوپاس برا! ❤️ نهێنی زیاتری دوبەی لە کوڕی کەلارەوە دێت!\nEnglish: Thanks bro! ❤️ More Dubai secrets from Kalar boy!\nالعربية: شكراً أخي! ❤️ المزيد من أسرار دبي من ولد كلار!\n\nCTA: Link in bio - Dubai Creator Hub V5!`)}
 </script>
 </body>
 </html>
