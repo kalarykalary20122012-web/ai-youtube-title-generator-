@@ -1,36 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Title Generator | Dubai</title>
+<title>Dubai Creator Hub - AI Tools for Viral Content</title>
 <style>
-body{background:#0a0a0a;color:white;font-family:Arial;text-align:center;padding:20px}
-h1{color:#ff4500;font-size:28px}
-input{width:90%;padding:15px;border-radius:10px;border:none;font-size:16px;margin:10px}
-button{background:#ff4500;color:white;padding:15px 30px;border:none;border-radius:10px;font-size:18px;font-weight:bold;cursor:pointer}
-.card{background:#1a1a1a;padding:15px;margin:10px;border-radius:10px;text-align:left;border-left:4px solid #ff4500}
-small{color:#888}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0a;color:#fff;font-family:Arial,sans-serif}
+.header{background:linear-gradient(135deg,#ff4500,#ff8c00);padding:30px 20px;text-align:center}
+.header h1{font-size:32px;margin-bottom:10px}
+.header p{font-size:16px;opacity:0.9}
+.container{max-width:900px;margin:0 auto;padding:20px}
+.tool{background:#1a1a1a;border-radius:15px;padding:20px;margin:20px 0;border:1px solid #333}
+.tool h2{color:#ff4500;margin-bottom:15px;font-size:20px}
+input,textarea{width:100%;padding:14px;border-radius:10px;border:none;background:#2a2a2a;color:white;font-size:16px;margin:10px 0}
+button{background:#ff4500;color:white;padding:14px 25px;border:none;border-radius:10px;font-weight:bold;cursor:pointer;width:100%;font-size:16px}
+button:hover{background:#e03e00}
+.result{background:#0f0f0f;padding:15px;border-radius:10px;margin-top:15px;border-left:4px solid #ff4500;white-space:pre-wrap;text-align:left}
+.badge{background:#ff4500;padding:5px 10px;border-radius:20px;font-size:12px}
+.footer{text-align:center;padding:30px;color:#666}
+.pro{background:linear-gradient(135deg,#FFD700,#FFA500);color:black;padding:20px;border-radius:15px;text-align:center;margin:20px 0}
 </style>
 </head>
 <body>
-<h1>🔥 AI YouTube Viral Title Generator</h1>
-<p>Dubai Edition - For Content Creators</p>
-<input id="topic" placeholder="Enter topic... ex: Fitness in Dubai">
-<br><br>
-<button onclick="generate()">Generate Viral Titles 🚀</button>
-<div id="result" style="margin-top:20px"></div>
-<p><small>Built by Kalary | Kalar to Dubai 2026 | Value $20</small></p>
+<div class="header">
+<h1>🌍 Dubai Creator Hub</h1>
+<p>The #1 AI Toolkit for Dubai Content Creators & Youtubers</p>
+<p><span class="badge">🔥 5 Tools in 1</span> <span class="badge">Made in Kalar</span></p>
+</div>
+
+<div class="container">
+
+<div class="pro">
+<h3>🚀 Want More? Get Pro Version - $20</h3>
+<p>Unlock 100+ viral templates + Thumbnail AI + 24/7 Support</p>
+<p style="margin-top:10px;font-weight:bold">Contact: Your PayPal / Instagram</p>
+</div>
+
+<div class="tool">
+<h2>1️⃣ Viral Title Generator</h2>
+<input id="t1" placeholder="Ex: Fitness in Dubai">
+<button onclick="gen1()">Generate 5 Viral Titles</button>
+<div id="r1" class="result" style="display:none"></div>
+</div>
+
+<div class="tool">
+<h2>2️⃣ Description Generator</h2>
+<input id="t2" placeholder="Ex: Best Burger in Dubai">
+<button onclick="gen2()">Generate SEO Description</button>
+<div id="r2" class="result" style="display:none"></div>
+</div>
+
+<div class="tool">
+<h2>3️⃣ Hashtag Generator</h2>
+<input id="t3" placeholder="Ex: Dubai Travel">
+<button onclick="gen3()">Generate 20 Hashtags</button>
+<div id="r3" class="result" style="display:none"></div>
+</div>
+
+<div class="tool">
+<h2>4️⃣ Hook Generator (First 5 Seconds)</h2>
+<input id="t4" placeholder="Ex: How to get rich in Dubai">
+<button onclick="gen4()">Generate 3 Hooks</button>
+<div id="r4" class="result" style="display:none"></div>
+</div>
+
+</div>
+
+<div class="footer">
+<p>Built by Kalary | Kalar to Dubai 2026 | Dubai Creator Hub v2.0</p>
+<p>Value: $20 | Goal: $1000/month</p>
+</div>
+
 <script>
-function generate(){
-let t=document.getElementById('topic').value;
-if(!t){alert('Enter a topic first!');return;}
-let r=document.getElementById('result');
-r.innerHTML=`
-<div class="card">1. STOP! Don't Try ${t} Before Watching This Dubai Secret!</div>
-<div class="card">2. I Tried ${t} For 24 Hours in Dubai - SHOCKING RESULT</div>
-<div class="card">3. Dubai Millionaires Don't Want You To Know This ${t} Hack</div>
-`;
+function gen1(){
+let v=document.getElementById('t1').value||'My Topic';
+let r=document.getElementById('r1');r.style.display='block';
+r.innerText=`1. STOP! Don't Try ${v} Before Watching This Dubai Secret!\n\n2. I Tried ${v} For 24 Hours in Dubai - SHOCKING RESULT\n\n3. Dubai Millionaires Don't Want You To Know This ${v} Hack\n\n4. How I Made $10k With ${v} in Dubai (Full Breakdown)\n\n5. The TRUTH About ${v} in Dubai - No One Talks About This!`;
+}
+function gen2(){
+let v=document.getElementById('t2').value||'Dubai Content';
+let r=document.getElementById('r2');r.style.display='block';
+r.innerText=`🔥 ${v} in Dubai - Ultimate Guide 2026\n\nIn this video, I reveal everything about ${v} that no one tells you in Dubai!\n\n✅ What you'll learn:\n- Secret tips for ${v}\n- How to save money\n- My personal experience\n\n👇 TIMESTAMPS\n00:00 Intro\n01:30 The Secret\n05:00 Results\n\n#Dubai #${v.replace(/ /g,'')} #DubaiLife\n\nSubscribe for more Dubai secrets!`;
+}
+function gen3(){
+let v=document.getElementById('t3').value||'Dubai';
+let r=document.getElementById('r3');r.style.display='block';
+r.innerText=`#Dubai #DubaiLife #${v.replace(/ /g,'')} #VisitDubai #DubaiCreator #MyDubai #DubaiVlog #UAELife #Dubai2026 #DubaiReels #DubaiStyle #DubaiLuxury #ExploreDubai #DubaiTips #DubaiSecrets #DubaiHacks #DubaiInfluencer #DubaiContent #DubaiBusiness #DubaiViral`;
+}
+function gen4(){
+let v=document.getElementById('t4').value||'This Topic';
+let r=document.getElementById('r4');r.style.display='block';
+r.innerText=`HOOK 1 (Shock): "I lost $1000 in Dubai because of ${v} - Don't make my mistake!"\n\nHOOK 2 (Curiosity): "Dubai billionaires are hiding this ${v} secret from you..."\n\nHOOK 3 (Result): "I tried ${v} for 7 days in Dubai, here's what happened to my life..."`;
 }
 </script>
 </body>
