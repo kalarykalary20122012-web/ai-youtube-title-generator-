@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Title Generator | Dubai</title>
+<style>
+body{background:#0a0a0a;color:white;font-family:Arial;text-align:center;padding:20px}
+h1{color:#ff4500;font-size:28px}
+input{width:90%;padding:15px;border-radius:10px;border:none;font-size:16px;margin:10px}
+button{background:#ff4500;color:white;padding:15px 30px;border:none;border-radius:10px;font-size:18px;font-weight:bold;cursor:pointer}
+.card{background:#1a1a1a;padding:15px;margin:10px;border-radius:10px;text-align:left;border-left:4px solid #ff4500}
+small{color:#888}
+</style>
+</head>
+<body>
+<h1>🔥 AI YouTube Viral Title Generator</h1>
+<p>Dubai Edition - For Content Creators</p>
+<input id="topic" placeholder="Enter topic... ex: Fitness in Dubai">
+<br><br>
+<button onclick="generate()">Generate Viral Titles 🚀</button>
+<div id="result" style="margin-top:20px"></div>
+<p><small>Built by Kalary | Kalar to Dubai 2026 | Value $20</small></p>
+<script>
+function generate(){
+let t=document.getElementById('topic').value;
+if(!t){alert('Enter a topic first!');return;}
+let r=document.getElementById('result');
+r.innerHTML=`
+<div class="card">1. STOP! Don't Try ${t} Before Watching This Dubai Secret!</div>
+<div class="card">2. I Tried ${t} For 24 Hours in Dubai - SHOCKING RESULT</div>
+<div class="card">3. Dubai Millionaires Don't Want You To Know This ${t} Hack</div>
+`;
+}
+</script>
+</body>
+</html>
