@@ -2660,5 +2660,4142 @@ try {
 
 /* Configure checkout links on load as well as when opening the modal. */
 configurePayments();
+<!-- ===== EXPANSION START - LINE 2666 - MEGA MENU & DASHBOARD ===== -->
+
+<style>
+/* ============================================================
+   DUBAI CREATOR LABS — EXPANSION MODULE 1
+   Mega Menu, Dashboard, Founder Section
+   Vanilla CSS; no external libraries or dependencies.
+   ============================================================ */
+
+/* ---------- 01. Design tokens ---------- */
+
+:root {
+  --dcl-header-height: 78px;
+  --dcl-radius-xs: 8px;
+  --dcl-radius-sm: 12px;
+  --dcl-radius-md: 18px;
+  --dcl-radius-lg: 24px;
+  --dcl-radius-xl: 32px;
+  --dcl-shadow-sm: 0 4px 14px rgba(0, 0, 0, .06);
+  --dcl-shadow-md: 0 12px 36px rgba(0, 0, 0, .10);
+  --dcl-shadow-lg: 0 24px 70px rgba(0, 0, 0, .16);
+  --dcl-motion: 220ms ease;
+  --dcl-accent: #7257ff;
+  --dcl-accent-strong: #5a3ee6;
+  --dcl-accent-soft: rgba(114, 87, 255, .12);
+  --dcl-cyan: #22c8d8;
+  --dcl-success: #159b72;
+  --dcl-warning: #d58b16;
+  --dcl-danger: #d94b63;
+  --dcl-header-bg: rgba(255, 255, 255, .84);
+  --dcl-page-bg: #f7f8fc;
+  --dcl-card-bg: #ffffff;
+  --dcl-text: #20243a;
+  --dcl-muted: #737991;
+  --dcl-border: rgba(34, 39, 68, .12);
+  --dcl-input-bg: #f6f7fb;
+  --dcl-menu-bg: #ffffff;
+  --dcl-overlay: rgba(18, 20, 37, .48);
+  --dcl-chart-grid: rgba(114, 87, 255, .10);
+  --dcl-chart-line: #7257ff;
+  --dcl-chart-fill: rgba(114, 87, 255, .12);
+}
+
+html[data-dcl-theme="dark"] {
+  color-scheme: dark;
+  --dcl-header-bg: rgba(19, 21, 36, .88);
+  --dcl-page-bg: #111321;
+  --dcl-card-bg: #191c2e;
+  --dcl-text: #f0f1fa;
+  --dcl-muted: #a4a8c0;
+  --dcl-border: rgba(231, 233, 255, .12);
+  --dcl-input-bg: #202338;
+  --dcl-menu-bg: #191c2e;
+  --dcl-overlay: rgba(0, 0, 0, .68);
+  --dcl-chart-grid: rgba(170, 151, 255, .12);
+  --dcl-chart-line: #a493ff;
+  --dcl-chart-fill: rgba(164, 147, 255, .13);
+}
+
+/* ---------- 02. Scoped foundation ---------- */
+
+#mega-header,
+#mega-header *,
+#dcl-mobile-drawer,
+#dcl-mobile-drawer *,
+#dashboard,
+#dashboard *,
+#founder-youssef,
+#founder-youssef *,
+#dcl-search-panel,
+#dcl-search-panel * {
+  box-sizing: border-box;
+}
+
+#mega-header button,
+#mega-header input,
+#mega-header select,
+#dcl-mobile-drawer button,
+#dcl-search-panel button {
+  font: inherit;
+}
+
+#mega-header button,
+#dcl-mobile-drawer button,
+#dcl-search-panel button {
+  cursor: pointer;
+}
+
+#dashboard,
+#founder-youssef {
+  color: var(--dcl-text);
+  font-family: inherit;
+}
+
+#dashboard a,
+#founder-youssef a,
+#mega-header a {
+  text-decoration: none;
+}
+
+#dashboard button:focus-visible,
+#founder-youssef a:focus-visible,
+#mega-header a:focus-visible,
+#mega-header button:focus-visible,
+#mega-header input:focus-visible,
+#dcl-mobile-drawer button:focus-visible,
+#dcl-search-panel button:focus-visible {
+  outline: 3px solid var(--dcl-cyan);
+  outline-offset: 3px;
+}
+
+/* ---------- 03. Sticky glass header ---------- */
+
+#mega-header {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  width: 100%;
+  min-height: var(--dcl-header-height);
+  color: var(--dcl-text);
+  background: var(--dcl-header-bg);
+  border-bottom: 1px solid var(--dcl-border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition:
+    box-shadow var(--dcl-motion),
+    background var(--dcl-motion),
+    border-color var(--dcl-motion);
+}
+
+#mega-header.dcl-scrolled {
+  box-shadow: var(--dcl-shadow-md);
+}
+
+.dcl-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: min(1440px, calc(100% - 48px));
+  min-height: var(--dcl-header-height);
+  margin-inline: auto;
+}
+
+.dcl-brand {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+  color: var(--dcl-text);
+}
+
+.dcl-brand-mark {
+  display: grid;
+  flex: 0 0 43px;
+  width: 43px;
+  height: 43px;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 14px;
+  color: #fff;
+  background: linear-gradient(135deg, #8a6cff, #4b35c9 70%, #22c8d8);
+  box-shadow: 0 8px 20px rgba(114, 87, 255, .25);
+}
+
+.dcl-brand-mark svg {
+  width: 26px;
+  height: 26px;
+}
+
+.dcl-brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  line-height: 1.1;
+}
+
+.dcl-brand-name {
+  font-size: 15px;
+  font-weight: 850;
+  letter-spacing: -.4px;
+}
+
+.dcl-brand-caption {
+  color: var(--dcl-muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.35px;
+  text-transform: uppercase;
+}
+
+/* ---------- 04. Desktop navigation ---------- */
+
+.dcl-main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.dcl-nav-item {
+  position: relative;
+}
+
+.dcl-nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 43px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 11px;
+  color: var(--dcl-muted);
+  background: transparent;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition:
+    color var(--dcl-motion),
+    background var(--dcl-motion);
+}
+
+.dcl-nav-link:hover,
+.dcl-nav-link[aria-expanded="true"] {
+  color: var(--dcl-accent);
+  background: var(--dcl-accent-soft);
+}
+
+.dcl-nav-chevron {
+  width: 13px;
+  height: 13px;
+  transition: transform var(--dcl-motion);
+}
+
+.dcl-nav-link[aria-expanded="true"] .dcl-nav-chevron {
+  transform: rotate(180deg);
+}
+
+/* ---------- 05. Mega menu panel ---------- */
+
+.dcl-mega-wrap {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 50%;
+  z-index: 10010;
+  width: min(920px, calc(100vw - 48px));
+  padding-top: 12px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, 8px);
+  transition:
+    opacity var(--dcl-motion),
+    transform var(--dcl-motion),
+    visibility var(--dcl-motion);
+}
+
+.dcl-nav-item.dcl-open .dcl-mega-wrap {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.dcl-mega-panel {
+  padding: 25px;
+  border: 1px solid var(--dcl-border);
+  border-radius: var(--dcl-radius-lg);
+  background: var(--dcl-menu-bg);
+  box-shadow: var(--dcl-shadow-lg);
+}
+
+.dcl-mega-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.dcl-mega-heading h3 {
+  margin: 0 0 7px;
+  color: var(--dcl-text);
+  font-size: 19px;
+  font-weight: 850;
+  letter-spacing: -.45px;
+}
+
+.dcl-mega-heading p {
+  max-width: 540px;
+  margin: 0;
+  color: var(--dcl-muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.dcl-mega-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border: 1px solid var(--dcl-border);
+  border-radius: 999px;
+  color: var(--dcl-accent);
+  background: var(--dcl-accent-soft);
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.dcl-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 11px;
+}
+
+.dcl-tool-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11px;
+  min-height: 145px;
+  padding: 15px;
+  border: 1px solid var(--dcl-border);
+  border-radius: 15px;
+  color: var(--dcl-text);
+  background: transparent;
+  transition:
+    transform var(--dcl-motion),
+    border-color var(--dcl-motion),
+    background var(--dcl-motion),
+    box-shadow var(--dcl-motion);
+}
+
+.dcl-tool-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(114, 87, 255, .45);
+  background: var(--dcl-accent-soft);
+  box-shadow: var(--dcl-shadow-sm);
+}
+
+.dcl-tool-icon {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  place-items: center;
+  border-radius: 12px;
+  color: var(--dcl-accent);
+  background: var(--dcl-accent-soft);
+}
+
+.dcl-tool-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.dcl-tool-name {
+  color: var(--dcl-text);
+  font-size: 12px;
+  font-weight: 850;
+  line-height: 1.4;
+}
+
+.dcl-tool-description {
+  color: var(--dcl-muted);
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.dcl-mega-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 20px;
+  padding-top: 17px;
+  border-top: 1px solid var(--dcl-border);
+}
+
+.dcl-mega-footer p {
+  margin: 0;
+  color: var(--dcl-muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.dcl-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--dcl-accent);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+/* ---------- 06. Header action area ---------- */
+
+.dcl-header-actions {
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  min-width: 0;
+}
+
+.dcl-icon-button {
+  display: grid;
+  flex: 0 0 auto;
+  width: 39px;
+  height: 39px;
+  place-items: center;
+  border: 1px solid var(--dcl-border);
+  border-radius: 12px;
+  color: var(--dcl-text);
+  background: transparent;
+  transition:
+    color var(--dcl-motion),
+    background var(--dcl-motion),
+    border-color var(--dcl-motion);
+}
+
+.dcl-icon-button:hover {
+  color: var(--dcl-accent);
+  border-color: rgba(114, 87, 255, .4);
+  background: var(--dcl-accent-soft);
+}
+
+.dcl-icon-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.dcl-language-select {
+  max-width: 83px;
+  height: 39px;
+  padding: 0 8px;
+  border: 1px solid var(--dcl-border);
+  border-radius: 11px;
+  color: var(--dcl-text);
+  background: var(--dcl-card-bg);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.dcl-search-wrap {
+  position: relative;
+  width: clamp(130px, 15vw, 205px);
+}
+
+.dcl-search-input {
+  width: 100%;
+  height: 40px;
+  padding: 0 36px 0 12px;
+  border: 1px solid var(--dcl-border);
+  border-radius: 12px;
+  outline: none;
+  color: var(--dcl-text);
+  background: var(--dcl-input-bg);
+  font-size: 12px;
+  transition:
+    border-color var(--dcl-motion),
+    box-shadow var(--dcl-motion);
+}
+
+.dcl-search-input:focus {
+  border-color: var(--dcl-accent);
+  box-shadow: 0 0 0 3px var(--dcl-accent-soft);
+}
+
+.dcl-search-input::placeholder {
+  color: var(--dcl-muted);
+}
+
+.dcl-search-symbol {
+  position: absolute;
+  top: 50%;
+  right: 11px;
+  width: 16px;
+  height: 16px;
+  color: var(--dcl-muted);
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.dcl-download-cv {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 12px;
+  color: #fff;
+  background: linear-gradient(135deg, #8067ff, #5a3ee6);
+  box-shadow: 0 7px 18px rgba(114, 87, 255, .23);
+  font-size: 12px;
+  font-weight: 850;
+  white-space: nowrap;
+  transition:
+    transform var(--dcl-motion),
+    box-shadow var(--dcl-motion);
+}
+
+.dcl-download-cv:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 11px 24px rgba(114, 87, 255, .32);
+}
+
+.dcl-download-cv svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ---------- 07. Search autocomplete ---------- */
+
+#dcl-search-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 10030;
+  display: none;
+  width: min(360px, calc(100vw - 28px));
+  max-height: min(420px, 70vh);
+  overflow-y: auto;
+  padding: 9px;
+  border: 1px solid var(--dcl-border);
+  border-radius: 17px;
+  color: var(--dcl-text);
+  background: var(--dcl-menu-bg);
+  box-shadow: var(--dcl-shadow-lg);
+}
+
+#dcl-search-panel.dcl-visible {
+  display: block;
+  animation: dcl-pop-in 160ms ease both;
+}
+
+.dcl-search-panel-title {
+  padding: 9px 10px;
+  color: var(--dcl-muted);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.dcl-search-result {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  padding: 11px 10px;
+  border: 0;
+  border-radius: 11px;
+  color: var(--dcl-text);
+  background: transparent;
+  text-align: left;
+}
+
+.dcl-search-result:hover,
+.dcl-search-result[aria-selected="true"] {
+  background: var(--dcl-accent-soft);
+}
+
+.dcl-search-result-icon {
+  display: grid;
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 10px;
+  color: var(--dcl-accent);
+  background: var(--dcl-accent-soft);
+}
+
+.dcl-search-result-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.dcl-search-result-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.dcl-search-result-copy strong {
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dcl-search-result-copy span {
+  overflow: hidden;
+  color: var(--dcl-muted);
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dcl-search-empty {
+  padding: 22px 12px;
+  color: var(--dcl-muted);
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* ---------- 08. Mobile drawer ---------- */
+
+.dcl-mobile-toggle {
+  display: none;
+}
+
+#dcl-mobile-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10040;
+  visibility: hidden;
+  background: var(--dcl-overlay);
+  opacity: 0;
+  transition:
+    opacity var(--dcl-motion),
+    visibility var(--dcl-motion);
+}
+
+#dcl-mobile-backdrop.dcl-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+#dcl-mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10050;
+  display: flex;
+  flex-direction: column;
+  width: min(390px, 91vw);
+  height: 100dvh;
+  padding: 20px;
+  overflow-y: auto;
+  border-left: 1px solid var(--dcl-border);
+  color: var(--dcl-text);
+  background: var(--dcl-card-bg);
+  box-shadow: var(--dcl-shadow-lg);
+  transform: translateX(105%);
+  transition: transform 260ms cubic-bezier(.2, .8, .2, 1);
+}
+
+#dcl-mobile-drawer.dcl-open {
+  transform: translateX(0);
+}
+
+.dcl-drawer-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--dcl-border);
+}
+
+.dcl-drawer-close {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border: 1px solid var(--dcl-border);
+  border-radius: 12px;
+  color: var(--dcl-text);
+  background: transparent;
+}
+
+.dcl-drawer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-block: 18px;
+}
+
+.dcl-drawer-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  color: var(--dcl-text);
+  background: transparent;
+  font-size: 14px;
+  font-weight: 750;
+  text-align: left;
+}
+
+.dcl-drawer-link:hover {
+  border-color: var(--dcl-border);
+  background: var(--dcl-accent-soft);
+}
+
+.dcl-drawer-tools {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  padding: 0 0 20px;
+}
+
+.dcl-drawer-tool {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 100px;
+  padding: 13px;
+  border: 1px solid var(--dcl-border);
+  border-radius: 13px;
+  color: var(--dcl-text);
+  background: var(--dcl-card-bg);
+  text-align: left;
+}
+
+.dcl-drawer-tool span:first-child {
+  color: var(--dcl-accent);
+  font-size: 21px;
+}
+
+.dcl-drawer-tool span:last-child {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.dcl-drawer-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid var(--dcl-border);
+}
+
+.dcl-drawer-actions .dcl-download-cv {
+  min-height: 47px;
+}
+
+.dcl-drawer-note {
+  margin: 15px 0 0;
+  color: var(--dcl-muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* ---------- 09. Shared buttons and layout ---------- */
+
+.dcl-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 15px;
+  border: 1px solid var(--dcl-border);
+  border-radius: 12px;
+  color: var(--dcl-text);
+  background: var(--dcl-card-bg);
+  font-size: 12px;
+  font-weight: 800;
+  transition:
+    border-color var(--dcl-motion),
+    background var(--dcl-motion),
+    transform var(--dcl-motion);
+}
+
+.dcl-button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(114, 87, 255, .42);
+}
+
+.dcl-button-primary {
+  border-color: transparent;
+  color: #fff;
+  background: linear-gradient(135deg, #8067ff, #5a3ee6);
+}
+
+.dcl-button-primary:hover {
+  background: linear-gradient(135deg, #7257ff, #4e32d1);
+}
+
+.dcl-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.dcl-section-shell {
+  width: min(1240px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.dcl-section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: var(--dcl-accent);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.dcl-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--dcl-cyan);
+  box-shadow: 0 0 0 4px rgba(34, 200, 216, .12);
+}
+
+.dcl-section-title {
+  margin: 0;
+  color: var(--dcl-text);
+  font-size: clamp(25px, 3vw, 37px);
+  font-weight: 900;
+  letter-spacing: -1.2px;
+  line-height: 1.15;
+}
+
+.dcl-section-description {
+  max-width: 690px;
+  margin: 12px 0 0;
+  color: var(--dcl-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* ---------- 10. Dashboard ---------- */
+
+#dashboard {
+  position: relative;
+  padding: clamp(54px, 7vw, 88px) 0;
+  background:
+    radial-gradient(ellipse at 5% 0%, rgba(114, 87, 255, .08), transparent 38%),
+    var(--dcl-page-bg);
+}
+
+.dcl-dashboard-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.dcl-dashboard-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.dcl-local-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  margin-bottom: 24px;
+  padding: 14px 16px;
+  border: 1px solid rgba(34, 200, 216, .25);
+  border-radius: 14px;
+  color: var(--dcl-text);
+  background: rgba(34, 200, 216, .07);
+}
+
+.dcl-local-notice-icon {
+  display: grid;
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 9px;
+  color: var(--dcl-success);
+  background: rgba(21, 155, 114, .12);
+}
+
+.dcl-local-notice strong {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 12px;
+}
+
+.dcl-local-notice p {
+  margin: 0;
+  color: var(--dcl-muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.dcl-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.dcl-stat-card {
+  position: relative;
+  min-width: 0;
+  padding: 22px;
+  overflow: hidden;
+  border: 1px solid var(--dcl-border);
+  border-radius: var(--dcl-radius-md);
+  background: var(--dcl-card-bg);
+  box-shadow: var(--dcl-shadow-sm);
+  transition:
+    transform var(--dcl-motion),
+    box-shadow var(--dcl-motion);
+}
+
+.dcl-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--dcl-shadow-md);
+}
+
+.dcl-stat-card::after {
+  position: absolute;
+  top: -33px;
+  right: -33px;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background: var(--dcl-accent-soft);
+  content: "";
+}
+
+.dcl-stat-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.dcl-stat-label {
+  color: var(--dcl-muted);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.dcl-stat-icon {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  place-items: center;
+  border-radius: 12px;
+  color: var(--dcl-accent);
+  background: var(--dcl-accent-soft);
+}
+
+.dcl-stat-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.dcl-stat-value {
+  display: block;
+  overflow-wrap: anywhere;
+  color: var(--dcl-text);
+  font-size: clamp(24px, 3vw, 33px);
+  font-weight: 900;
+  letter-spacing: -1.1px;
+  line-height: 1.1;
+}
+
+.dcl-stat-foot {
+  margin-top: 9px;
+  color: var(--dcl-muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.dcl-stat-foot strong {
+  color: var(--dcl-success);
+}
+
+.dcl-dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(260px, .85fr);
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.dcl-panel {
+  min-width: 0;
+  padding: 23px;
+  border: 1px solid var(--dcl-border);
+  border-radius: var(--dcl-radius-md);
+  background: var(--dcl-card-bg);
+  box-shadow: var(--dcl-shadow-sm);
+}
+
+.dcl-panel-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.dcl-panel-head h3 {
+  margin: 0;
+  color: var(--dcl-text);
+  font-size: 15px;
+  font-weight: 850;
+  letter-spacing: -.25px;
+}
+
+.dcl-panel-head p {
+  margin: 6px 0 0;
+  color: var(--dcl-muted);
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.dcl-period-select {
+  max-width: 125px;
+  min-height: 34px;
+  padding: 0 9px;
+  border: 1px solid var(--dcl-border);
+  border-radius: 9px;
+  color: var(--dcl-text);
+  background: var(--dcl-input-bg);
+  font-size: 11px;
+}
+
+.dcl-chart-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 240px;
+}
+
+#dcl-activity-chart {
+  display: block;
+  width: 100%;
+  height: 240px;
+}
+
+.dcl-chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  margin-top: 14px;
+}
+
+.dcl-chart-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--dcl-muted);
+  font-size: 11px;
+}
+
+.dcl-legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--dcl-chart-line);
+}
+
+.dcl-chart-footnote {
+  margin: 13px 0 0;
+  color: var(--dcl-muted);
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.dcl-quick-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.dcl-quick-action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 13px;
+  border: 1px solid var(--dcl-border);
+  border-radius: 13px;
+  color: var(--dcl-text);
+  background: transparent;
+  text-align: left;
+  transition:
+    border-color var(--dcl-motion),
+    background var(--dcl-motion);
+}
+
+.dcl-quick-action:hover {
+  border-color: rgba(114, 87, 255, .42);
+  background: var(--dcl-accent-soft);
+}
+
+.dcl-quick-icon {
+  display: grid;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 12px;
+  color: var(--dcl-accent);
+  background: var(--dcl-accent-soft);
+  font-size: 19px;
+}
+
+.dcl-quick-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.dcl-quick-copy strong {
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.dcl-quick-copy span {
+  color: var(--dcl-muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.dcl-quick-arrow {
+  color: var(--dcl-muted);
+  font-size: 18px;
+}
+
+.dcl-history-panel {
+  padding: 0;
+  overflow: hidden;
+}
+
+.dcl-history-panel .dcl-panel-head {
+  margin: 0;
+  padding: 22px 23px;
+}
+
+.dcl-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.dcl-history-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.dcl-history-table th,
+.dcl-history-table td {
+  padding: 14px 23px;
+  border-top: 1px solid var(--dcl-border);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.dcl-history-table th {
+  color: var(--dcl-muted);
+  background: var(--dcl-input-bg);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+}
+
+.dcl-history-table td {
+  color: var(--dcl-text);
+}
+
+.dcl-history-table tbody tr:hover {
+  background: var(--dcl-accent-soft);
+}
+
+.dcl-history-empty {
+  padding: 34px 18px !important;
+  color: var(--dcl-muted) !important;
+  line-height: 1.8;
+  text-align: center;
+  white-space: normal !important;
+}
+
+.dcl-history-tool {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 800;
+}
+
+.dcl-history-tool-icon {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 9px;
+  color: var(--dcl-accent);
+  background: var(--dcl-accent-soft);
+}
+
+.dcl-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 9px;
+  border-radius: 999px;
+  color: var(--dcl-success);
+  background: rgba(21, 155, 114, .10);
+  font-size: 10px;
+  font-weight: 850;
+}
+
+.dcl-status-badge::before {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  content: "";
+}
+
+.dcl-history-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 15px 23px;
+  border-top: 1px solid var(--dcl-border);
+}
+
+.dcl-history-footer p {
+  margin: 0;
+  color: var(--dcl-muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* ---------- 11. Founder section ---------- */
+
+#founder-youssef {
+  position: relative;
+  padding: clamp(65px, 8vw, 105px) 0;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 90% 15%, rgba(114, 87, 255, .11), transparent 36%),
+    var(--dcl-card-bg);
+}
+
+.dcl-founder-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  align-items: center;
+  gap: clamp(36px, 6vw, 80px);
+}
+
+.dcl-founder-visual {
+  position: relative;
+  min-width: 0;
+}
+
+.dcl-founder-card {
+  position: relative;
+  padding: clamp(25px, 4vw, 42px);
+  overflow: hidden;
+  border: 1px solid var(--dcl-border);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 90% 0%, rgba(34, 200, 216, .15), transparent 35%),
+    linear-gradient(145deg, var(--dcl-page-bg), var(--dcl-card-bg));
+  box-shadow: var(--dcl-shadow-md);
+}
+
+.dcl-founder-avatar {
+  display: grid;
+  width: 105px;
+  height: 105px;
+  margin-bottom: 25px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, .45);
+  border-radius: 29px;
+  color: #fff;
+  background: linear-gradient(135deg, #927aff, #4d36c6 72%, #22c8d8);
+  box-shadow: 0 15px 35px rgba(114, 87, 255, .26);
+  font-size: 34px;
+  font-weight: 950;
+  letter-spacing: -2px;
+}
+
+.dcl-founder-card h3 {
+  margin: 0;
+  color: var(--dcl-text);
+  font-size: clamp(22px, 3vw, 29px);
+  font-weight: 900;
+  letter-spacing: -.8px;
+}
+
+.dcl-founder-role {
+  margin: 9px 0 0;
+  color: var(--dcl-accent);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.dcl-founder-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  color: var(--dcl-muted);
+  font-size: 12px;
+}
+
+.dcl-founder-location svg {
+  width: 16px;
+  height: 16px;
+  color: var(--dcl-accent);
+}
+
+.dcl-founder-card-description {
+  margin: 20px 0 0;
+  color: var(--dcl-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.dcl-founder-card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.dcl-founder-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 10px;
+  border: 1px solid var(--dcl-border);
+  border-radius: 999px;
+  color: var(--dcl-text);
+  background: var(--dcl-card-bg);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.dcl-founder-badge span {
+  color: var(--dcl-accent);
+}
+
+.dcl-founder-copy {
+  min-width: 0;
+}
+
+.dcl-founder-copy .dcl-section-title {
+  max-width: 650px;
+}
+
+.dcl-founder-intro {
+  margin: 19px 0 0;
+  color: var(--dcl-muted);
+  font-size: 14px;
+  line-height: 1.95;
+}
+
+.dcl-founder-intro strong {
+  color: var(--dcl-text);
+  font-weight: 850;
+}
+
+.dcl-founder-values {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+  margin-top: 25px;
+}
+
+.dcl-founder-value {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 15px;
+  border: 1px solid var(--dcl-border);
+  border-radius: 14px;
+  background: var(--dcl-page-bg);
+}
+
+.dcl-founder-value-icon {
+  display: grid;
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 10px;
+  color: var(--dcl-accent);
+  background: var(--dcl-accent-soft);
+}
+
+.dcl-founder-value-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.dcl-founder-value strong {
+  display: block;
+  color: var(--dcl-text);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.dcl-founder-value p {
+  margin: 5px 0 0;
+  color: var(--dcl-muted);
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+/* ---------- 12. Skills bars ---------- */
+
+.dcl-skills-block {
+  margin-top: 32px;
+}
+
+.dcl-subsection-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.dcl-subsection-heading h3 {
+  margin: 0;
+  color: var(--dcl-text);
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.dcl-subsection-heading span {
+  color: var(--dcl-muted);
+  font-size: 10px;
+}
+
+.dcl-skill-row {
+  margin-bottom: 17px;
+}
+
+.dcl-skill-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+.dcl-skill-head span:first-child {
+  color: var(--dcl-text);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.dcl-skill-head span:last-child {
+  color: var(--dcl-muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.dcl-skill-track {
+  width: 100%;
+  height: 7px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--dcl-border);
+}
+
+.dcl-skill-fill {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #8a73ff, #5a3ee6, #22c8d8);
+  transition: width 950ms cubic-bezier(.2, .7, .2, 1);
+}
+
+/* ---------- 13. Founder timeline ---------- */
+
+.dcl-timeline {
+  position: relative;
+  display: grid;
+  gap: 19px;
+  margin-top: 35px;
+  padding-left: 3px;
+}
+
+.dcl-timeline::before {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 8px;
+  width: 1px;
+  background: var(--dcl-border);
+  content: "";
+}
+
+.dcl-timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 17px minmax(0, 1fr);
+  gap: 14px;
+}
+
+.dcl-timeline-marker {
+  position: relative;
+  z-index: 1;
+  width: 17px;
+  height: 17px;
+  margin-top: 2px;
+  border: 4px solid var(--dcl-card-bg);
+  border-radius: 50%;
+  background: var(--dcl-accent);
+  box-shadow: 0 0 0 1px rgba(114, 87, 255, .35);
+}
+
+.dcl-timeline-content h4 {
+  margin: 0;
+  color: var(--dcl-text);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.dcl-timeline-content time {
+  display: inline-block;
+  margin-top: 5px;
+  color: var(--dcl-accent);
+  font-size: 10px;
+  font-weight: 850;
+}
+
+.dcl-timeline-content p {
+  margin: 7px 0 0;
+  color: var(--dcl-muted);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+/* ---------- 14. Responsive layouts ---------- */
+
+@media (max-width: 1280px) {
+  .dcl-header-inner {
+    width: min(100% - 32px, 1440px);
+    gap: 12px;
+  }
+
+  .dcl-main-nav {
+    gap: 0;
+  }
+
+  .dcl-nav-link {
+    padding-inline: 9px;
+    font-size: 12px;
+  }
+
+  .dcl-search-wrap {
+    width: 145px;
+  }
+
+  .dcl-download-cv {
+    padding-inline: 11px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .dcl-main-nav {
+    display: none;
+  }
+
+  .dcl-header-actions {
+    margin-left: auto;
+  }
+
+  .dcl-mobile-toggle {
+    display: grid;
+  }
+
+  .dcl-tools-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dcl-mega-wrap {
+    display: none;
+  }
+
+  .dcl-dashboard-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  :root {
+    --dcl-header-height: 68px;
+  }
+
+  .dcl-header-inner {
+    width: calc(100% - 28px);
+    gap: 10px;
+  }
+
+  .dcl-brand-mark {
+    flex-basis: 39px;
+    width: 39px;
+    height: 39px;
+    border-radius: 12px;
+  }
+
+  .dcl-brand-name {
+    font-size: 13px;
+  }
+
+  .dcl-brand-caption {
+    font-size: 9px;
+    letter-spacing: .9px;
+  }
+
+  .dcl-header-actions > .dcl-language-select,
+  .dcl-header-actions > .dcl-search-wrap,
+  .dcl-header-actions > .dcl-download-cv {
+    display: none;
+  }
+
+  .dcl-header-actions {
+    gap: 6px;
+  }
+
+  .dcl-icon-button {
+    width: 37px;
+    height: 37px;
+  }
+
+  .dcl-section-shell {
+    width: calc(100% - 32px);
+  }
+
+  .dcl-dashboard-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dcl-dashboard-actions {
+    width: 100%;
+  }
+
+  .dcl-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px;
+  }
+
+  .dcl-stat-card {
+    padding: 16px;
+  }
+
+  .dcl-stat-head {
+    margin-bottom: 15px;
+  }
+
+  .dcl-stat-value {
+    font-size: 26px;
+  }
+
+  .dcl-panel {
+    padding: 17px;
+  }
+
+  .dcl-history-panel {
+    padding: 0;
+  }
+
+  .dcl-history-panel .dcl-panel-head {
+    padding: 17px;
+  }
+
+  .dcl-history-table th,
+  .dcl-history-table td {
+    padding: 12px 15px;
+  }
+
+  .dcl-history-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 15px 17px;
+  }
+
+  .dcl-founder-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .dcl-founder-visual {
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .dcl-founder-values {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dcl-mega-heading {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 420px) {
+  .dcl-brand-caption {
+    display: none;
+  }
+
+  .dcl-brand-name {
+    max-width: 145px;
+    font-size: 12px;
+  }
+
+  .dcl-tools-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dcl-stat-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dcl-stat-card {
+    padding: 19px;
+  }
+
+  .dcl-founder-card {
+    padding: 23px;
+  }
+
+  .dcl-dashboard-actions .dcl-button {
+    flex: 1;
+  }
+
+  .dcl-panel-head {
+    flex-direction: column;
+  }
+
+  .dcl-period-select {
+    max-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #mega-header *,
+  #dcl-mobile-drawer *,
+  #dashboard *,
+  #founder-youssef *,
+  #dcl-search-panel * {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* ---------- 15. RTL support ---------- */
+
+html[dir="rtl"] .dcl-search-input {
+  padding-right: 12px;
+  padding-left: 36px;
+}
+
+html[dir="rtl"] .dcl-search-symbol {
+  right: auto;
+  left: 11px;
+}
+
+html[dir="rtl"] .dcl-search-result {
+  text-align: right;
+}
+
+html[dir="rtl"] .dcl-history-table {
+  text-align: right;
+}
+
+html[dir="rtl"] .dcl-timeline {
+  padding-right: 3px;
+  padding-left: 0;
+}
+
+html[dir="rtl"] .dcl-timeline::before {
+  right: 8px;
+  left: auto;
+}
+
+html[dir="rtl"] .dcl-timeline-item {
+  grid-template-columns: minmax(0, 1fr) 17px;
+}
+
+html[dir="rtl"] .dcl-timeline-marker {
+  grid-column: 2;
+}
+
+html[dir="rtl"] .dcl-timeline-content {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+html[dir="rtl"] #dcl-mobile-drawer {
+  right: auto;
+  left: 0;
+  border-right: 1px solid var(--dcl-border);
+  border-left: 0;
+  transform: translateX(-105%);
+}
+
+html[dir="rtl"] #dcl-mobile-drawer.dcl-open {
+  transform: translateX(0);
+}
+
+html[dir="rtl"] .dcl-history-table th,
+html[dir="rtl"] .dcl-history-table td {
+  text-align: right;
+}
+
+/* ---------- 16. Animations ---------- */
+
+@keyframes dcl-pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-5px) scale(.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes dcl-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dcl-animate-in {
+  animation: dcl-fade-up 450ms ease both;
+}
+
+/* ---------- 17. Print styles ---------- */
+
+@media print {
+  #mega-header,
+  #dcl-mobile-drawer,
+  #dcl-mobile-backdrop,
+  .dcl-dashboard-actions,
+  .dcl-quick-actions {
+    display: none !important;
+  }
+
+  #dashboard,
+  #founder-youssef {
+    padding: 20px 0;
+    background: #fff !important;
+  }
+
+  .dcl-section-shell {
+    width: 100%;
+  }
+
+  .dcl-panel,
+  .dcl-stat-card,
+  .dcl-founder-card {
+    break-inside: avoid;
+    box-shadow: none;
+  }
+}
+</style>
+
+<script>
+/* ============================================================
+   DUBAI CREATOR LABS — EXPANSION MODULE 1
+   All state is local to this browser through localStorage.
+   No credentials, remote APIs, or third-party libraries.
+   ============================================================ */
+
+(function DCLExpansionModule() {
+  "use strict";
+
+  /* ---------- 01. Avoid duplicate initialization ---------- */
+
+  if (window.__DCL_EXPANSION_MODULE_1__) {
+    return;
+  }
+
+  window.__DCL_EXPANSION_MODULE_1__ = true;
+
+  /* ---------- 02. Configuration ---------- */
+
+  const DCL_CONFIG = Object.freeze({
+    storagePrefix: "dcl_expansion_v1_",
+    brandName: "Dubai Creator Labs",
+    founderName: "Youssef Jalal Sleman",
+    founderLocation: "Kalar, Kurdistan Region, Iraq",
+    paypalUsername: "CONFIGURE_ME",
+    historyLimit: 100,
+    searchLimit: 8
+  });
+
+  /* Payment configuration is intentionally not connected to a processor. */
+  const PAYMENTS = {
+    paypalUsername: "CONFIGURE_ME"
+  };
+
+  window.DCL_PAYMENTS_CONFIG = PAYMENTS;
+
+  /* ---------- 03. Safe local storage helpers ---------- */
+
+  function storageGet(key, fallback) {
+    try {
+      const raw = localStorage.getItem(DCL_CONFIG.storagePrefix + key);
+
+      if (raw === null) {
+        return fallback;
+      }
+
+      return JSON.parse(raw);
+    } catch (error) {
+      console.warn("[DCL] Could not read local setting:", key);
+      return fallback;
+    }
+  }
+
+  function storageSet(key, value) {
+    try {
+      localStorage.setItem(
+        DCL_CONFIG.storagePrefix + key,
+        JSON.stringify(value)
+      );
+
+      return true;
+    } catch (error) {
+      console.warn("[DCL] Could not save local setting:", key);
+      return false;
+    }
+  }
+
+  function storageRemove(key) {
+    try {
+      localStorage.removeItem(DCL_CONFIG.storagePrefix + key);
+      return true;
+    } catch (error) {
+      return false;
+    }
+  }
+
+  /* ---------- 04. HTML escaping ---------- */
+
+  function escapeHTML(value) {
+    return String(value == null ? "" : value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  /* ---------- 05. SVG icon collection ---------- */
+
+  const ICONS = {
+    sparkle:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-2-5.8L4 11l6-2.2L12 3Z"/><path d="m19 14 1.1 2.3L22 17l-1.9.7L19 20l-.8-2.3L16 17l2.2-.7L19 14Z"/></svg>',
+    chevron:
+      '<svg class="dcl-nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>',
+    search:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>',
+    moon:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.6 8.6 0 1 0 20.5 14Z"/></svg>',
+    sun:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>',
+    download:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5"/><path d="M5 17v3h14v-3"/></svg>',
+    menu:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>',
+    close:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>',
+    arrow:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>',
+    chart:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5m0 14h17"/><path d="m7 15 4-4 3 2 5-6"/></svg>',
+    clock:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+    file:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10Z"/><path d="M13 3v7h7M8 14h8m-8 4h8"/></svg>',
+    globe:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>',
+    location:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>',
+    code:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 8-4 4 4 4m8-8 4 4-4 4m-2-11-4 14"/></svg>',
+    book:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v17H6.5A2.5 2.5 0 0 0 4 22Z"/><path d="M4 5.5V22m4-14h8m-8 4h8"/></svg>',
+    users:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 5a3.5 3.5 0 0 1 0 6.8m2 2.3a5.5 5.5 0 0 1 3.5 5.1"/></svg>',
+    shield:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></svg>',
+    sparkles:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="m19 15 1.2 2.8L23 19l-2.8 1.2L19 23l-1.2-2.8L15 19l2.8-1.2L19 15Z"/></svg>'
+  };
+
+  /* ---------- 06. Navigation data ---------- */
+
+  const TOOL_DATA = [
+    {
+      id: "youtube-title-generator",
+      name: "YouTube Title Generator",
+      description: "Explore title ideas for your next video.",
+      icon: "▶",
+      keywords: "youtube title video creator"
+    },
+    {
+      id: "youtube-description-generator",
+      name: "YouTube Description",
+      description: "Organize descriptions and video details.",
+      icon: "▤",
+      keywords: "youtube description seo"
+    },
+    {
+      id: "hashtag-generator",
+      name: "Hashtag Generator",
+      description: "Draft relevant social media hashtags.",
+      icon: "#",
+      keywords: "hashtags social media tags"
+    },
+    {
+      id: "thumbnail-ideas",
+      name: "Thumbnail Ideas",
+      description: "Brainstorm visual concepts and hooks.",
+      icon: "▧",
+      keywords: "thumbnail design image"
+    },
+    {
+      id: "video-script-writer",
+      name: "Video Script Writer",
+      description: "Structure a script from a simple brief.",
+      icon: "✎",
+      keywords: "script writer narration"
+    },
+    {
+      id: "shorts-hook-generator",
+      name: "Shorts Hook Generator",
+      description: "Brainstorm opening lines for short videos.",
+      icon: "⚡",
+      keywords: "shorts reels hook opening"
+    },
+    {
+      id: "channel-name-ideas",
+      name: "Channel Name Ideas",
+      description: "Explore names for a creator channel.",
+      icon: "✧",
+      keywords: "channel name branding"
+    },
+    {
+      id: "content-calendar",
+      name: "Content Calendar",
+      description: "Plan ideas and publishing dates.",
+      icon: "▦",
+      keywords: "calendar schedule planner"
+    },
+    {
+      id: "caption-writer",
+      name: "Caption Writer",
+      description: "Draft captions for social posts.",
+      icon: "☷",
+      keywords: "caption instagram social"
+    },
+    {
+      id: "keyword-brainstormer",
+      name: "Keyword Brainstormer",
+      description: "Collect keywords for a topic.",
+      icon: "⌕",
+      keywords: "keywords search discoverability"
+    },
+    {
+      id: "bio-generator",
+      name: "Creator Bio Generator",
+      description: "Draft a concise creator profile.",
+      icon: "◎",
+      keywords: "bio profile about"
+    },
+    {
+      id: "video-idea-generator",
+      name: "Video Idea Generator",
+      description: "Turn a niche into fresh video concepts.",
+      icon: "✦",
+      keywords: "video ideas brainstorming"
+    }
+  ];
+
+  const NAV_LINKS = [
+    {
+      label: "Pricing",
+      href: "#pricing",
+      keywords: "pricing plans subscription"
+    },
+    {
+      label: "Templates",
+      href: "#templates",
+      keywords: "templates marketplace designs"
+    },
+    {
+      label: "Support",
+      href: "#support",
+      keywords: "support help contact faq"
+    },
+    {
+      label: "Dashboard",
+      href: "#dashboard",
+      keywords: "dashboard activity history"
+    },
+    {
+      label: "Founder",
+      href: "#founder-youssef",
+      keywords: "founder about youssef"
+    }
+  ];
+
+  /* ---------- 07. Shared HTML components ---------- */
+
+  function brandMarkup() {
+    return `
+      <a class="dcl-brand" href="#top" aria-label="Dubai Creator Labs home">
+        <span class="dcl-brand-mark">
+          ${ICONS.sparkles}
+        </span>
+        <span class="dcl-brand-copy">
+          <span class="dcl-brand-name">Dubai Creator Labs</span>
+          <span class="dcl-brand-caption">Creator tools studio</span>
+        </span>
+      </a>
+    `;
+  }
+
+  function toolCardMarkup(tool) {
+    return `
+      <a class="dcl-tool-card"
+         href="#${escapeHTML(tool.id)}"
+         data-dcl-tool="${escapeHTML(tool.id)}"
+         data-dcl-search="${escapeHTML(
+           tool.name + " " + tool.description + " " + tool.keywords
+         )}">
+        <span class="dcl-tool-icon" aria-hidden="true">
+          <span style="font-size:20px;font-weight:900">
+            ${escapeHTML(tool.icon)}
+          </span>
+        </span>
+        <span class="dcl-tool-name">${escapeHTML(tool.name)}</span>
+        <span class="dcl-tool-description">
+          ${escapeHTML(tool.description)}
+        </span>
+      </a>
+    `;
+  }
+
+  function megaMenuMarkup() {
+    return `
+      <div class="dcl-mega-wrap" id="dcl-mega-wrap">
+        <div class="dcl-mega-panel">
+          <div class="dcl-mega-heading">
+            <div>
+              <h3>Explore creator tools</h3>
+              <p>
+                Browse tools for video planning, social media, writing,
+                and creator workflows.
+              </p>
+            </div>
+            <span class="dcl-mega-label">
+              ${ICONS.sparkles}
+              Creator workspace
+            </span>
+          </div>
+
+          <div class="dcl-tools-grid">
+            ${TOOL_DATA.slice(0, 8).map(toolCardMarkup).join("")}
+          </div>
+
+          <div class="dcl-mega-footer">
+            <p>
+              Tool availability depends on the sections already present
+              in your website.
+            </p>
+            <a class="dcl-text-link" href="#dashboard">
+              Open dashboard ${ICONS.arrow}
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  /* ---------- 08. Header markup ---------- */
+
+  function headerMarkup() {
+    return `
+      <div class="dcl-header-inner">
+        ${brandMarkup()}
+
+        <nav class="dcl-main-nav" aria-label="Main navigation">
+          <div class="dcl-nav-item" id="dcl-tools-nav-item">
+            <button class="dcl-nav-link"
+                    id="dcl-tools-trigger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dcl-mega-wrap">
+              AI Tools
+              ${ICONS.chevron}
+            </button>
+            ${megaMenuMarkup()}
+          </div>
+
+          ${NAV_LINKS.slice(0, 3).map(link => `
+            <a class="dcl-nav-link"
+               href="${escapeHTML(link.href)}"
+               data-dcl-search="${escapeHTML(
+                 link.label + " " + link.keywords
+               )}">
+              ${escapeHTML(link.label)}
+            </a>
+          `).join("")}
+        </nav>
+
+        <div class="dcl-header-actions">
+          <label class="dcl-sr-only" for="dcl-language">
+            Select language
+          </label>
+
+          <select class="dcl-language-select"
+                  id="dcl-language"
+                  aria-label="Select language">
+            <option value="en">EN</option>
+            <option value="ku">KU</option>
+            <option value="ar">AR</option>
+          </select>
+
+          <button class="dcl-icon-button"
+                  id="dcl-theme-toggle"
+                  type="button"
+                  aria-label="Switch color theme"
+                  title="Switch color theme">
+            ${ICONS.moon}
+          </button>
+
+          <div class="dcl-search-wrap">
+            <label class="dcl-sr-only" for="dcl-global-search">
+              Search website
+            </label>
+
+            <input class="dcl-search-input"
+                   id="dcl-global-search"
+                   type="search"
+                   placeholder="Search..."
+                   autocomplete="off"
+                   role="combobox"
+                   aria-autocomplete="list"
+                   aria-expanded="false"
+                   aria-controls="dcl-search-panel">
+
+            <span class="dcl-search-symbol">
+              ${ICONS.search}
+            </span>
+
+            <div id="dcl-search-panel"
+                 role="listbox"
+                 aria-label="Search suggestions"></div>
+          </div>
+
+          <a class="dcl-download-cv"
+             href="cv.pdf"
+             download="Youssef-Jalal-Sleman-CV.pdf">
+            ${ICONS.download}
+            <span>Download CV</span>
+          </a>
+
+          <button class="dcl-icon-button dcl-mobile-toggle"
+                  id="dcl-mobile-toggle"
+                  type="button"
+                  aria-label="Open mobile menu"
+                  aria-expanded="false"
+                  aria-controls="dcl-mobile-drawer">
+            ${ICONS.menu}
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
+  /* ---------- 09. Dashboard markup ---------- */
+
+  function dashboardMarkup() {
+    return `
+      <div class="dcl-section-shell">
+        <div class="dcl-dashboard-top">
+          <div>
+            <div class="dcl-section-eyebrow">
+              <span class="dcl-eyebrow-dot"></span>
+              Your workspace
+            </div>
+
+            <h2 class="dcl-section-title">Creator dashboard</h2>
+
+            <p class="dcl-section-description">
+              A private, browser-based overview of your saved activity.
+              This dashboard only counts activity recorded by this module
+              on this device.
+            </p>
+          </div>
+
+          <div class="dcl-dashboard-actions">
+            <button class="dcl-button"
+                    type="button"
+                    id="dcl-export-history">
+              ${ICONS.download}
+              Export history
+            </button>
+
+            <button class="dcl-button dcl-button-primary"
+                    type="button"
+                    id="dcl-refresh-dashboard">
+              ${ICONS.chart}
+              Refresh
+            </button>
+          </div>
+        </div>
+
+        <div class="dcl-local-notice">
+          <span class="dcl-local-notice-icon" aria-hidden="true">
+            ${ICONS.shield}
+          </span>
+          <div>
+            <strong>Local browser data</strong>
+            <p>
+              The statistics below are calculated from this browser's
+              locally saved activity. They are not customer counts,
+              server analytics, or verified business metrics.
+            </p>
+          </div>
+        </div>
+
+        <div class="dcl-stat-grid">
+          <article class="dcl-stat-card">
+            <div class="dcl-stat-head">
+              <span class="dcl-stat-label">Saved activities</span>
+              <span class="dcl-stat-icon">${ICONS.chart}</span>
+            </div>
+            <strong class="dcl-stat-value" id="dcl-stat-total">0</strong>
+            <div class="dcl-stat-foot">
+              Entries stored on this device
+            </div>
+          </article>
+
+          <article class="dcl-stat-card">
+            <div class="dcl-stat-head">
+              <span class="dcl-stat-label">Tools explored</span>
+              <span class="dcl-stat-icon">${ICONS.sparkles}</span>
+            </div>
+            <strong class="dcl-stat-value" id="dcl-stat-tools">0</strong>
+            <div class="dcl-stat-foot">
+              Different tool names in local history
+            </div>
+          </article>
+
+          <article class="dcl-stat-card">
+            <div class="dcl-stat-head">
+              <span class="dcl-stat-label">Activity today</span>
+              <span class="dcl-stat-icon">${ICONS.clock}</span>
+            </div>
+            <strong class="dcl-stat-value" id="dcl-stat-today">0</strong>
+            <div class="dcl-stat-foot">
+              Based on this device's local date
+            </div>
+          </article>
+
+          <article class="dcl-stat-card">
+            <div class="dcl-stat-head">
+              <span class="dcl-stat-label">Storage status</span>
+              <span class="dcl-stat-icon">${ICONS.shield}</span>
+            </div>
+            <strong class="dcl-stat-value" id="dcl-stat-storage">Local</strong>
+            <div class="dcl-stat-foot">
+              Browser storage only; no account sync
+            </div>
+          </article>
+        </div>
+
+        <div class="dcl-dashboard-grid">
+          <section class="dcl-panel" aria-labelledby="dcl-chart-heading">
+            <div class="dcl-panel-head">
+              <div>
+                <h3 id="dcl-chart-heading">Activity overview</h3>
+                <p>Recorded local activities by day.</p>
+              </div>
+
+              <select class="dcl-period-select"
+                      id="dcl-chart-period"
+                      aria-label="Activity chart period">
+                <option value="7">Last 7 days</option>
+                <option value="14">Last 14 days</option>
+                <option value="30">Last 30 days</option>
+              </select>
+            </div>
+
+            <div class="dcl-chart-wrap">
+              <canvas id="dcl-activity-chart"
+                      role="img"
+                      aria-label="Chart of locally recorded activities">
+                Your browser does not support the canvas element.
+              </canvas>
+            </div>
+
+            <div class="dcl-chart-legend">
+              <span class="dcl-chart-legend-item">
+                <span class="dcl-legend-dot"></span>
+                Saved activities
+              </span>
+            </div>
+
+            <p class="dcl-chart-footnote">
+              This chart is drawn using the built-in canvas API.
+              It does not use Chart.js or send information to a server.
+            </p>
+          </section>
+
+          <section class="dcl-panel" aria-labelledby="dcl-quick-heading">
+            <div class="dcl-panel-head">
+              <div>
+                <h3 id="dcl-quick-heading">Quick navigation</h3>
+                <p>Jump to common areas of the website.</p>
+              </div>
+            </div>
+
+            <div class="dcl-quick-actions">
+              <a class="dcl-quick-action" href="#youtube-title-generator">
+                <span class="dcl-quick-icon">▶</span>
+                <span class="dcl-quick-copy">
+                  <strong>Title generator</strong>
+                  <span>Find the title tool on your page.</span>
+                </span>
+                <span class="dcl-quick-arrow">›</span>
+              </a>
+
+              <a class="dcl-quick-action" href="#templates">
+                <span class="dcl-quick-icon">▦</span>
+                <span class="dcl-quick-copy">
+                  <strong>Templates</strong>
+                  <span>Explore your templates section.</span>
+                </span>
+                <span class="dcl-quick-arrow">›</span>
+              </a>
+
+              <a class="dcl-quick-action" href="#pricing">
+                <span class="dcl-quick-icon">◇</span>
+                <span class="dcl-quick-copy">
+                  <strong>Pricing</strong>
+                  <span>Review available plans.</span>
+                </span>
+                <span class="dcl-quick-arrow">›</span>
+              </a>
+
+              <a class="dcl-quick-action" href="#founder-youssef">
+                <span class="dcl-quick-icon">◎</span>
+                <span class="dcl-quick-copy">
+                  <strong>About the founder</strong>
+                  <span>Read the founder profile.</span>
+                </span>
+                <span class="dcl-quick-arrow">›</span>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <section class="dcl-panel dcl-history-panel"
+                 aria-labelledby="dcl-history-heading">
+          <div class="dcl-panel-head">
+            <div>
+              <h3 id="dcl-history-heading">Recent activity</h3>
+              <p>Entries saved locally by this expansion module.</p>
+            </div>
+
+            <button class="dcl-button"
+                    type="button"
+                    id="dcl-clear-history">
+              Clear history
+            </button>
+          </div>
+
+          <div class="dcl-table-scroll">
+            <table class="dcl-history-table">
+              <thead>
+                <tr>
+                  <th scope="col">Activity</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Time</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+
+              <tbody id="dcl-history-body">
+                <tr>
+                  <td colspan="4" class="dcl-history-empty">
+                    No activity has been recorded yet.
+                    Use the navigation to explore your website.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="dcl-history-footer">
+            <p id="dcl-history-count">0 locally saved entries</p>
+            <p>Stored on this device only.</p>
+          </div>
+        </section>
+      </div>
+    `;
+  }
+
+  /* ---------- 10. Founder section markup ---------- */
+
+  function founderMarkup() {
+    const skills = [
+      { label: "HTML and semantic structure", value: 78 },
+      { label: "CSS and responsive design", value: 74 },
+      { label: "JavaScript fundamentals", value: 62 },
+      { label: "AI tools and prompt design", value: 80 },
+      { label: "Creative problem solving", value: 84 }
+    ];
+
+    const timeline = [
+      {
+        date: "Learning journey",
+        title: "Building digital skills",
+        text: "Learning web development, interface design, and practical uses of AI."
+      },
+      {
+        date: "Project development",
+        title: "Creating Dubai Creator Labs",
+        text: "Working on creator-focused utilities and a more accessible web experience."
+      },
+      {
+        date: "Next steps",
+        title: "Improving through practice",
+        text: "Continuing to learn, test ideas, and improve the project through feedback."
+      }
+    ];
+
+    return `
+      <div class="dcl-section-shell">
+        <div class="dcl-founder-grid">
+          <div class="dcl-founder-visual">
+            <article class="dcl-founder-card">
+              <div class="dcl-founder-avatar"
+                   aria-label="Initials YS">YS</div>
+
+              <h3>Youssef Jalal Sleman</h3>
+
+              <p class="dcl-founder-role">
+                Young Developer · Creator of Dubai Creator Labs
+              </p>
+
+              <div class="dcl-founder-location">
+                ${ICONS.location}
+                <span>Kalar, Kurdistan Region, Iraq</span>
+              </div>
+
+              <p class="dcl-founder-card-description">
+                A young learner exploring web development, artificial
+                intelligence tools, digital creativity, and ways to
+                make online creator workflows easier.
+              </p>
+
+              <div class="dcl-founder-card-badges">
+                <span class="dcl-founder-badge">
+                  <span>✦</span> Learning by building
+                </span>
+                <span class="dcl-founder-badge">
+                  <span>⌘</span> Web development
+                </span>
+                <span class="dcl-founder-badge">
+                  <span>◇</span> AI exploration
+                </span>
+              </div>
+            </article>
+          </div>
+
+          <div class="dcl-founder-copy">
+            <div class="dcl-section-eyebrow">
+              <span class="dcl-eyebrow-dot"></span>
+              Meet the founder
+            </div>
+
+            <h2 class="dcl-section-title">
+              A young creator with a passion for technology
+            </h2>
+
+            <p class="dcl-founder-intro">
+              Hello, I'm <strong>Youssef Jalal Sleman</strong>, a
+              <strong>14-year-old</strong> young developer from
+              <strong>Kalar, Kurdistan Region, Iraq</strong>.
+              I'm learning how to build useful websites and explore
+              creative applications of artificial intelligence.
+            </p>
+
+            <p class="dcl-founder-intro">
+              Dubai Creator Labs is a project for experimenting with
+              creator-focused tools, practical web interfaces, and
+              accessible digital workflows. My goal is to keep learning,
+              improve the experience, and build useful things step by step.
+            </p>
+
+            <div class="dcl-founder-values">
+              <article class="dcl-founder-value">
+                <span class="dcl-founder-value-icon">
+                  ${ICONS.code}
+                </span>
+                <div>
+                  <strong>Build and learn</strong>
+                  <p>Practice coding by developing real interface features.</p>
+                </div>
+              </article>
+
+              <article class="dcl-founder-value">
+                <span class="dcl-founder-value-icon">
+                  ${ICONS.sparkles}
+                </span>
+                <div>
+                  <strong>Explore AI</strong>
+                  <p>Experiment with creative tools and responsible workflows.</p>
+                </div>
+              </article>
+
+              <article class="dcl-founder-value">
+                <span class="dcl-founder-value-icon">
+                  ${ICONS.users}
+                </span>
+                <div>
+                  <strong>Improve usability</strong>
+                  <p>Make interfaces clearer, responsive, and easier to navigate.</p>
+                </div>
+              </article>
+
+              <article class="dcl-founder-value">
+                <span class="dcl-founder-value-icon">
+                  ${ICONS.book}
+                </span>
+                <div>
+                  <strong>Keep learning</strong>
+                  <p>Build skills through study, practice, and iteration.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="dcl-skills-block">
+              <div class="dcl-subsection-heading">
+                <h3>Skills and learning areas</h3>
+                <span>Illustrative self-assessment</span>
+              </div>
+
+              <div id="dcl-founder-skills">
+                ${skills.map(skill => `
+                  <div class="dcl-skill-row">
+                    <div class="dcl-skill-head">
+                      <span>${escapeHTML(skill.label)}</span>
+                      <span>${skill.value}%</span>
+                    </div>
+                    <div class="dcl-skill-track"
+                         role="progressbar"
+                         aria-label="${escapeHTML(skill.label)}"
+                         aria-valuemin="0"
+                         aria-valuemax="100"
+                         aria-valuenow="${skill.value}">
+                      <div class="dcl-skill-fill"
+                           data-dcl-skill-width="${skill.value}%"></div>
+                    </div>
+                  </div>
+                `).join("")}
+              </div>
+            </div>
+
+            <div class="dcl-timeline-block">
+              <div class="dcl-subsection-heading">
+                <h3>My journey</h3>
+                <span>Learning milestones</span>
+              </div>
+
+              <div class="dcl-timeline">
+                ${timeline.map(item => `
+                  <article class="dcl-timeline-item">
+                    <span class="dcl-timeline-marker"></span>
+                    <div class="dcl-timeline-content">
+                      <h4>${escapeHTML(item.title)}</h4>
+                      <time>${escapeHTML(item.date)}</time>
+                      <p>${escapeHTML(item.text)}</p>
+                    </div>
+                  </article>
+                `).join("")}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  /* ---------- 11. Screen-reader utility ---------- */
+
+  function addAccessibilityCSS() {
+    if (document.getElementById("dcl-accessibility-css")) {
+      return;
+    }
+
+    const style = document.createElement("style");
+    style.id = "dcl-accessibility-css";
+    style.textContent = `
+      .dcl-sr-only {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0, 0, 0, 0) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+      }
+    `;
+
+    document.head.appendChild(style);
+  }
+
+  /* ---------- 12. Insert header safely ---------- */
+
+  function mountHeader() {
+    if (document.getElementById("mega-header")) {
+      return document.getElementById("mega-header");
+    }
+
+    const header = document.createElement("header");
+    header.id = "mega-header";
+    header.innerHTML = headerMarkup();
+
+    const body = document.body;
+    const firstChild = body.firstElementChild;
+
+    if (firstChild) {
+      body.insertBefore(header, firstChild);
+    } else {
+      body.appendChild(header);
+    }
+
+    return header;
+  }
+
+  /* ---------- 13. Insert sections safely ---------- */
+
+  function mountSection(id, markup, insertAfterId) {
+    const existing = document.getElementById(id);
+
+    if (existing) {
+      return existing;
+    }
+
+    const section = document.createElement("section");
+    section.id = id;
+    section.innerHTML = markup;
+
+    const target = insertAfterId
+      ? document.getElementById(insertAfterId)
+      : null;
+
+    if (target && target.parentNode) {
+      target.insertAdjacentElement("afterend", section);
+    } else {
+      document.body.appendChild(section);
+    }
+
+    return section;
+  }
+
+  function mountSections() {
+    mountSection("dashboard", dashboardMarkup(), null);
+    mountSection("founder-youssef", founderMarkup(), "dashboard");
+  }
+
+  /* ---------- 14. Drawer markup ---------- */
+
+  function mountMobileDrawer() {
+    if (
+      document.getElementById("dcl-mobile-drawer") &&
+      document.getElementById("dcl-mobile-backdrop")
+    ) {
+      return;
+    }
+
+    const backdrop = document.createElement("div");
+    backdrop.id = "dcl-mobile-backdrop";
+    backdrop.setAttribute("aria-hidden", "true");
+
+    const drawer = document.createElement("aside");
+    drawer.id = "dcl-mobile-drawer";
+    drawer.setAttribute("aria-label", "Mobile navigation");
+    drawer.setAttribute("aria-hidden", "true");
+
+    drawer.innerHTML = `
+      <div class="dcl-drawer-head">
+        ${brandMarkup()}
+        <button class="dcl-drawer-close"
+                id="dcl-drawer-close"
+                type="button"
+                aria-label="Close mobile menu">
+          ${ICONS.close}
+        </button>
+      </div>
+
+      <nav class="dcl-drawer-nav" aria-label="Mobile links">
+        <button class="dcl-drawer-link"
+                type="button"
+                data-dcl-drawer-target="dcl-drawer-tools">
+          <span>AI Tools</span><span aria-hidden="true">⌄</span>
+        </button>
+
+        ${NAV_LINKS.map(link => `
+          <a class="dcl-drawer-link"
+             href="${escapeHTML(link.href)}">
+            <span>${escapeHTML(link.label)}</span>
+            <span aria-hidden="true">›</span>
+          </a>
+        `).join("")}
+      </nav>
+
+      <div id="dcl-drawer-tools" class="dcl-drawer-tools">
+        ${TOOL_DATA.slice(0, 8).map(tool => `
+          <a class="dcl-drawer-tool"
+             href="#${escapeHTML(tool.id)}">
+            <span aria-hidden="true">${escapeHTML(tool.icon)}</span>
+            <span>${escapeHTML(tool.name)}</span>
+          </a>
+        `).join("")}
+      </div>
+
+      <div class="dcl-drawer-actions">
+        <label for="dcl-mobile-language"
+               class="dcl-sr-only">Language</label>
+
+        <select class="dcl-language-select"
+                id="dcl-mobile-language"
+                aria-label="Select language">
+          <option value="en">English</option>
+          <option value="ku">Kurdish</option>
+          <option value="ar">Arabic</option>
+        </select>
+
+        <a class="dcl-download-cv"
+           href="cv.pdf"
+           download="Youssef-Jalal-Sleman-CV.pdf">
+          ${ICONS.download}
+          Download CV
+        </a>
+      </div>
+
+      <p class="dcl-drawer-note">
+        Language selection and theme preferences are saved in this
+        browser. This menu does not create an account or sync data.
+      </p>
+    `;
+
+    document.body.appendChild(backdrop);
+    document.body.appendChild(drawer);
+  }
+
+  /* ---------- 15. Mega menu interaction ---------- */
+
+  function initMegaMenu() {
+    const navItem = document.getElementById("dcl-tools-nav-item");
+    const trigger = document.getElementById("dcl-tools-trigger");
+
+    if (!navItem || !trigger) {
+      return;
+    }
+
+    function setOpen(open) {
+      navItem.classList.toggle("dcl-open", open);
+      trigger.setAttribute("aria-expanded", String(open));
+    }
+
+    trigger.addEventListener("click", function(event) {
+      event.preventDefault();
+
+      const isOpen = navItem.classList.contains("dcl-open");
+      setOpen(!isOpen);
+    });
+
+    document.addEventListener("click", function(event) {
+      if (!navItem.contains(event.target)) {
+        setOpen(false);
+      }
+    });
+
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape") {
+        setOpen(false);
+        trigger.focus();
+      }
+    });
+
+    navItem.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", function() {
+        setOpen(false);
+      });
+    });
+
+    navItem.addEventListener("mouseenter", function() {
+      if (window.matchMedia("(hover: hover)").matches) {
+        setOpen(true);
+      }
+    });
+
+    navItem.addEventListener("mouseleave", function() {
+      if (window.matchMedia("(hover: hover)").matches) {
+        setOpen(false);
+      }
+    });
+  }
+
+  /* ---------- 16. Mobile drawer interaction ---------- */
+
+  function initMobileDrawer() {
+    const drawer = document.getElementById("dcl-mobile-drawer");
+    const backdrop = document.getElementById("dcl-mobile-backdrop");
+    const openButton = document.getElementById("dcl-mobile-toggle");
+    const closeButton = document.getElementById("dcl-drawer-close");
+
+    if (!drawer || !backdrop || !openButton || !closeButton) {
+      return;
+    }
+
+    let lastFocusedElement = null;
+
+    function openDrawer() {
+      lastFocusedElement = document.activeElement;
+
+      drawer.classList.add("dcl-open");
+      backdrop.classList.add("dcl-open");
+
+      drawer.setAttribute("aria-hidden", "false");
+      openButton.setAttribute("aria-expanded", "true");
+      backdrop.setAttribute("aria-hidden", "false");
+
+      document.body.style.overflow = "hidden";
+      closeButton.focus();
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove("dcl-open");
+      backdrop.classList.remove("dcl-open");
+
+      drawer.setAttribute("aria-hidden", "true");
+      openButton.setAttribute("aria-expanded", "false");
+      backdrop.setAttribute("aria-hidden", "true");
+
+      document.body.style.overflow = "";
+
+      if (lastFocusedElement && lastFocusedElement.focus) {
+        lastFocusedElement.focus();
+      } else {
+        openButton.focus();
+      }
+    }
+
+    openButton.addEventListener("click", openDrawer);
+    closeButton.addEventListener("click", closeDrawer);
+    backdrop.addEventListener("click", closeDrawer);
+
+    drawer.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", closeDrawer);
+    });
+
+    drawer.querySelectorAll("[data-dcl-drawer-target]").forEach(button => {
+      button.addEventListener("click", function() {
+        const targetId = button.getAttribute("data-dcl-drawer-target");
+        const target = document.getElementById(targetId);
+
+        if (!target) {
+          return;
+        }
+
+        const isHidden = target.hidden;
+        target.hidden = !isHidden;
+        button.setAttribute("aria-expanded", String(isHidden));
+      });
+    });
+
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape" && drawer.classList.contains("dcl-open")) {
+        closeDrawer();
+      }
+
+      if (event.key === "Tab" && drawer.classList.contains("dcl-open")) {
+        const focusable = Array.from(
+          drawer.querySelectorAll(
+            'a[href], button:not([disabled]), select, input'
+          )
+        ).filter(element => element.offsetParent !== null);
+
+        if (!focusable.length) {
+          return;
+        }
+
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (
+          !event.shiftKey &&
+          document.activeElement === last
+        ) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+    });
+
+    window.addEventListener("resize", function() {
+      if (window.innerWidth > 1080 && drawer.classList.contains("dcl-open")) {
+        closeDrawer();
+      }
+    });
+  }
+
+  /* ---------- 17. Sticky header behavior ---------- */
+
+  function initStickyHeader() {
+    const header = document.getElementById("mega-header");
+
+    if (!header) {
+      return;
+    }
+
+    let ticking = false;
+
+    function updateHeader() {
+      header.classList.toggle("dcl-scrolled", window.scrollY > 8);
+      ticking = false;
+    }
+
+    window.addEventListener("scroll", function() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    }, { passive: true });
+
+    updateHeader();
+  }
+
+  /* ---------- 18. Theme switcher ---------- */
+
+  function getPreferredTheme() {
+    const saved = storageGet("theme", null);
+
+    if (saved === "light" || saved === "dark") {
+      return saved;
+    }
+
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      return "dark";
+    }
+
+    return "light";
+  }
+
+  function applyTheme(theme) {
+    const normalized = theme === "dark" ? "dark" : "light";
+
+    document.documentElement.setAttribute(
+      "data-dcl-theme",
+      normalized
+    );
+
+    const button = document.getElementById("dcl-theme-toggle");
+
+    if (button) {
+      button.innerHTML = normalized === "dark" ? ICONS.sun : ICONS.moon;
+
+      button.setAttribute(
+        "aria-label",
+        normalized === "dark"
+          ? "Switch to light theme"
+          : "Switch to dark theme"
+      );
+
+      button.title = normalized === "dark"
+        ? "Switch to light theme"
+        : "Switch to dark theme";
+    }
+
+    storageSet("theme", normalized);
+
+    window.dispatchEvent(new CustomEvent("dcl:themechange", {
+      detail: { theme: normalized }
+    }));
+  }
+
+  function initThemeSwitcher() {
+    applyTheme(getPreferredTheme());
+
+    const button = document.getElementById("dcl-theme-toggle");
+
+    if (!button) {
+      return;
+    }
+
+    button.addEventListener("click", function() {
+      const current = document.documentElement.getAttribute(
+        "data-dcl-theme"
+      );
+
+      applyTheme(current === "dark" ? "light" : "dark");
+    });
+  }
+
+  /* ---------- 19. Language preferences ---------- */
+
+  const LANGUAGE_SETTINGS = {
+    en: {
+      dir: "ltr",
+      name: "English"
+    },
+    ku: {
+      dir: "rtl",
+      name: "Kurdish"
+    },
+    ar: {
+      dir: "rtl",
+      name: "Arabic"
+    }
+  };
+
+  function applyLanguage(language) {
+    const selected = LANGUAGE_SETTINGS[language]
+      ? language
+      : "en";
+
+    document.documentElement.setAttribute(
+      "lang",
+      selected === "ku" ? "ckb" : selected
+    );
+
+    document.documentElement.setAttribute(
+      "dir",
+      LANGUAGE_SETTINGS[selected].dir
+    );
+
+    document.querySelectorAll(
+      "#dcl-language, #dcl-mobile-language"
+    ).forEach(select => {
+      select.value = selected;
+    });
+
+    storageSet("language", selected);
+
+    window.dispatchEvent(new CustomEvent("dcl:languagechange", {
+      detail: {
+        language: selected,
+        direction: LANGUAGE_SETTINGS[selected].dir
+      }
+    }));
+  }
+
+  function initLanguageSwitcher() {
+    const initialLanguage = storageGet("language", "en");
+    applyLanguage(initialLanguage);
+
+    document.querySelectorAll(
+      "#dcl-language, #dcl-mobile-language"
+    ).forEach(select => {
+      select.addEventListener("change", function() {
+        applyLanguage(select.value);
+      });
+    });
+  }
+
+  /* ---------- 20. Global search index ---------- */
+
+  function getSearchIndex() {
+    const items = [];
+
+    TOOL_DATA.forEach(tool => {
+      items.push({
+        title: tool.name,
+        description: tool.description,
+        href: "#" + tool.id,
+        icon: tool.icon,
+        keywords: tool.keywords + " " + tool.name
+      });
+    });
+
+    NAV_LINKS.forEach(link => {
+      items.push({
+        title: link.label,
+        description: "Navigate to " + link.label,
+        href: link.href,
+        icon: "↗",
+        keywords: link.keywords + " " + link.label
+      });
+    });
+
+    items.push({
+      title: "Creator dashboard",
+      description: "View activity recorded in this browser.",
+      href: "#dashboard",
+      icon: "▦",
+      keywords: "dashboard statistics activity history chart"
+    });
+
+    items.push({
+      title: "Youssef Jalal Sleman",
+      description: "Read the founder profile.",
+      href: "#founder-youssef",
+      icon: "YS",
+      keywords: "founder about biography youssef kalar"
+    });
+
+    return items;
+  }
+
+  function searchMarkup(results, query) {
+    if (!query.trim()) {
+      return `
+        <div class="dcl-search-panel-title">Quick suggestions</div>
+        ${results.slice(0, 5).map(searchResultMarkup).join("")}
+      `;
+    }
+
+    if (!results.length) {
+      return `
+        <div class="dcl-search-empty">
+          No matching results for
+          <strong>${escapeHTML(query)}</strong>.
+          Try a different keyword.
+        </div>
+      `;
+    }
+
+    return `
+      <div class="dcl-search-panel-title">
+        Search results (${results.length})
+      </div>
+      ${results.map(searchResultMarkup).join("")}
+    `;
+  }
+
+  function searchResultMarkup(item, index) {
+    return `
+      <button class="dcl-search-result"
+              type="button"
+              role="option"
+              aria-selected="false"
+              data-dcl-result-index="${index}"
+              data-dcl-result-href="${escapeHTML(item.href)}">
+        <span class="dcl-search-result-icon" aria-hidden="true">
+          ${escapeHTML(item.icon)}
+        </span>
+
+        <span class="dcl-search-result-copy">
+          <strong>${escapeHTML(item.title)}</strong>
+          <span>${escapeHTML(item.description)}</span>
+        </span>
+      </button>
+    `;
+  }
+
+  function normalizeSearchText(value) {
+    return String(value || "")
+      .toLocaleLowerCase()
+      .normalize("NFKD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .trim();
+  }
+
+  function performSearch(query) {
+    const normalizedQuery = normalizeSearchText(query);
+    const index = getSearchIndex();
+
+    if (!normalizedQuery) {
+      return index.slice(0, 5);
+    }
+
+    const terms = normalizedQuery.split(/\s+/).filter(Boolean);
+
+    return index
+      .map(item => {
+        const title = normalizeSearchText(item.title);
+        const description = normalizeSearchText(item.description);
+        const keywords = normalizeSearchText(item.keywords);
+
+        let score = 0;
+
+        terms.forEach(term => {
+          if (title === term) {
+            score += 10;
+          } else if (title.startsWith(term)) {
+            score += 6;
+          } else if (title.includes(term)) {
+            score += 4;
+          }
+
+          if (keywords.includes(term)) {
+            score += 3;
+          }
+
+          if (description.includes(term)) {
+            score += 1;
+          }
+        });
+
+        return { item, score };
+      })
+      .filter(result => result.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, DCL_CONFIG.searchLimit)
+      .map(result => result.item);
+  }
+
+  function initSearch() {
+    const input = document.getElementById("dcl-global-search");
+    const panel = document.getElementById("dcl-search-panel");
+
+    if (!input || !panel) {
+      return;
+    }
+
+    let activeIndex = -1;
+    let currentResults = [];
+
+    function render() {
+      const query = input.value;
+      currentResults = performSearch(query);
+      activeIndex = -1;
+
+      panel.innerHTML = searchMarkup(currentResults, query);
+      panel.classList.add("dcl-visible");
+
+      input.setAttribute("aria-expanded", "true");
+    }
+
+    function hide() {
+      panel.classList.remove("dcl-visible");
+      input.setAttribute("aria-expanded", "false");
+      input.removeAttribute("aria-activedescendant");
+      activeIndex = -1;
+    }
+
+    function selectResult(index) {
+      const result = currentResults[index];
+
+      if (!result) {
+        return;
+      }
+
+      hide();
+      input.blur();
+
+      const destination = document.querySelector(result.href);
+
+      if (destination) {
+        destination.scrollIntoView({
+          behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+            ? "auto"
+            : "smooth",
+          block: "start"
+        });
+
+        if (result.href.charAt(0) === "#") {
+          try {
+            history.replaceState(null, "", result.href);
+          } catch (error) {
+            /* Browsers may restrict history changes in some contexts. */
+          }
+        }
+
+        recordActivity(result.title);
+      } else {
+        window.location.hash = result.href.replace(/^#/, "");
+      }
+    }
+
+    input.addEventListener("focus", render);
+    input.addEventListener("input", render);
+
+    input.addEventListener("keydown", function(event) {
+      if (!panel.classList.contains("dcl-visible")) {
+        if (event.key === "ArrowDown") {
+          render();
+        } else {
+          return;
+        }
+      }
+
+      const buttons = Array.from(
+        panel.querySelectorAll(".dcl-search-result")
+      );
+
+      if (event.key === "ArrowDown") {
+        event.preventDefault();
+
+        if (!buttons.length) {
+          return;
+        }
+
+        activeIndex = (activeIndex + 1) % buttons.length;
+      } else if (event.key === "ArrowUp") {
+        event.preventDefault();
+
+        if (!buttons.length) {
+          return;
+        }
+
+        activeIndex = activeIndex <= 0
+          ? buttons.length - 1
+          : activeIndex - 1;
+      } else if (event.key === "Enter") {
+        if (activeIndex >= 0) {
+          event.preventDefault();
+          selectResult(activeIndex);
+        } else if (currentResults.length === 1) {
+          event.preventDefault();
+          selectResult(0);
+        }
+
+        return;
+      } else if (event.key === "Escape") {
+        hide();
+        input.blur();
+        return;
+      } else {
+        return;
+      }
+
+      buttons.forEach((button, index) => {
+        const selected = index === activeIndex;
+
+        button.setAttribute("aria-selected", String(selected));
+
+        if (selected) {
+          input.setAttribute(
+            "aria-activedescendant",
+            "dcl-search-option-" + index
+          );
+
+          button.scrollIntoView({ block: "nearest" });
+        }
+      });
+    });
+
+    panel.addEventListener("click", function(event) {
+      const button = event.target.closest("[data-dcl-result-index]");
+
+      if (!button) {
+        return;
+      }
+
+      const index = Number(button.getAttribute("data-dcl-result-index"));
+      selectResult(index);
+    });
+
+    document.addEventListener("click", function(event) {
+      if (
+        !panel.contains(event.target) &&
+        event.target !== input
+      ) {
+        hide();
+      }
+    });
+
+    input.addEventListener("search", function() {
+      if (!input.value) {
+        render();
+      }
+    });
+  }
+
+  /* ---------- 21. Local activity history ---------- */
+
+  function getHistory() {
+    const history = storageGet("history", []);
+
+    if (!Array.isArray(history)) {
+      return [];
+    }
+
+    return history
+      .filter(item =>
+        item &&
+        typeof item.name === "string" &&
+        typeof item.timestamp === "string"
+      )
+      .slice(0, DCL_CONFIG.historyLimit);
+  }
+
+  function saveHistory(history) {
+    return storageSet(
+      "history",
+      history.slice(0, DCL_CONFIG.historyLimit)
+    );
+  }
+
+  function recordActivity(name) {
+    const cleanName = String(name || "").trim().slice(0, 120);
+
+    if (!cleanName) {
+      return;
+    }
+
+    const history = getHistory();
+
+    history.unshift({
+      name: cleanName,
+      timestamp: new Date().toISOString(),
+      source: "dcl-expansion"
+    });
+
+    saveHistory(history);
+    renderDashboard();
+  }
+
+  window.DCL_recordActivity = recordActivity;
+
+  /* ---------- 22. Date and time formatting ---------- */
+
+  function safeDate(timestamp) {
+    const date = new Date(timestamp);
+
+    return Number.isNaN(date.getTime()) ? null : date;
+  }
+
+  function formatDate(timestamp) {
+    const date = safeDate(timestamp);
+
+    if (!date) {
+      return "Unknown";
+    }
+
+    try {
+      return new Intl.DateTimeFormat(undefined, {
+        year: "numeric",
+        month: "short",
+        day: "numeric"
+      }).format(date);
+    } catch (error) {
+      return date.toLocaleDateString();
+    }
+  }
+
+  function formatTime(timestamp) {
+    const date = safeDate(timestamp);
+
+    if (!date) {
+      return "—";
+    }
+
+    try {
+      return new Intl.DateTimeFormat(undefined, {
+        hour: "2-digit",
+        minute: "2-digit"
+      }).format(date);
+    } catch (error) {
+      return date.toLocaleTimeString();
+    }
+  }
+
+  function isSameLocalDay(dateA, dateB) {
+    return dateA.getFullYear() === dateB.getFullYear() &&
+      dateA.getMonth() === dateB.getMonth() &&
+      dateA.getDate() === dateB.getDate();
+  }
+
+  /* ---------- 23. Dashboard statistic rendering ---------- */
+
+  function setText(id, value) {
+    const element = document.getElementById(id);
+
+    if (element) {
+      element.textContent = String(value);
+    }
+  }
+
+  function renderStats(history) {
+    const today = new Date();
+
+    const todayCount = history.filter(item => {
+      const date = safeDate(item.timestamp);
+      return date && isSameLocalDay(date, today);
+    }).length;
+
+    const uniqueTools = new Set(
+      history.map(item => item.name.toLocaleLowerCase())
+    ).size;
+
+    setText("dcl-stat-total", history.length);
+    setText("dcl-stat-tools", uniqueTools);
+    setText("dcl-stat-today", todayCount);
+    setText("dcl-stat-storage", "Local");
+    setText(
+      "dcl-history-count",
+      history.length + (history.length === 1
+        ? " locally saved entry"
+        : " locally saved entries")
+    );
+  }
+
+  /* ---------- 24. History table rendering ---------- */
+
+  function renderHistoryTable(history) {
+    const tbody = document.getElementById("dcl-history-body");
+
+    if (!tbody) {
+      return;
+    }
+
+    if (!history.length) {
+      tbody.innerHTML = `
+        <tr>
+          <td colspan="4" class="dcl-history-empty">
+            No activity has been recorded yet.
+            Use the navigation to explore your website.
+          </td>
+        </tr>
+      `;
+
+      return;
+    }
+
+    tbody.innerHTML = history.slice(0, 12).map(item => `
+      <tr>
+        <td>
+          <span class="dcl-history-tool">
+            <span class="dcl-history-tool-icon">✦</span>
+            <span>${escapeHTML(item.name)}</span>
+          </span>
+        </td>
+
+        <td>${escapeHTML(formatDate(item.timestamp))}</td>
+        <td>${escapeHTML(formatTime(item.timestamp))}</td>
+        <td><span class="dcl-status-badge">Saved locally</span></td>
+      </tr>
+    `).join("");
+  }
+
+  /* ---------- 25. Canvas chart helpers ---------- */
+
+  function chartColor(variableName, fallback) {
+    return getComputedStyle(document.documentElement)
+      .getPropertyValue(variableName)
+      .trim() || fallback;
+  }
+
+  function roundedRect(ctx, x, y, width, height, radius) {
+    const r = Math.max(0, Math.min(radius, width / 2, height / 2));
+
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + width, y, x + width, y + height, r);
+    ctx.arcTo(x + width, y + height, x, y + height, r);
+    ctx.arcTo(x, y + height, x, y, r);
+    ctx.arcTo(x, y, x + width, y, r);
+    ctx.closePath();
+  }
+
+  function getDailyCounts(history, days) {
+    const counts = [];
+    const now = new Date();
+
+    for (let offset = days - 1; offset >= 0; offset--) {
+      const date = new Date(now);
+      date.setHours(0, 0, 0, 0);
+      date.setDate(date.getDate() - offset);
+
+      const count = history.filter(item => {
+        const itemDate = safeDate(item.timestamp);
+        return itemDate && isSameLocalDay(itemDate, date);
+      }).length;
+
+      counts.push({
+        date,
+        count
+      });
+    }
+
+    return counts;
+  }
+
+  function drawActivityChart(history) {
+    const canvas = document.getElementById("dcl-activity-chart");
+
+    if (!canvas) {
+      return;
+    }
+
+    const context = canvas.getContext("2d");
+
+    if (!context) {
+      return;
+    }
+
+    const select = document.getElementById("dcl-chart-period");
+    const days = select ? Number(select.value) || 7 : 7;
+    const data = getDailyCounts(history, days);
+
+    const cssWidth = Math.max(
+      260,
+      Math.floor(canvas.getBoundingClientRect().width || 600)
+    );
+
+    const cssHeight = 240;
+    const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+
+    canvas.width = Math.floor(cssWidth * pixelRatio);
+    canvas.height = Math.floor(cssHeight * pixelRatio);
+    canvas.style.width = cssWidth + "px";
+    canvas.style.height = cssHeight + "px";
+
+    context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+    context.clearRect(0, 0, cssWidth, cssHeight);
+
+    const textColor = chartColor("--dcl-muted", "#737991");
+    const gridColor = chartColor(
+      "--dcl-chart-grid",
+      "rgba(114, 87, 255, .10)"
+    );
+    const lineColor = chartColor("--dcl-chart-line", "#7257ff");
+    const fillColor = chartColor(
+      "--dcl-chart-fill",
+      "rgba(114, 87, 255, .12)"
+    );
+
+    const left = 35;
+    const right = 12;
+    const top = 15;
+    const bottom = 35;
+
+    const chartWidth = cssWidth - left - right;
+    const chartHeight = cssHeight - top - bottom;
+
+    const maxValue = Math.max(
+      4,
+      Math.ceil(Math.max(...data.map(item => item.count), 0) / 2) * 2
+    );
+
+    context.font = "10px system-ui, sans-serif";
+    context.textBaseline = "middle";
+    context.fillStyle = textColor;
+    context.strokeStyle = gridColor;
+    context.lineWidth = 1;
+
+    for (let line = 0; line <= 4; line++) {
+      const y = top + chartHeight * line / 4;
+      const label = Math.round(maxValue * (4 - line) / 4);
+
+      context.beginPath();
+      context.moveTo(left, y);
+      context.lineTo(cssWidth - right, y);
+      context.stroke();
+
+      context.textAlign = "right";
+      context.fillText(String(label), left - 10, y);
+    }
+
+    const points = data.map((item, index) => {
+      const x = data.length === 1
+        ? left + chartWidth / 2
+        : left + chartWidth * index / (data.length - 1);
+
+      const y = top + chartHeight -
+        (item.count / maxValue) * chartHeight;
+
+      return {
+        x,
+        y,
+        item
+      };
+    });
+
+    if (points.length) {
+      context.beginPath();
+      context.moveTo(points[0].x, top + chartHeight);
+
+      points.forEach(point => {
+        context.lineTo(point.x, point.y);
+      });
+
+      context.lineTo(
+        points[points.length - 1].x,
+        top + chartHeight
+      );
+
+      context.closePath();
+      context.fillStyle = fillColor;
+      context.fill();
+
+      context.beginPath();
+
+      points.forEach((point, index) => {
+        if (index === 0) {
+          context.moveTo(point.x, point.y);
+        } else {
+          context.lineTo(point.x, point.y);
+        }
+      });
+
+      context.strokeStyle = lineColor;
+      context.lineWidth = 2.5;
+      context.lineJoin = "round";
+      context.lineCap = "round";
+      context.stroke();
+
+      points.forEach(point => {
+        context.beginPath();
+        context.arc(point.x, point.y, 3.2, 0, Math.PI * 2);
+        context.fillStyle = lineColor;
+        context.fill();
+      });
+    }
+
+    const labelStep = days > 14 ? 5 : days > 7 ? 2 : 1;
+
+    data.forEach((item, index) => {
+      if (index % labelStep !== 0 && index !== data.length - 1) {
+        return;
+      }
+
+      const x = data.length === 1
+        ? left + chartWidth / 2
+        : left + chartWidth * index / (data.length - 1);
+
+      const label = item.date.toLocaleDateString(undefined, {
+        month: "short",
+        day: "numeric"
+      });
+
+      context.fillStyle = textColor;
+      context.textAlign = "center";
+      context.textBaseline = "top";
+      context.fillText(label, x, top + chartHeight + 12);
+    });
+
+    canvas.setAttribute(
+      "aria-label",
+      "Locally recorded activities for the last " +
+      days + " days. Total: " +
+      data.reduce((sum, item) => sum + item.count, 0)
+    );
+  }
+
+  /* ---------- 26. Full dashboard rendering ---------- */
+
+  function renderDashboard() {
+    const history = getHistory();
+
+    renderStats(history);
+    renderHistoryTable(history);
+    drawActivityChart(history);
+  }
+
+  /* ---------- 27. CSV export ---------- */
+
+  function csvCell(value) {
+    const text = String(value == null ? "" : value);
+    return '"' + text.replace(/"/g, '""') + '"';
+  }
+
+  function exportHistory() {
+    const history = getHistory();
+
+    const rows = [
+      ["Activity", "Timestamp", "Date", "Time", "Source"]
+    ];
+
+    history.forEach(item => {
+      rows.push([
+        item.name,
+        item.timestamp,
+        formatDate(item.timestamp),
+        formatTime(item.timestamp),
+        item.source || "local"
+      ]);
+    });
+
+    const csv = rows
+      .map(row => row.map(csvCell).join(","))
+      .join("\r\n");
+
+    const blob = new Blob(["\uFEFF", csv], {
+      type: "text/csv;charset=utf-8;"
+    });
+
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+
+    link.href = url;
+    link.download = "dcl-local-activity.csv";
+    link.hidden = true;
+
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+
+    window.setTimeout(function() {
+      URL.revokeObjectURL(url);
+    }, 1000);
+  }
+
+  /* ---------- 28. Clear local history ---------- */
+
+  function clearHistory() {
+    const confirmed = window.confirm(
+      "Clear the activity history saved by this dashboard on this device?"
+    );
+
+    if (!confirmed) {
+      return;
+    }
+
+    storageRemove("history");
+    renderDashboard();
+  }
+
+  /* ---------- 29. Dashboard controls ---------- */
+
+  function initDashboardControls() {
+    const exportButton = document.getElementById("dcl-export-history");
+    const clearButton = document.getElementById("dcl-clear-history");
+    const refreshButton = document.getElementById("dcl-refresh-dashboard");
+    const periodSelect = document.getElementById("dcl-chart-period");
+
+    if (exportButton) {
+      exportButton.addEventListener("click", exportHistory);
+    }
+
+    if (clearButton) {
+      clearButton.addEventListener("click", clearHistory);
+    }
+
+    if (refreshButton) {
+      refreshButton.addEventListener("click", renderDashboard);
+    }
+
+    if (periodSelect) {
+      periodSelect.addEventListener("change", function() {
+        drawActivityChart(getHistory());
+      });
+    }
+
+    window.addEventListener("resize", function() {
+      window.requestAnimationFrame(function() {
+        drawActivityChart(getHistory());
+      });
+    });
+
+    window.addEventListener("dcl:themechange", function() {
+      drawActivityChart(getHistory());
+    });
+  }
+
+  /* ---------- 30. Skill bar animation ---------- */
+
+  function initSkillBars() {
+    const fills = document.querySelectorAll("[data-dcl-skill-width]");
+
+    if (!fills.length) {
+      return;
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      fills.forEach(fill => {
+        fill.style.width = fill.getAttribute("data-dcl-skill-width");
+      });
+
+      return;
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        const fill = entry.target;
+        fill.style.width = fill.getAttribute("data-dcl-skill-width");
+        observer.unobserve(fill);
+      });
+    }, {
+      threshold: 0.25
+    });
+
+    fills.forEach(fill => observer.observe(fill));
+  }
+
+  /* ---------- 31. Record navigation activity ---------- */
+
+  function initActivityTracking() {
+    document.addEventListener("click", function(event) {
+      const link = event.target.closest("a[href]");
+
+      if (!link) {
+        return;
+      }
+
+      if (
+        link.closest("#mega-header") ||
+        link.closest("#dcl-mobile-drawer")
+      ) {
+        const href = link.getAttribute("href") || "";
+
+        if (href.startsWith("#")) {
+          const label =
+            link.querySelector(".dcl-tool-name")?.textContent ||
+            link.textContent.trim();
+
+          if (label && href !== "#top") {
+            recordActivity(label.slice(0, 120));
+          }
+        }
+      }
+    });
+  }
+
+  /* ---------- 32. Local-only public API ---------- */
+
+  window.DCLDashboard = Object.freeze({
+    recordActivity: recordActivity,
+
+    getHistory: function() {
+      return getHistory().map(item => ({ ...item }));
+    },
+
+    refresh: renderDashboard,
+
+    exportCSV: exportHistory,
+
+    clear: clearHistory,
+
+    getTheme: function() {
+      return document.documentElement.getAttribute("data-dcl-theme")
+        || "light";
+    },
+
+    setTheme: applyTheme,
+
+    getLanguage: function() {
+      return storageGet("language", "en");
+    },
+
+    setLanguage: applyLanguage,
+
+    search: performSearch
+  });
+
+  /* ---------- 33. Safe initialization ---------- */
+
+  function initialize() {
+    addAccessibilityCSS();
+
+    mountHeader();
+    mountMobileDrawer();
+    mountSections();
+
+    initMegaMenu();
+    initMobileDrawer();
+    initStickyHeader();
+    initThemeSwitcher();
+    initLanguageSwitcher();
+    initSearch();
+    initDashboardControls();
+    initSkillBars();
+    initActivityTracking();
+
+    renderDashboard();
+
+    /* Record initialization only once for this browser installation. */
+    if (!storageGet("module_initialized", false)) {
+      storageSet("module_initialized", true);
+    }
+
+    window.dispatchEvent(new CustomEvent("dcl:module-ready", {
+      detail: {
+        module: "mega-menu-dashboard-founder",
+        version: 1
+      }
+    }));
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initialize, {
+      once: true
+    });
+  } else {
+    initialize();
+  }
+})();
+
+
+<!-- ===== EXPANSION END ===== -->
+
+  
 </script></body>
 </html>
