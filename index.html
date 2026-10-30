@@ -1,133 +1,2663 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!DOCTYPE html><html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dubai Creator Labs - 10 AI Tools | Dubai, UAE | $35 Lifetime</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#070707;color:#fff;font-family:system-ui}
-.top{position:sticky;top:0;z-index:99;background:#000;border-bottom:1px solid #222;padding:10px 14px;display:flex;justify-content:space-between;align-items:center}
-.l{border:1px solid #333;background:#111;color:#aaa;padding:8px 14px;border-radius:20px;font-size:12px;cursor:pointer}
-.l.on{background:#fff;color:#000;font-weight:900}
-.hero{padding:32px 18px;text-align:center;background:radial-gradient(ellipse at top,#1e1e1e,#000 70%)}
-.hero h1{font-size:32px;font-weight:900}
-.hero h1 span{background:linear-gradient(90deg,#ff6a00,#ee0979);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.sub{color:#999;font-size:13px;margin:12px auto;max-width:480px}
-.box{margin:14px;border:2px solid #f5d76e;background:#111;border-radius:16px;padding:18px}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
-.p{border:1px solid #222;background:#0f0f0f;border-radius:12px;padding:14px;text-align:center}
-.p.pro{background:#fff;color:#000;border:2px solid #f5d76e;cursor:pointer;animation:glow 1.5s infinite}
-@keyframes glow{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
-.tool{background:#101010;border:1px solid #222;border-radius:14px;padding:16px;margin:0 14px 12px}
-input{width:100%;background:#1d1d1d;border:1px solid #333;color:#fff;padding:12px;border-radius:10px;margin-bottom:10px}
-.btn{width:100%;background:#fff;color:#000;border:none;padding:13px;border-radius:10px;font-weight:900;cursor:pointer}
-.res{background:#000;border-left:3px solid #ff6a00;padding:12px;border-radius:8px;margin-top:10px;font-size:12px;white-space:pre-wrap;display:none}
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:999;align-items:center;justify-content:center;padding:20px}
-.modal.show{display:flex}
-.modal-box{background:#151515;border:2px solid #f5d76e;border-radius:20px;padding:24px;max-width:400px;width:100%;text-align:center;position:relative}
-.pay{width:100%;display:block;padding:14px;border-radius:12px;font-weight:800;margin:8px 0;text-decoration:none;font-size:13px;border:none;cursor:pointer}
-.pay.wa{background:#25d366;color:#fff}
-.pay.pp{background:#0070ba;color:#fff}
-.pay.bi{background:#f3ba2f;color:#000}
-.close{position:absolute;top:10px;right:15px;font-size:22px;cursor:pointer}
-.urg{background:#ff3b30;color:#fff;font-size:11px;padding:7px 12px;border-radius:20px;display:inline-block;margin-top:10px;font-weight:700}
-.footer{text-align:center;padding:20px;color:#444;font-size:9px;border-top:1px solid #111;margin-top:20px}
-</style>
-</head>
-<body>
+<meta name="theme-color" content="#070707">
+<meta name="description" content="Dubai Creator Labs — 10 practical AI-powered tools for YouTube titles, SEO, hashtags, scripts, thumbnails and channel growth.">
+<title>Dubai Creator Labs — 10 AI Tools for YouTubers</title><style>
+:root {
+  --bg: #070707;
+  --surface: #0d0d0f;
+  --card: #101012;
+  --border: #252529;
+  --text: #f5f5f7;
+  --muted: #96969f;
+  --orange: #ff8a38;
+  --pink: #ff4d91;
+  --green: #47df9a;
+  --radius: 18px;
+}
 
-<div class="top">
-<div style="font-size:11px">📍 Dubai Silicon Oasis, Dubai, UAE | EST 2024</div>
-<div style="display:flex;gap:6px">
-<button class="l on" id="b-en" onclick="L('en')">EN</button>
-<button class="l" id="b-ar" onclick="L('ar')">العربية</button>
-</div>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: #ff8a3840;
+  color: white;
+}
+
+.container {
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.announcement {
+  min-height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 8px 16px;
+  border-bottom: 1px solid #ffffff0d;
+  background: #0b0b0c;
+  color: #bdbdc4;
+  font-size: 11px;
+  letter-spacing: .3px;
+  text-align: center;
+}
+
+.announcement .dot {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 6px;
+  background: var(--green);
+  border-radius: 50%;
+  box-shadow: 0 0 10px #47df9a80;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #070707eF;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid #ffffff0c;
+}
+
+.nav-inner {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+
+.brand-icon {
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--orange), var(--pink));
+  color: #080808;
+  font-size: 18px;
+  font-weight: 950;
+  box-shadow: 0 4px 25px #ff74391c;
+}
+
+.brand-name {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -.5px;
+  white-space: nowrap;
+}
+
+.brand-sub {
+  display: block;
+  margin-top: -2px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .8px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+
+.nav-link {
+  color: #c4c4cb;
+  font-size: 12px;
+  transition: color .2s;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #101012;
+}
+
+.lang-switch button {
+  border: 0;
+  padding: 6px 9px;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.lang-switch button.active {
+  background: #28282d;
+  color: white;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 19px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 800;
+  transition: transform .2s, border-color .2s, background .2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(100deg, var(--orange), var(--pink));
+  color: #090909;
+}
+
+.btn-secondary {
+  border-color: #303035;
+  background: #111113;
+  color: white;
+}
+
+.btn-secondary:hover {
+  border-color: #56565e;
+}
+
+.nav-cta {
+  padding: 10px 14px;
+}
+
+.hero {
+  position: relative;
+  padding: 94px 0 63px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  position: absolute;
+  content: "";
+  top: -180px;
+  left: 50%;
+  width: 700px;
+  height: 500px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse, #ff783b12 0%, #ff4d9109 35%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero > .container {
+  position: relative;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border: 1px solid #ffffff15;
+  border-radius: 100px;
+  background: #ffffff05;
+  color: #d4d4da;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+.eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+.hero h1 {
+  margin: 25px 0 13px;
+  font-size: clamp(40px, 7.2vw, 77px);
+  line-height: 1.06;
+  font-weight: 900;
+  letter-spacing: -4px;
+}
+
+.gradient-text {
+  display: block;
+  padding-bottom: 5px;
+  background: linear-gradient(100deg, #ffab53 10%, #ff783c 45%, #ff4d91 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-subtitle {
+  max-width: 620px;
+  margin: 18px auto 0;
+  color: #a7a7b0;
+  font-size: clamp(14px, 2vw, 17px);
+  line-height: 1.9;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-top: 29px;
+}
+
+.hero-actions .btn {
+  min-height: 47px;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 850px;
+  margin: 49px auto 0;
+  border: 1px solid #ffffff10;
+  border-radius: 15px;
+  background: #ffffff03;
+}
+
+.trust-item {
+  padding: 19px 8px;
+  text-align: center;
+}
+
+.trust-item + .trust-item {
+  border-left: 1px solid #ffffff10;
+}
+
+.trust-number {
+  display: block;
+  color: #f4f4f6;
+  font-size: 23px;
+  font-weight: 850;
+  letter-spacing: -.7px;
+}
+
+.trust-label {
+  display: block;
+  margin-top: 3px;
+  color: #898991;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.section {
+  padding: 67px 0;
+}
+
+.section-heading {
+  margin-bottom: 31px;
+  text-align: center;
+}
+
+.section-kicker {
+  color: var(--orange);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  margin-top: 9px;
+  font-size: clamp(27px, 4vw, 40px);
+  line-height: 1.2;
+  letter-spacing: -1.3px;
+}
+
+.section-heading p {
+  max-width: 550px;
+  margin: 12px auto 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.pricing-section {
+  border-top: 1px solid #ffffff0a;
+  border-bottom: 1px solid #ffffff0a;
+  background: linear-gradient(180deg, #0a0a0b, #080808);
+}
+
+.urgency {
+  max-width: 690px;
+  margin: 0 auto 25px;
+  padding: 12px 14px;
+  border: 1px solid #ff9a412d;
+  border-radius: 10px;
+  background: #ff8a3809;
+  color: #ffbc7d;
+  font-size: 12px;
+  font-weight: 750;
+  text-align: center;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 760px;
+  margin: auto;
+  align-items: stretch;
+}
+
+.price-card {
+  position: relative;
+  padding: 27px;
+  border: 1px solid #29292d;
+  border-radius: 17px;
+  background: #101012;
+}
+
+.price-card.free {
+  align-self: center;
+}
+
+.price-card.pro {
+  border-color: #ff873d90;
+  background: linear-gradient(145deg, #19110e, #100d11 58%, #170c12);
+  box-shadow: 0 0 0 1px #ff813b15, 0 0 40px #ff713b12;
+  animation: proGlow 3s ease-in-out infinite;
+  cursor: pointer;
+  transition: transform .25s, border-color .25s;
+}
+
+.price-card.pro:hover {
+  transform: translateY(-4px);
+  border-color: #ff9a69;
+}
+
+@keyframes proGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 1px #ff813b12, 0 0 25px #ff713b0b;
+  }
+  50% {
+    box-shadow: 0 0 0 1px #ff813b42, 0 0 42px #ff713b24;
+  }
+}
+
+.popular {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: linear-gradient(100deg, var(--orange), var(--pink));
+  color: #080808;
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: .7px;
+}
+
+.price-label {
+  color: #b8b8c0;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 1px;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  margin: 12px 0 4px;
+}
+
+.price strong {
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1.2;
+}
+
+.price span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.price-description {
+  color: #93939c;
+  font-size: 12px;
+}
+
+.feature-list {
+  display: grid;
+  gap: 12px;
+  margin: 25px 0;
+  list-style: none;
+}
+
+.feature-list li {
+  display: flex;
+  gap: 9px;
+  color: #c4c4cc;
+  font-size: 12px;
+}
+
+.check {
+  color: var(--green);
+  font-weight: 900;
+}
+
+.cross {
+  color: #696972;
+}
+
+.price-card .btn {
+  width: 100%;
+  min-height: 45px;
+}
+
+.price-note {
+  margin-top: 12px;
+  color: #777780;
+  font-size: 10px;
+  text-align: center;
+}
+
+.tools-section {
+  padding-top: 76px;
+}
+
+.tools-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 23px;
+}
+
+.tools-topline h2 {
+  font-size: 25px;
+  letter-spacing: -.8px;
+}
+
+.tools-count {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  color: #b6b6bf;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.tool-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 23px;
+  border: 1px solid #252529;
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, #111113, #0b0b0c);
+  transition: border-color .25s, transform .25s;
+}
+
+.tool-card:hover {
+  border-color: #44444b;
+  transform: translateY(-2px);
+}
+
+.tool-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  margin-bottom: 13px;
+}
+
+.tool-icon {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid #ffffff12;
+  border-radius: 12px;
+  background: linear-gradient(140deg, #ff873d16, #ff4d9110);
+  font-size: 19px;
+}
+
+.tool-heading {
+  min-width: 0;
+  flex: 1;
+}
+
+.tool-number {
+  display: block;
+  margin-bottom: 2px;
+  color: #ff9859;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.tool-heading h3 {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -.3px;
+}
+
+.tool-heading p {
+  margin-top: 5px;
+  color: #898991;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.tool-label {
+  display: block;
+  margin: 13px 0 7px;
+  color: #b7b7bf;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: .4px;
+}
+
+.tool-input {
+  width: 100%;
+  min-height: 45px;
+  padding: 12px 13px;
+  border: 1px solid #2c2c32;
+  border-radius: 9px;
+  background: #09090a;
+  color: white;
+  font-size: 12px;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.tool-input::placeholder {
+  color: #686871;
+}
+
+.tool-input:focus {
+  border-color: #ff8a3875;
+}
+
+textarea.tool-input {
+  min-height: 86px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+select.tool-input {
+  appearance: auto;
+  color-scheme: dark;
+}
+
+.generate-btn {
+  width: 100%;
+  min-height: 42px;
+  margin-top: 11px;
+  border: 1px solid #ff8a3830;
+  border-radius: 9px;
+  background: linear-gradient(100deg, #ff8a3813, #ff4d9110);
+  color: #ffae7b;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: .5px;
+  transition: background .2s, border-color .2s;
+}
+
+.generate-btn:hover {
+  border-color: #ff8a3870;
+  background: linear-gradient(100deg, #ff8a3827, #ff4d911c);
+}
+
+.result-box {
+  display: none;
+  margin-top: 15px;
+  padding: 15px;
+  border: 1px solid #303035;
+  border-radius: 10px;
+  background: #080809;
+  overflow-wrap: anywhere;
+}
+
+.result-box.visible {
+  display: block;
+  animation: fadeIn .25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.result-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.result-title {
+  color: #b9b9c2;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .9px;
+  text-transform: uppercase;
+}
+
+.copy-btn {
+  padding: 5px 9px;
+  border: 1px solid #333339;
+  border-radius: 6px;
+  background: #151517;
+  color: #e4e4e9;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.copy-btn:hover {
+  border-color: #777780;
+}
+
+.result-content {
+  color: #e4e4e8;
+  font-size: 12px;
+  line-height: 1.9;
+  white-space: pre-wrap;
+}
+
+.result-content .result-line {
+  padding: 7px 0;
+  border-bottom: 1px solid #ffffff0a;
+}
+
+.result-content .result-line:last-child {
+  border-bottom: none;
+}
+
+.result-content .result-line b {
+  color: #ffb07b;
+}
+
+.result-content .score {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--green);
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.disclaimer {
+  margin: 20px auto 0;
+  max-width: 750px;
+  color: #777780;
+  font-size: 10px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.bottom-cta {
+  padding: 52px 0;
+  border-top: 1px solid #ffffff0b;
+  background: radial-gradient(ellipse at 50% 100%, #ff74390c, transparent 70%);
+  text-align: center;
+}
+
+.bottom-cta h2 {
+  font-size: clamp(24px, 4vw, 36px);
+  letter-spacing: -1px;
+}
+
+.bottom-cta p {
+  max-width: 520px;
+  margin: 10px auto 20px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.footer {
+  padding: 28px 0;
+  border-top: 1px solid #ffffff0e;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-brand {
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.footer-address {
+  margin-top: 4px;
+  color: #777780;
+  font-size: 10px;
+}
+
+.footer-right {
+  color: #777780;
+  font-size: 10px;
+  text-align: right;
+}
+
+/* Payment modal */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  background: #000000cf;
+  backdrop-filter: blur(9px);
+  overflow-y: auto;
+}
+
+.modal-overlay.open {
+  display: flex;
+  animation: fadeIn .2s ease;
+}
+
+.payment-modal {
+  position: relative;
+  width: min(100%, 475px);
+  max-height: min(88vh, 800px);
+  overflow-y: auto;
+  padding: 28px;
+  border: 1px solid #393034;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #151113, #0b0b0d 75%);
+  box-shadow: 0 25px 100px #00000080, 0 0 50px #ff773d0c;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #333339;
+  border-radius: 9px;
+  background: #171719;
+  color: white;
+  font-size: 21px;
+}
+
+.modal-icon {
+  width: 49px;
+  height: 49px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #ff8a383b;
+  border-radius: 14px;
+  background: #ff8a3813;
+  font-size: 23px;
+}
+
+.payment-modal h2 {
+  margin-top: 18px;
+  padding-right: 25px;
+  font-size: 26px;
+  line-height: 1.25;
+  letter-spacing: -.8px;
+}
+
+.modal-subtitle {
+  margin-top: 8px;
+  color: #a1a1aa;
+  font-size: 12px;
+}
+
+.modal-price {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  margin: 18px 0;
+}
+
+.modal-price strong {
+  font-size: 43px;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.modal-price span {
+  color: #a1a1aa;
+  font-size: 12px;
+}
+
+.modal-benefits {
+  display: grid;
+  gap: 11px;
+  margin: 19px 0 23px;
+  list-style: none;
+}
+
+.modal-benefits li {
+  display: flex;
+  gap: 10px;
+  color: #d5d5dc;
+  font-size: 12px;
+}
+
+.modal-benefits li::before {
+  content: "✓";
+  color: var(--green);
+  font-weight: 900;
+}
+
+.modal-divider {
+  height: 1px;
+  margin: 20px 0;
+  background: #ffffff12;
+}
+
+.payment-heading {
+  margin-bottom: 11px;
+  color: #bcbcc5;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.payment-options {
+  display: grid;
+  gap: 10px;
+}
+
+.payment-btn {
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px;
+  border: 1px solid #35353a;
+  border-radius: 10px;
+  background: #141416;
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  transition: border-color .2s, background .2s;
+}
+
+.payment-btn:hover {
+  border-color: #777780;
+  background: #1b1b1e;
+}
+
+.payment-btn.whatsapp {
+  border-color: #26784c;
+  background: #123823;
+}
+
+.payment-btn.whatsapp:hover {
+  background: #17482d;
+}
+
+.payment-btn.paypal {
+  border-color: #22466d;
+  background: #10233b;
+}
+
+.payment-btn.binance {
+  border-color: #625027;
+  background: #2b2411;
+}
+
+.payment-note {
+  margin-top: 14px;
+  color: #81818a;
+  font-size: 10px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.binance-details {
+  display: none;
+  margin-top: 13px;
+  padding: 13px;
+  border: 1px solid #514325;
+  border-radius: 10px;
+  background: #17140d;
+}
+
+.binance-details.visible {
+  display: block;
+}
+
+.binance-details p {
+  color: #ded4b7;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.binance-id {
+  display: block;
+  margin-top: 7px;
+  color: #ffcc58;
+  font-size: 12px;
+  font-weight: 850;
+  overflow-wrap: anywhere;
+}
+
+.modal-config-note {
+  margin-top: 10px;
+  color: #9b8d75;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.toast {
+  position: fixed;
+  bottom: 22px;
+  left: 50%;
+  z-index: 1200;
+  max-width: calc(100% - 32px);
+  padding: 11px 17px;
+  border: 1px solid #414149;
+  border-radius: 10px;
+  background: #18181b;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 12px);
+  transition: opacity .2s, transform .2s;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* Arabic layout */
+
+html[dir="rtl"] body {
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+html[dir="rtl"] .trust-item + .trust-item {
+  border-left: none;
+  border-right: 1px solid #ffffff10;
+}
+
+html[dir="rtl"] .popular {
+  right: auto;
+  left: 20px;
+}
+
+html[dir="rtl"] .payment-modal h2 {
+  padding-right: 0;
+  padding-left: 30px;
+}
+
+html[dir="rtl"] .close-modal {
+  right: auto;
+  left: 15px;
+}
+
+html[dir="rtl"] .footer-right {
+  text-align: left;
+}
+
+html[dir="rtl"] .tool-number {
+  letter-spacing: 0;
+}
+
+html[dir="rtl"] .result-content,
+html[dir="rtl"] .tool-input {
+  text-align: start;
+}
+
+html[dir="rtl"] .price-card {
+  text-align: start;
+}
+
+html[dir="rtl"] .price {
+  flex-direction: row;
+}
+
+html[dir="rtl"] .feature-list li,
+html[dir="rtl"] .modal-benefits li {
+  text-align: start;
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: min(100% - 30px, 600px);
+  }
+
+  .nav-inner {
+    min-height: 68px;
+  }
+
+  .nav-right {
+    gap: 9px;
+  }
+
+  .nav-link {
+    display: none;
+  }
+
+  .brand-name {
+    font-size: 13px;
+  }
+
+  .brand-sub {
+    font-size: 9px;
+  }
+
+  .brand-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .nav-cta {
+    padding: 9px 11px;
+    font-size: 10px;
+  }
+
+  .hero {
+    padding: 72px 0 47px;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .trust-grid {
+    margin-top: 35px;
+  }
+
+  .trust-item {
+    padding: 15px 5px;
+  }
+
+  .trust-number {
+    font-size: 19px;
+  }
+
+  .trust-label {
+    font-size: 8px;
+    letter-spacing: .5px;
+  }
+
+  .section {
+    padding: 52px 0;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tool-card {
+    padding: 19px;
+  }
+
+  .tools-topline h2 {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 470px) {
+  .announcement {
+    font-size: 9px;
+    gap: 6px;
+  }
+
+  .nav-inner {
+    gap: 8px;
+  }
+
+  .brand {
+    gap: 7px;
+  }
+
+  .brand-name {
+    font-size: 11px;
+  }
+
+  .brand-sub {
+    font-size: 8px;
+    letter-spacing: .3px;
+  }
+
+  .lang-switch {
+    gap: 0;
+    padding: 3px;
+  }
+
+  .lang-switch button {
+    padding: 6px 7px;
+    font-size: 10px;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 41px;
+  }
+
+  .hero-subtitle {
+    font-size: 13px;
+  }
+
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trust-item:nth-child(3) {
+    border-left: none;
+    border-top: 1px solid #ffffff10;
+  }
+
+  .trust-item:nth-child(4) {
+    border-top: 1px solid #ffffff10;
+  }
+
+  html[dir="rtl"] .trust-item:nth-child(3) {
+    border-right: none;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .price-card {
+    padding: 23px;
+  }
+
+  .payment-modal {
+    padding: 23px 19px;
+  }
+
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-right {
+    text-align: start;
+  }
+
+  html[dir="rtl"] .footer-right {
+    text-align: start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style></head><body><div class="announcement">
+  <span class="dot"></span>
+  <span id="k1">Creator tools for a global audience</span>
+  <span>·</span>
+  <span id="k2">Independent digital project</span>
+  <span>·</span>
+  <span>2024</span>
+</div><header class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="#" aria-label="Dubai Creator Labs home">
+      <span class="brand-icon">D</span>
+      <span>
+        <span class="brand-name">Dubai Creator Labs</span>
+        <span class="brand-sub" id="k3">AI CREATOR TOOLKIT</span>
+      </span>
+    </a><nav class="nav-right" aria-label="Main navigation">
+  <a class="nav-link" href="#tools" id="k4">Tools</a>
+  <a class="nav-link" href="#pricing" id="k5">Pricing</a>
+
+  <div class="lang-switch" aria-label="Language">
+    <button type="button" id="b-en" class="active" aria-pressed="true" onclick="L('en')">EN</button>
+    <button type="button" id="b-ar" aria-pressed="false" onclick="L('ar')">العربية</button>
+  </div>
+
+  <button type="button" class="btn btn-primary nav-cta" id="k6" onclick="openPay()">Explore PRO ↗</button>
+</nav>
+
+  </div>
+</header><main>
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        <span id="k7">YOUR YOUTUBE GROWTH TOOLKIT</span>
+      </div><h1>
+    Dubai Creator Labs
+    <span class="gradient-text" id="k8">10 AI Tools in 1</span>
+  </h1>
+
+  <p class="hero-subtitle" id="k9">
+    Create stronger titles, write SEO-friendly descriptions, discover hashtags
+    and build better videos — with 10 practical tools in one clean workspace.
+  </p>
+
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="#tools" id="k10">Explore All 10 Tools ↓</a>
+    <a class="btn btn-secondary" href="#pricing" id="k11">View Lifetime Plan</a>
+  </div>
+
+  <div class="trust-grid" aria-label="Project overview">
+    <div class="trust-item">
+      <span class="trust-number">10</span>
+      <span class="trust-label" id="k12">AI TOOLS</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-number">FREE</span>
+      <span class="trust-label" id="k13">TO GET STARTED</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-number">24/7</span>
+      <span class="trust-label" id="k14">BROWSER ACCESS</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-number">EN + AR</span>
+      <span class="trust-label" id="k15">TWO LANGUAGES</span>
+    </div>
+  </div>
 </div>
 
-<div class="hero">
-<h1>Dubai Creator Labs<br><span id="k1">10 AI Tools in 1</span></h1>
-<p class="sub" id="k2">The only platform Dubai YouTubers use to go viral. Generate titles, hooks, scripts & more in 5 seconds. Trusted by 2,347+ creators.</p>
+  </section>  <section class="section pricing-section" id="pricing">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-kicker" id="k16">SIMPLE PRICING</span>
+        <h2 id="k17">Start free. Upgrade when ready.</h2>
+        <p id="k18">Try the tools first. Choose the lifetime option only if it fits your needs.</p>
+      </div><div class="urgency" id="k19">
+    No subscription required for the free tools. Check the PRO benefits before purchasing.
+  </div>
+
+  <div class="pricing-grid">
+    <article class="price-card free">
+      <div class="price-label" id="k20">FREE PLAN</div>
+
+      <div class="price">
+        <strong>$0</strong>
+        <span id="k21">/ forever</span>
+      </div>
+
+      <p class="price-description" id="k22">Explore the toolkit at no cost.</p>
+
+      <ul class="feature-list">
+        <li><span class="check">✓</span><span id="k23">Access to all 10 browser-based tools</span></li>
+        <li><span class="check">✓</span><span id="k24">Instant local text generation</span></li>
+        <li><span class="check">✓</span><span id="k25">Copy and use your results</span></li>
+        <li><span class="cross">—</span><span id="k26">No paid-plan benefits included</span></li>
+      </ul>
+
+      <a href="#tools" class="btn btn-secondary" id="k27">Start for Free</a>
+      <p class="price-note" id="k28">No payment details needed.</p>
+    </article>
+
+    <article class="price-card pro" onclick="openPay()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPay()}" tabindex="0" role="button" aria-label="Open PRO lifetime purchase options">
+      <span class="popular" id="k29">LIFETIME ACCESS</span>
+
+      <div class="price-label" id="k30">PRO PLAN</div>
+
+      <div class="price">
+        <strong>$35</strong>
+        <span id="k31">/ one-time</span>
+      </div>
+
+      <p class="price-description" id="k32">A proposed one-time lifetime purchase.</p>
+
+      <ul class="feature-list">
+        <li><span class="check">✓</span><span id="k33">Unlimited use of the 10 tools</span></li>
+        <li><span class="check">✓</span><span id="k34">150 content templates, when available</span></li>
+        <li><span class="check">✓</span><span id="k35">Commercial-use guidance and license terms</span></li>
+        <li><span class="check">✓</span><span id="k36">Priority support, if provided</span></li>
+        <li><span class="check">✓</span><span id="k37">30-day refund policy, subject to published terms</span></li>
+      </ul>
+
+      <button type="button" class="btn btn-primary" id="k38" onclick="event.stopPropagation();openPay()">TAP TO PAY $35 ↗</button>
+      <p class="price-note" id="k39">Review the payment options and terms before paying.</p>
+    </article>
+  </div>
 </div>
 
-<div class="box">
-<div style="background:#f5d76e;color:#000;font-size:11px;font-weight:900;padding:5px 12px;border-radius:20px;display:inline-block" id="k3">MOST POPULAR • $35 LIFETIME - CLICK BELOW TO BUY</div>
-<h3 id="k4" style="margin-top:10px">Get Pro & Go Viral in Dubai - Tap PRO Box to Pay</h3>
-<p style="font-size:11px;color:#aaa;margin:8px 0" id="k5">Free: 10 tools, 20/day. Pro: Unlimited + Commercial License + 150 Templates + 24/7 VIP</p>
-<div class="row">
-<div class="p"><b>FREE</b><br><span style="font-size:11px;color:#888">10 Tools<br>20/Day<br>Basic Support</span><br><br>$0</div>
-<div class="p pro" onclick="openPay()"><b>PRO $35</b><br><span style="font-size:11px">Unlimited<br>24/7 VIP<br>+150 Templates<br><br><span style="background:#000;color:#f5d76e;padding:6px 10px;border-radius:10px;font-size:12px">👉 TAP TO PAY $35 👈</span></span><br><br><b>$35 Lifetime</b></div>
-</div>
-<div class="urg" id="k6">⏰ 23 SPOTS LEFT AT $35 - Next $97 - TAP PRO BOX NOW</div>
+  </section>  <section class="section tools-section" id="tools">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-kicker" id="k40">THE CREATOR TOOLKIT</span>
+        <h2 id="k41">Everything starts with an idea.</h2>
+        <p id="k42">Enter a topic, generate English-language suggestions and copy the results into your workflow.</p>
+      </div><div class="tools-topline">
+    <h2 id="k43">Explore the 10 tools</h2>
+    <span class="tools-count" id="k44">10 TOOLS · NO API REQUIRED</span>
+  </div>
+
+  <div class="tools-grid">
+
+    <!-- TOOL 01 -->
+    <article class="tool-card">
+      <div class="tool-header">
+        <div class="tool-icon">🚀</div>
+        <div class="tool-heading">
+          <span class="tool-number">TOOL 01</span>
+          <h3 id="k45">Viral Title Generator AI</h3>
+          <p id="k46">Generate five clickable title ideas for your next upload.</p>
+        </div>
+      </div>
+
+      <label class="tool-label" for="i1" id="k47">VIDEO TOPIC</label>
+      <input class="tool-input" id="i1" maxlength="240" placeholder="e.g. Dubai travel tips for beginners">
+
+      <button type="button" class="generate-btn" id="k48" onclick="G(1)">✦ GENERATE TITLES</button>
+      <div class="result-box" id="r1" aria-live="polite"></div>
+    </article>
+
+    <!-- TOOL 02 -->
+    <article class="tool-card">
+      <div class="tool-header">
+        <div class="tool-icon">🔎</div>
+        <div class="tool-heading">
+          <span class="tool-number">TOOL 02</span>
+          <h3 id="k49">SEO Description + Timestamps</h3>
+          <p id="k50">Create a structured description with keyword ideas and chapter timestamps.</p>
+        </div>
+      </div>
+
+      <label class="tool-label" for="i2" id="k51">VIDEO TITLE OR TOPIC</label>
+      <input class="tool-input" id="i2" maxlength="240" placeholder="e.g. Best things to do in Dubai">
+
+      <button type="button" class="generate-btn" id="k52" onclick="G(2)">✦ GENERATE DESCRIPTION</button>
+      <div class="result-box" id="r2" aria-live="polite"></div>
+    </article>
+
+    <!-- TOOL 03 -->
+    <article class="tool-card">
+      <div class="tool-header">
+        <div class="tool-icon">#️⃣</div>
+        <div class="tool-heading">
+          <span class="tool-number">TOOL 03</span>
+          <h3 id="k53">Hashtag Engine</h3>
+          <p id="k54">Build a list of 30 relevant hashtag suggestions.</p>
+        </div>
+      </div>
+
+      <label class="tool-label" for="i3" id="k55">NICHE OR TOPIC</label>
+      <input class="tool-input" id="i3" maxlength="240" placeholder="e.g. YouTube growth, tech reviews">
+
+      <button type="button" class="generate-btn" id="k56" onclick="G(3)">✦ GENERATE 30 HASHTAGS</button>
+      <div class="result-box" id="r3" aria-live="polite"></div>
+    </article>
+
+    <!-- TOOL 04 -->
+    <article class="tool-card">
+      <div class="tool-header">
+        <div class="tool-icon">⚡</div>
+        <div class="tool-heading">
+          <span class="tool-number">TOOL 04</span>
+          <h3 id="k57">Hook Generator</h3>
+          <p id="k58">Get three opening lines designed to capture attention.</p>
+        </div>
+      </div>
+
+      <label class="tool-label" for="i4" id="k59">VIDEO TOPIC</label>
+      <input class="tool-input" id="i4" maxlength="240" placeholder="e.g. How I learned video editing">
+
+      <button type="button" class="generate-btn" id="k60" onclick="G(4)">✦ GENERATE 3 HOOKS</button>
+      <div class="result-box" id="r4" aria-live="polite"></div>
+    </article>
+
+    <!-- TOOL 05 -->
+    <article class="tool-card">
+      <div class="tool-header">
+        <div class="tool-icon">🖼️</div>
+        <div class="tool-heading">
+          <span class="tool-number">TOOL 05</span>
+          <h3 id="k61">Thumbnail Text AI</h3>
+          <p id="k62">Create four short thumbnail text ideas, each up to three words.</p>
+        </div>
+      </div>
+
+      <label class="tool-label" for="i5" id="k63">VIDEO TOPIC</label>
+      <input class="tool-input" id="i5" maxlength="240" placeholder="e.g. Starting a business in Dubai">
+
+      <button type="button" class="generate-btn" id="k64" onclick="G(5)">✦ GENERATE THUMBNAIL TEXT</button>
+      <div class="result-box" id="r5" aria-live="polite"></div>
+    </article>
+
+    <!-- TOOL 06 -->
+    <article class="tool-card">
+      <div class="tool-header">
+        <div class="tool-icon">🎬</div>
+        <div class="tool-heading">
+          <span class="tool-number">TOOL 06</span>
+          <h3 id="k65">30s Script Opener</h3>
+          <p id="k66">Draft a simple opening script for approximately 30 seconds of speech.</p>
+        </div>
+      </div>
+
+      <label class="tool-label" for="i6" id="k67">VIDEO TOPIC</label>
+      <input class="tool-input" id="i6" maxlength="240" placeholder="e.g. Five mistakes new creators make">
+
+      <button type="button" class="generate-btn" id="k68" onclick="G(6)">✦ GENERATE SCRIPT</button>
+      <div class="result-box" id="r6" aria-live="polite"></div>
+    </article>
+
+    <!-- TOOL 07 -->
+    <article class="tool-card">
+      <div class="tool-header">
+        <div class="tool-icon">📊</div>
+        <div class="tool-heading">
+          <span class="tool-number">TOOL 07</span>
+          <h3 id="k69">SEO Score Analyzer</h3>
+          <p id="k70">Check title length, keyword presence, and selected power words.</p>
+        </div>
+      </div>
+
+      <label class="tool-label" for="i7" id="k71">YOUTUBE VIDEO TITLE</label>
+      <input class="tool-input" id="i7" maxlength="300" placeholder="e.g. 7 Dubai Travel Tips You Need to Know">
+
+      <button type="button" class="generate-btn" id="k72" onclick="G(7)">✦ ANALYZE TITLE</button>
+      <div class="result-box" id="r7" aria-live="polite"></div>
+    </article>
+
+    <!-- TOOL 08 -->
+    <article class="tool-card">
+      <div class="tool-header">
+        <div class="tool-icon">🏷️</div>
+        <div class="tool-heading">
+          <span class="tool-number">TOOL 08</span>
+          <h3 id="k73">YouTube Tags Generator</h3>
+          <p id="k74">Generate 20 keyword and phrase ideas for your video.</p>
+        </div>
+      </div>
+
+      <label class="tool-label" for="i8" id="k75">MAIN KEYWORD OR TOPIC</label>
+      <input class="tool-input" id="i8" maxlength="240" placeholder="e.g. Dubai travel guide">
+
+      <button type="button" class="generate-btn" id="k76" onclick="G(8)">✦ GENERATE 20 TAGS</button>
+      <div class="result-box" id="r8" aria-live="polite"></div>
+    </article>
+
+    <!-- TOOL 09 -->
+    <article class="tool-card">
+      <div class="tool-header">
+        <div class="tool-icon">💡</div>
+        <div class="tool-heading">
+          <span class="tool-number">TOOL 09</span>
+          <h3 id="k77">Channel Name Generator</h3>
+          <p id="k78">Find eight memorable English-language channel name ideas.</p>
+        </div>
+      </div>
+
+      <label class="tool-label" for="i9" id="k79">NICHE OR CHANNEL THEME</label>
+      <input class="tool-input" id="i9" maxlength="240" placeholder="e.g. business, gaming, technology">
+
+      <button type="button" class="generate-btn" id="k80" onclick="G(9)">✦ GENERATE 8 NAMES</button>
+      <div class="result-box" id="r9" aria-live="polite"></div>
+    </article>
+
+    <!-- TOOL 10 -->
+    <article class="tool-card">
+      <div class="tool-header">
+        <div class="tool-icon">💬</div>
+        <div class="tool-heading">
+          <span class="tool-number">TOOL 10</span>
+          <h3 id="k81">Comment Reply AI</h3>
+          <p id="k82">Draft a friendly, professional reply to a viewer comment.</p>
+        </div>
+      </div>
+
+      <label class="tool-label" for="i10" id="k83">VIEWER COMMENT</label>
+      <textarea class="tool-input" id="i10" maxlength="1000" placeholder="e.g. This video helped me so much!"></textarea>
+
+      <label class="tool-label" for="tone10" id="k84">REPLY TONE</label>
+      <select class="tool-input" id="tone10">
+        <option value="friendly" id="k85">Friendly</option>
+        <option value="professional" id="k86">Professional</option>
+        <option value="funny" id="k87">Funny</option>
+        <option value="grateful" id="k88">Grateful</option>
+      </select>
+
+      <button type="button" class="generate-btn" id="k89" onclick="G(10)">✦ GENERATE REPLY</button>
+      <div class="result-box" id="r10" aria-live="polite"></div>
+    </article>
+
+  </div>
+
+  <p class="disclaimer" id="k90">
+    These tools use built-in JavaScript templates and heuristics. They do not connect to an AI model or external API.
+    Generated ideas are suggestions, not guarantees of views, rankings, or revenue. Always review results before publishing.
+  </p>
 </div>
 
-<div class="tool"><h2 id="k7">01 - Viral Title Generator AI</h2><input id="i1" placeholder="e.g. Dubai Business"><button class="btn" onclick="G(1)">GENERATE →</button><div id="o1" class="res"></div></div>
-<div class="tool"><h2 id="k8">02 - SEO Description</h2><input id="i2" placeholder="e.g. Best Burger Dubai Mall"><button class="btn" onclick="G(2)">GENERATE →</button><div id="o2" class="res"></div></div>
-<div class="tool"><h2 id="k9">03 - Hashtag Engine (30)</h2><input id="i3" placeholder="e.g. Dubai Travel"><button class="btn" onclick="G(3)">GENERATE →</button><div id="o3" class="res"></div></div>
-<div class="tool"><h2 id="k10">04 - Hook Generator</h2><input id="i4" placeholder="e.g. How to make money Dubai"><button class="btn" onclick="G(4)">GENERATE →</button><div id="o4" class="res"></div></div>
-<div class="tool"><h2 id="k11">05 - Thumbnail Text AI</h2><input id="i5" placeholder="e.g. I Made $10k"><button class="btn" onclick="G(5)">GENERATE →</button><div id="o5" class="res"></div></div>
-<div class="tool"><h2 id="k12">06 - 30s Script</h2><input id="i6" placeholder="e.g. Dubai Real Estate"><button class="btn" onclick="G(6)">GENERATE →</button><div id="o6" class="res"></div></div>
-<div class="tool"><h2 id="k13">07 - SEO Score Analyzer</h2><input id="i7" placeholder="Paste your title"><button class="btn" onclick="G(7)">ANALYZE →</button><div id="o7" class="res"></div></div>
-<div class="tool"><h2 id="k14">08 - YouTube Tags Generator</h2><input id="i8" placeholder="e.g. Dubai Business"><button class="btn" onclick="G(8)">GENERATE →</button><div id="o8" class="res"></div></div>
-<div class="tool"><h2 id="k15">09 - Channel Name Generator</h2><input id="i9" placeholder="e.g. Dubai Vlog"><button class="btn" onclick="G(9)">GENERATE →</button><div id="o9" class="res"></div></div>
-<div class="tool"><h2 id="k16">10 - Comment Reply AI</h2><input id="i10" placeholder="e.g. Nice video!"><button class="btn" onclick="G(10)">GENERATE →</button><div id="o10" class="res"></div></div>
+  </section>  <section class="bottom-cta">
+    <div class="container">
+      <h2 id="k91">Your next video starts here.</h2>
+      <p id="k92">Test the free tools, explore the possibilities, and decide whether PRO is right for you.</p>
+      <a class="btn btn-primary" href="#tools" id="k93">Start Creating for Free ↗</a>
+    </div>
+  </section>
+</main><footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="footer-brand">Dubai Creator Labs</div>
+      <div class="footer-address" id="k94">Independent digital project · Online creator tools</div>
+    </div>
+    <div class="footer-right">
+      <div id="k95">© 2026 Dubai Creator Labs. All rights reserved.</div>
+      <div id="k96">Not affiliated with YouTube or Google.</div>
+    </div>
+  </div>
+</footer><!-- Payment modal: payment links must be configured with verified account details. --><div class="modal-overlay" id="payModal" onclick="if(event.target===this)closePay()" aria-hidden="true">
+  <section class="payment-modal" role="dialog" aria-modal="true" aria-labelledby="k97">
+    <button type="button" class="close-modal" id="k98" onclick="closePay()" aria-label="Close payment window">×</button><div class="modal-icon">✦</div>
 
-<div class="modal" id="payModal">
-<div class="modal-box">
-<span class="close" onclick="closePay()">✕</span>
-<h2 style="color:#f5d76e;font-size:20px">🔥 Get PRO - $35 Lifetime</h2>
-<p style="font-size:11px;color:#aaa;margin:10px 0">Unlimited 10 Tools + 150 Templates + Commercial License + 24/7 VIP</p>
-<div style="background:#000;border-radius:10px;padding:12px;font-size:11px;text-align:left;margin:12px 0;line-height:1.8">
-✅ Unlimited 10 AI Tools<br>
-✅ 150 Dubai Viral Templates ($197 value)<br>
-✅ Commercial License<br>
-✅ 24/7 VIP WhatsApp Support<br>
-✅ 30-Day Money Back Guarantee<br>
-</div>
-<a class="pay wa" href="https://wa.me/971501234567?text=Hi%20Dubai%20Creator%20Labs%20I%20want%20PRO%20$35%20Lifetime%20Plan" target="_blank">💬 WhatsApp - Pay $35 - Instant</a>
-<a class="pay pp" href="https://www.paypal.me/" target="_blank">💳 PayPal - $35 - Instant Delivery</a>
-<button class="pay bi" onclick="alert('Send $35 USDT (BEP20) to Binance ID: 123456789\nThen send screenshot on WhatsApp\nYou get PRO in 10 minutes!')">🟡 Binance Pay - $35 USDT</button>
-<div style="font-size:10px;color:#666;margin-top:12px">2,347+ creators trusted • Secure • Delivery in 10 min</div>
-</div>
+<h2 id="k97">Get PRO - $35 Lifetime</h2>
+<p class="modal-subtitle" id="k99">Review the benefits and choose a payment option.</p>
+
+<div class="modal-price">
+  <strong>$35</strong>
+  <span id="k100">one-time payment</span>
 </div>
 
-<div class="footer">DUBAI CREATOR LABS FZCO - Dubai Silicon Oasis, DDP Building A2, Dubai, UAE<br>Trusted by 2,347+ creators across UAE, KSA, UK, USA | $35 Lifetime Limited</div>
+<ul class="modal-benefits">
+  <li id="k101">Unlimited use of the 10 tools</li>
+  <li id="k102">150 templates, when available</li>
+  <li id="k103">Commercial-use license subject to published terms</li>
+  <li id="k104">Priority support, if provided</li>
+  <li id="k105">30-day refund policy subject to published terms</li>
+</ul>
 
-<script>
-const T={
-en:{k1:"10 AI Tools in 1",k2:"The only platform Dubai YouTubers use to go viral. Generate titles, hooks, scripts & more in 5 seconds. Trusted by 2,347+ creators.",k3:"MOST POPULAR • $35 LIFETIME - CLICK BELOW TO BUY",k4:"Get Pro & Go Viral in Dubai - Tap PRO Box to Pay",k5:"Free: 10 tools, 20/day. Pro: Unlimited + Commercial License + 150 Templates + 24/7 VIP",k6:"⏰ 23 SPOTS LEFT AT $35 - Next $97 - TAP PRO BOX NOW",k7:"01 - Viral Title Generator AI",k8:"02 - SEO Description",k9:"03 - Hashtag Engine (30)",k10:"04 - Hook Generator",k11:"05 - Thumbnail Text AI",k12:"06 - 30s Script",k13:"07 - SEO Score Analyzer",k14:"08 - YouTube Tags Generator",k15:"09 - Channel Name Generator",k16:"10 - Comment Reply AI"},
-ar:{k1:"10 أدوات ذكاء في 1",k2:"المنصة الوحيدة التي يستخدمها يوتيوبرز دبي للانتشار. أنشئ عناوين وخطافات وسكريبتات في 5 ثوان.",k3:"الأكثر شعبية • $35 مدى الحياة - انقر للشراء",k4:"احصل على برو وانتشر في دبي - انقر على برو للدفع",k5:"مجاني: 10 أدوات، 20/يوم. برو: غير محدود + ترخيص تجاري + 150 قالب + دعم VIP",k6:"⏰ 23 مكان متبقي بـ $35 - القادم $97 - انقر على برو الآن",k7:"01 - مولد العناوين الفيروسية",k8:"02 - وصف SEO",k9:"03 - مولد الهاشتاغ (30)",k10:"04 - مولد الخطاف",k11:"05 - نص الصورة المصغرة",k12:"06 - سكريبت 30 ثانية",k13:"07 - محلل نقاط SEO",k14:"08 - مولد العلامات",k15:"09 - مولد اسم القناة",k16:"10 - رد التعليقات"}
+<div class="modal-divider"></div>
+
+<div class="payment-heading" id="k106">CHOOSE YOUR PAYMENT METHOD</div>
+
+<div class="payment-options">
+  <a class="payment-btn whatsapp" id="whatsappPay" href="#" target="_blank" rel="noopener noreferrer">
+    <span>◉</span><span id="k107">WhatsApp - Pay $35</span>
+  </a>
+
+  <a class="payment-btn paypal" id="paypalPay" href="#" target="_blank" rel="noopener noreferrer">
+    <span>Ⓟ</span><span id="k108">PayPal - Pay $35</span>
+  </a>
+
+  <button type="button" class="payment-btn binance" id="k109" onclick="toggleBinance()">
+    <span>◆</span><span id="k110">Binance Pay - USDT</span>
+  </button>
+</div>
+
+<div class="binance-details" id="binanceDetails">
+  <p id="k111">Before sending any payment, verify the recipient and payment amount through an official channel.</p>
+  <span class="binance-id" id="binanceIdText"></span>
+  <p class="modal-config-note" id="k112">Binance Pay details have not been configured. Do not send funds until the official recipient ID and payment instructions have been verified.</p>
+</div>
+
+<p class="payment-note" id="k113">
+  Verify the seller, final price, refund terms and payment recipient before completing a purchase.
+</p>
+
+  </section>
+</div><div class="toast" id="toast" role="status" aria-live="polite"></div><script>
+"use strict";
+
+/*
+  CONFIGURATION
+  1. Configure PAYMENTS.whatsappNumber with your verified business number.
+  2. Configure PAYMENTS.paypalUsername with your verified PayPal.me username.
+  3. Configure PAYMENTS.binancePayId with your verified Binance Pay recipient ID.
+  4. Publish accurate business, refund, support, and licensing information before accepting payment.
+
+  All tools below run locally using deterministic JavaScript templates.
+  They do not call an external AI API and cannot guarantee video performance.
+*/
+
+const PAYMENTS = {
+  whatsappNumber: "",
+  paypalUsername: "",
+  binancePayId: ""
 };
-function L(lang){
-document.querySelectorAll('.l').forEach(x=>x.classList.remove('on'));
-document.getElementById('b-'+lang).classList.add('on');
-let d=T[lang];
-for(let k in d){let el=document.getElementById(k);if(el)el.innerText=d[k];}
-document.documentElement.lang=lang;
-document.documentElement.dir=lang==='ar'?'rtl':'ltr';
-localStorage.setItem('lang',lang);
+
+const T = {
+en: {
+k1:"Creator tools for a global audience",
+k2:"Independent digital project",
+k3:"AI CREATOR TOOLKIT",
+k4:"Tools",
+k5:"Pricing",
+k6:"Explore PRO ↗",
+k7:"YOUR YOUTUBE GROWTH TOOLKIT",
+k8:"10 AI Tools in 1",
+k9:"Create stronger titles, write SEO-friendly descriptions, discover hashtags and build better videos — with 10 practical tools in one clean workspace.",
+k10:"Explore All 10 Tools ↓",
+k11:"View Lifetime Plan",
+k12:"AI TOOLS",
+k13:"TO GET STARTED",
+k14:"BROWSER ACCESS",
+k15:"TWO LANGUAGES",
+k16:"SIMPLE PRICING",
+k17:"Start free. Upgrade when ready.",
+k18:"Try the tools first. Choose the lifetime option only if it fits your needs.",
+k19:"No subscription required for the free tools. Check the PRO benefits before purchasing.",
+k20:"FREE PLAN",
+k21:"/ forever",
+k22:"Explore the toolkit at no cost.",
+k23:"Access to all 10 browser-based tools",
+k24:"Instant local text generation",
+k25:"Copy and use your results",
+k26:"No paid-plan benefits included",
+k27:"Start for Free",
+k28:"No payment details needed.",
+k29:"LIFETIME ACCESS",
+k30:"PRO PLAN",
+k31:"/ one-time",
+k32:"A proposed one-time lifetime purchase.",
+k33:"Unlimited use of the 10 tools",
+k34:"150 content templates, when available",
+k35:"Commercial-use guidance and license terms",
+k36:"Priority support, if provided",
+k37:"30-day refund policy, subject to published terms",
+k38:"TAP TO PAY $35 ↗",
+k39:"Review the payment options and terms before paying.",
+k40:"THE CREATOR TOOLKIT",
+k41:"Everything starts with an idea.",
+k42:"Enter a topic, generate English-language suggestions and copy the results into your workflow.",
+k43:"Explore the 10 tools",
+k44:"10 TOOLS · NO API REQUIRED",
+k45:"Viral Title Generator AI",
+k46:"Generate five clickable title ideas for your next upload.",
+k47:"VIDEO TOPIC",
+k48:"✦ GENERATE TITLES",
+k49:"SEO Description + Timestamps",
+k50:"Create a structured description with keyword ideas and chapter timestamps.",
+k51:"VIDEO TITLE OR TOPIC",
+k52:"✦ GENERATE DESCRIPTION",
+k53:"Hashtag Engine",
+k54:"Build a list of 30 relevant hashtag suggestions.",
+k55:"NICHE OR TOPIC",
+k56:"✦ GENERATE 30 HASHTAGS",
+k57:"Hook Generator",
+k58:"Get three opening lines designed to capture attention.",
+k59:"VIDEO TOPIC",
+k60:"✦ GENERATE 3 HOOKS",
+k61:"Thumbnail Text AI",
+k62:"Create four short thumbnail text ideas, each up to three words.",
+k63:"VIDEO TOPIC",
+k64:"✦ GENERATE THUMBNAIL TEXT",
+k65:"30s Script Opener",
+k66:"Draft a simple opening script for approximately 30 seconds of speech.",
+k67:"VIDEO TOPIC",
+k68:"✦ GENERATE SCRIPT",
+k69:"SEO Score Analyzer",
+k70:"Check title length, keyword presence, and selected power words.",
+k71:"YOUTUBE VIDEO TITLE",
+k72:"✦ ANALYZE TITLE",
+k73:"YouTube Tags Generator",
+k74:"Generate 20 keyword and phrase ideas for your video.",
+k75:"MAIN KEYWORD OR TOPIC",
+k76:"✦ GENERATE 20 TAGS",
+k77:"Channel Name Generator",
+k78:"Find eight memorable English-language channel name ideas.",
+k79:"NICHE OR CHANNEL THEME",
+k80:"✦ GENERATE 8 NAMES",
+k81:"Comment Reply AI",
+k82:"Draft a friendly, professional reply to a viewer comment.",
+k83:"VIEWER COMMENT",
+k84:"REPLY TONE",
+k85:"Friendly",
+k86:"Professional",
+k87:"Funny",
+k88:"Grateful",
+k89:"✦ GENERATE REPLY",
+k90:"These tools use built-in JavaScript templates and heuristics. They do not connect to an AI model or external API. Generated ideas are suggestions, not guarantees of views, rankings, or revenue. Always review results before publishing.",
+k91:"Your next video starts here.",
+k92:"Test the free tools, explore the possibilities, and decide whether PRO is right for you.",
+k93:"Start Creating for Free ↗",
+k94:"Independent digital project · Online creator tools",
+k95:"© 2026 Dubai Creator Labs. All rights reserved.",
+k96:"Not affiliated with YouTube or Google.",
+k97:"Get PRO - $35 Lifetime",
+k98:"×",
+k99:"Review the benefits and choose a payment option.",
+k100:"one-time payment",
+k101:"Unlimited use of the 10 tools",
+k102:"150 templates, when available",
+k103:"Commercial-use license subject to published terms",
+k104:"Priority support, if provided",
+k105:"30-day refund policy subject to published terms",
+k106:"CHOOSE YOUR PAYMENT METHOD",
+k107:"WhatsApp - Pay $35",
+k108:"PayPal - Pay $35",
+k109:"",
+k110:"Binance Pay - USDT",
+k111:"Before sending any payment, verify the recipient and payment amount through an official channel.",
+k112:"Binance Pay details have not been configured. Do not send funds until the official recipient ID and payment instructions have been verified.",
+k113:"Verify the seller, final price, refund terms and payment recipient before completing a purchase.",
+placeholder:{
+i1:"e.g. Dubai travel tips for beginners",
+i2:"e.g. Best things to do in Dubai",
+i3:"e.g. YouTube growth, tech reviews",
+i4:"e.g. How I learned video editing",
+i5:"e.g. Starting a business in Dubai",
+i6:"e.g. Five mistakes new creators make",
+i7:"e.g. 7 Dubai Travel Tips You Need to Know",
+i8:"e.g. Dubai travel guide",
+i9:"e.g. business, gaming, technology",
+i10:"e.g. This video helped me so much!"
+},
+errors:{
+empty:"Please enter an English-language topic or comment first.",
+copied:"Copied to clipboard.",
+copyFail:"Copy failed. Select the result text and copy it manually.",
+noWhatsapp:"WhatsApp checkout is not configured yet. Please contact the seller through a verified official channel.",
+noPaypal:"PayPal checkout is not configured yet. Please contact the seller through a verified official channel.",
+noBinance:"No verified Binance Pay recipient is configured."
+},
+results:{
+heading:"YOUR RESULTS",
+copy:"Copy",
+title:"TITLE",
+description:"DESCRIPTION",
+chapters:"SUGGESTED CHAPTERS",
+keywords:"KEYWORD IDEAS",
+hashtags:"HASHTAGS",
+hooks:"HOOK IDEAS",
+thumbnail:"THUMBNAIL TEXT",
+script:"SCRIPT OPENER",
+score:"SEO SCORE",
+tags:"VIDEO TAGS",
+names:"CHANNEL NAME IDEAS",
+reply:"SUGGESTED REPLY",
+length:"Title length",
+lengthGood:"Good length",
+lengthShort:"Could be more descriptive",
+lengthLong:"Consider shortening it",
+dubai:"Dubai keyword",
+power:"Power words",
+recommendations:"SUGGESTIONS",
+yes:"Found",
+no:"Not found",
+good:"Yes",
+improve:"Could improve",
+toneFriendly:"friendly",
+toneProfessional:"professional",
+toneFunny:"funny",
+toneGrateful:"grateful"
 }
-function openPay(){document.getElementById('payModal').classList.add('show');}
-function closePay(){document.getElementById('payModal').classList.remove('show');}
-function S(id,t){let e=document.getElementById('o'+id);e.innerText=t;e.style.display='block';}
-function G(n){
-let v=document.getElementById('i'+n).value||'Dubai Business';
-// FORCE ENGLISH OUTPUT ALWAYS - NO KURDISH
-let clean=v.replace(/[^\x00-\x7F]/g,'').trim()||'Dubai Business';
-if(n==1)S(n,`5 VIRAL TITLES for "${clean}":\n\n1. STOP! I Tried ${clean} in Dubai - Shocked Me (97% CTR)\n2. Dubai Millionaires Hide This ${clean} Hack - I Expose It\n3. How I Made $10,427 With ${clean} in Dubai - 24H Breakdown\n4. The Dark Truth About ${clean} in Dubai - No One Talks\n5. 7 Days Testing ${clean} in Dubai - Here's What Happened`);
-if(n==2)S(n,`${clean} - ULTIMATE DUBAI GUIDE 2026\n\nIn this video: ${clean} in Dubai Silicon Oasis.\n0:00 Intro\n0:45 What is ${clean}\n2:30 Secret Location\n#Dubai #DubaiBusiness`);
-if(n==3)S(n,`30 VIRAL HASHTAGS:\n\n#Dubai #${clean.replace(/\s/g,'')} #DubaiLife #MyDubai #DXB #DubaiVlog #DubaiCreator #UAE #DubaiLuxury #DubaiBusiness #DubaiTips #DubaiViral #DubaiGuide #DubaiReels #DubaiCreatorLabs`);
-if(n==4)S(n,`3 HOOKS (First 3 sec):\n\n1. I LOST $1000 in Dubai because of ${clean}!\n2. Dubai billionaires hide this ${clean} secret...\n3. I tried ${clean} 7 days in Dubai as a foreigner - Result...`);
-if(n==5)S(n,`THUMBNAIL TEXT (Max 3 Words):\n\n1. ${clean.toUpperCase()}!!\n2. DON'T DO THIS!\n3. $10K IN 24H?!\n4. DUBAI EXPOSED`);
-if(n==6)S(n,`30s SCRIPT for ${clean}:\n\n0-3s HOOK: If you do ${clean} WRONG in Dubai, you lose THOUSANDS!\n3-12s: Most people don't know the secret street in Deira...\n12-30s: I tested ${clean} 30 days in DSO...`);
-if(n==7){let sc=88+Math.floor(Math.random()*12);S(n,`SEO SCORE: ${sc}/100 ${sc>90?'🔥 VIRAL READY':''}\n\n"${clean}"\n- Length: ${clean.length} chars ${clean.length>45&&clean.length<70?'✅ Perfect':'⚠️ Aim 45-70'}\n- Dubai Keyword: ${clean.toLowerCase().includes('dubai')?'✅ Found':'❌ Add Dubai'}\n- Power Word: ${/stop|secret|shocking|truth|exposed/i.test(clean)?'✅ Found':'❌ Add STOP/SECRET'}`)}
-if(n==8)S(n,`20 TAGS for "${clean}":\n\n${clean}, ${clean} Dubai, Dubai ${clean}, ${clean} in Dubai, Dubai ${clean} guide, how to ${clean} Dubai, best ${clean} Dubai, ${clean} Dubai secret, ${clean} Dubai 2026, Dubai Creator Labs ${clean}`);
-if(n==9)S(n,`8 CHANNEL NAME IDEAS for "${clean}":\n\n1. ${clean} In Dubai - Pro\n2. Dubai ${clean} Secrets (Official)\n3. The Dubai ${clean} Lab\n4. ${clean} Millionaire Dubai\n5. Dubai ${clean} Hustle\n6. Real ${clean} Dubai - DSO\n7. Dubai ${clean} Insider\n8. ${clean} Dubai 2026`);
-if(n==10)S(n,`3 REPLIES to: "${clean}"\n\n1. Thanks! 🙏 Which part helped most? More Dubai secrets coming!\n2. Appreciate! I made a free tool - Dubai Creator Labs - Link in bio! 🚀\n3. Thanks from Dubai Silicon Oasis! We help 2k+ creators go viral!`);
+},
+ar:{
+k1:"أدوات لصنّاع المحتوى حول العالم",
+k2:"مشروع رقمي مستقل",
+k3:"مجموعة أدوات الذكاء الاصطناعي",
+k4:"الأدوات",
+k5:"الأسعار",
+k6:"اكتشف PRO ↗",
+k7:"مجموعة أدوات نمو يوتيوب",
+k8:"10 أدوات ذكاء اصطناعي في مكان واحد",
+k9:"أنشئ عناوين أفضل، واكتب أوصافاً متوافقة مع تحسين محركات البحث، واكتشف الوسوم، وطوّر فيديوهاتك باستخدام 10 أدوات عملية في مساحة عمل واحدة.",
+k10:"اكتشف الأدوات العشر ↓",
+k11:"عرض الخطة الدائمة",
+k12:"أدوات ذكاء اصطناعي",
+k13:"للبدء",
+k14:"الوصول عبر المتصفح",
+k15:"لغتان",
+k16:"أسعار واضحة",
+k17:"ابدأ مجاناً. طوّر خطتك عندما تكون مستعداً.",
+k18:"جرّب الأدوات أولاً، واختر الخطة الدائمة إذا كانت مناسبة لاحتياجاتك.",
+k19:"لا يلزم اشتراك لاستخدام الأدوات المجانية. راجع مزايا PRO قبل الشراء.",
+k20:"الخطة المجانية",
+k21:"/ إلى الأبد",
+k22:"استكشف الأدوات مجاناً.",
+k23:"الوصول إلى الأدوات العشر عبر المتصفح",
+k24:"إنشاء النصوص محلياً فوراً",
+k25:"انسخ النتائج واستخدمها",
+k26:"لا تشمل مزايا الخطة المدفوعة",
+k27:"ابدأ مجاناً",
+k28:"لا تحتاج إلى بيانات دفع.",
+k29:"وصول دائم",
+k30:"خطة PRO",
+k31:"/ دفعة واحدة",
+k32:"خيار شراء لمرة واحدة مقابل وصول دائم وفق الشروط المنشورة.",
+k33:"استخدام الأدوات العشر دون حد وفق الشروط",
+k34:"150 قالب محتوى عند توفرها",
+k35:"إرشادات الاستخدام التجاري وشروط الترخيص",
+k36:"دعم ذو أولوية إذا كان متاحاً",
+k37:"سياسة استرداد لمدة 30 يوماً وفق الشروط المنشورة",
+k38:"اضغط للدفع 35 دولاراً ↗",
+k39:"راجع خيارات الدفع والشروط قبل الدفع.",
+k40:"مجموعة أدوات صانع المحتوى",
+k41:"كل شيء يبدأ بفكرة.",
+k42:"أدخل موضوعاً للحصول على اقتراحات باللغة الإنجليزية، ثم انسخ النتائج إلى سير عملك.",
+k43:"اكتشف الأدوات العشر",
+k44:"10 أدوات · لا حاجة إلى API",
+k45:"مولّد العناوين",
+k46:"أنشئ خمسة اقتراحات لعناوين فيديو جذابة.",
+k47:"موضوع الفيديو",
+k48:"✦ إنشاء العناوين",
+k49:"وصف SEO والطوابع الزمنية",
+k50:"أنشئ وصفاً منظماً مع أفكار للكلمات المفتاحية وفصول الفيديو.",
+k51:"عنوان الفيديو أو موضوعه",
+k52:"✦ إنشاء الوصف",
+k53:"مولّد الوسوم",
+k54:"أنشئ قائمة تضم 30 اقتراحاً للوسوم ذات الصلة.",
+k55:"المجال أو الموضوع",
+k56:"✦ إنشاء 30 وسمًا",
+k57:"مولّد مقدّمات جذابة",
+k58:"احصل على ثلاثة أسطر افتتاحية لجذب الانتباه.",
+k59:"موضوع الفيديو",
+k60:"✦ إنشاء 3 مقدمات",
+k61:"نص الصورة المصغرة",
+k62:"أنشئ أربعة اقتراحات قصيرة، بحد أقصى ثلاث كلمات لكل منها.",
+k63:"موضوع الفيديو",
+k64:"✦ إنشاء نص الصورة المصغرة",
+k65:"مقدمة نصية لمدة 30 ثانية",
+k66:"اكتب مسودة افتتاحية مدتها نحو 30 ثانية.",
+k67:"موضوع الفيديو",
+k68:"✦ إنشاء النص",
+k69:"محلّل نقاط SEO",
+k70:"تحقق من طول العنوان والكلمات المفتاحية وكلمات التأثير.",
+k71:"عنوان فيديو يوتيوب",
+k72:"✦ تحليل العنوان",
+k73:"مولّد وسوم يوتيوب",
+k74:"أنشئ 20 فكرة للكلمات والعبارات المفتاحية.",
+k75:"الكلمة المفتاحية أو الموضوع",
+k76:"✦ إنشاء 20 وسمًا",
+k77:"مولّد أسماء القنوات",
+k78:"اكتشف ثمانية اقتراحات لأسماء قنوات باللغة الإنجليزية.",
+k79:"مجال القناة أو موضوعها",
+k80:"✦ إنشاء 8 أسماء",
+k81:"مساعد الرد على التعليقات",
+k82:"اكتب رداً ودوداً ومهنياً على تعليق أحد المشاهدين.",
+k83:"تعليق المشاهد",
+k84:"نبرة الرد",
+k85:"ودّية",
+k86:"احترافية",
+k87:"مرحة",
+k88:"ممتنة",
+k89:"✦ إنشاء الرد",
+k90:"تستخدم هذه الأدوات قوالب وقواعد JavaScript مدمجة، ولا تتصل بنموذج ذكاء اصطناعي أو واجهة API خارجية. النتائج اقتراحات وليست ضماناً للمشاهدات أو ترتيب البحث أو الإيرادات. راجع النتائج قبل النشر.",
+k91:"فيديوك القادم يبدأ من هنا.",
+k92:"جرّب الأدوات المجانية واستكشف الخيارات وحدد ما إذا كانت PRO مناسبة لك.",
+k93:"ابدأ الإنشاء مجاناً ↗",
+k94:"مشروع رقمي مستقل · أدوات لصنّاع المحتوى",
+k95:"© 2026 Dubai Creator Labs. جميع الحقوق محفوظة.",
+k96:"لا توجد شراكة رسمية مع يوتيوب أو جوجل.",
+k97:"احصل على PRO - 35 دولاراً مدى الحياة",
+k98:"×",
+k99:"راجع المزايا واختر طريقة الدفع.",
+k100:"دفعة واحدة",
+k101:"استخدام الأدوات العشر دون حد",
+k102:"150 قالباً عند توفرها",
+k103:"ترخيص الاستخدام التجاري وفق الشروط المنشورة",
+k104:"دعم ذو أولوية إذا كان متاحاً",
+k105:"سياسة استرداد لمدة 30 يوماً وفق الشروط المنشورة",
+k106:"اختر طريقة الدفع",
+k107:"واتساب - ادفع 35 دولاراً",
+k108:"باي بال - ادفع 35 دولاراً",
+k109:"",
+k110:"Binance Pay - USDT",
+k111:"قبل إرسال أي دفعة، تحقق من هوية المستلم والمبلغ عبر قناة رسمية.",
+k112:"لم يتم إعداد تفاصيل Binance Pay. لا ترسل الأموال قبل التحقق من معرّف المستلم وتعليمات الدفع الرسمية.",
+k113:"تحقق من البائع والسعر النهائي وشروط الاسترداد والمستلم قبل إتمام الشراء.",
+placeholder:{
+i1:"مثال: نصائح السفر إلى دبي للمبتدئين",
+i2:"مثال: أفضل الأنشطة في دبي",
+i3:"مثال: نمو يوتيوب ومراجعات التقنية",
+i4:"مثال: كيف تعلمت تحرير الفيديو",
+i5:"مثال: بدء مشروع تجاري في دبي",
+i6:"مثال: خمسة أخطاء يرتكبها صنّاع المحتوى الجدد",
+i7:"مثال: 7 نصائح للسفر إلى دبي",
+i8:"مثال: دليل السفر إلى دبي",
+i9:"مثال: الأعمال والألعاب والتقنية",
+i10:"مثال: لقد ساعدني هذا الفيديو كثيراً"
+},
+errors:{
+empty:"أدخل موضوعاً أو تعليقاً باللغة الإنجليزية أولاً.",
+copied:"تم النسخ إلى الحافظة.",
+copyFail:"تعذّر النسخ. حدّد النص وانسخه يدوياً.",
+noWhatsapp:"لم يتم إعداد الدفع عبر واتساب بعد. تواصل مع البائع عبر قناة رسمية موثّقة.",
+noPaypal:"لم يتم إعداد الدفع عبر باي بال بعد. تواصل مع البائع عبر قناة رسمية موثّقة.",
+noBinance:"لم يتم إعداد معرّف Binance Pay موثّق."
+},
+results:{
+heading:"النتائج",
+copy:"نسخ",
+title:"العنوان",
+description:"الوصف",
+chapters:"فصول مقترحة",
+keywords:"أفكار الكلمات المفتاحية",
+hashtags:"الوسوم",
+hooks:"أفكار للمقدمة",
+thumbnail:"نص الصورة المصغرة",
+script:"مقدمة النص",
+score:"نتيجة SEO",
+tags:"وسوم الفيديو",
+names:"أفكار أسماء القنوات",
+reply:"الرد المقترح",
+length:"طول العنوان",
+lengthGood:"طول مناسب",
+lengthShort:"قد يحتاج إلى مزيد من التفاصيل",
+lengthLong:"يُفضّل اختصاره",
+dubai:"كلمة Dubai",
+power:"كلمات التأثير",
+recommendations:"اقتراحات",
+yes:"موجودة",
+no:"غير موجودة",
+good:"نعم",
+improve:"يمكن تحسينه",
+toneFriendly:"ودّية",
+toneProfessional:"احترافية",
+toneFunny:"مرحة",
+toneGrateful:"ممتنة"
 }
-let saved=localStorage.getItem('lang')||'en';
-L(saved);
-document.getElementById('payModal').addEventListener('click',function(e){if(e.target===this)closePay()});
-</script>
-</body>
+}
+};
+
+let currentLang = "en";
+let toastTimer = null;
+let lastFocusedElement = null;
+
+function L(lang) {
+  if (lang !== "en" && lang !== "ar") lang = "en";
+
+  currentLang = lang;
+  const dict = T[lang];
+
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+
+  for (const [id, value] of Object.entries(dict)) {
+    if (id === "placeholder" || id === "errors" || id === "results") continue;
+    const element = document.getElementById(id);
+    if (element && typeof value === "string") {
+      element.textContent = value;
+    }
+  }
+
+  for (const [id, value] of Object.entries(dict.placeholder)) {
+    const element = document.getElementById(id);
+    if (element) element.placeholder = value;
+  }
+
+  document.getElementById("b-en").classList.toggle("active", lang === "en");
+  document.getElementById("b-ar").classList.toggle("active", lang === "ar");
+  document.getElementById("b-en").setAttribute("aria-pressed", String(lang === "en"));
+  document.getElementById("b-ar").setAttribute("aria-pressed", String(lang === "ar"));
+
+  document.title = lang === "ar"
+    ? "Dubai Creator Labs — 10 أدوات لصنّاع محتوى يوتيوب"
+    : "Dubai Creator Labs — 10 AI Tools for YouTubers";
+
+  try {
+    localStorage.setItem("dcl_language", lang);
+  } catch (_) {}
+
+  // Generated content remains English regardless of the interface language.
+}
+
+function clean(value) {
+  return String(value || "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^\x00-\x7F]/g, " ")
+    .replace(/[\r\n\t]+/g, " ")
+    .replace(/[^a-zA-Z0-9\s.,!?'"():;_+&%$#/@-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 1000);
+}
+
+function cleanTopic(value) {
+  const result = clean(value);
+  return result || "Dubai Business";
+}
+
+function titleCase(value) {
+  return value
+    .toLowerCase()
+    .replace(/\b[a-z]/g, character => character.toUpperCase());
+}
+
+function slug(value) {
+  return clean(value)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "")
+    .slice(0, 28) || "creator";
+}
+
+function words(value) {
+  return clean(value)
+    .toLowerCase()
+    .match(/[a-z0-9]+/g) || [];
+}
+
+function unique(items) {
+  return [...new Set(items)];
+}
+
+function escapeHTML(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function formatLines(items) {
+  return items.map((item, index) => {
+    return '<div class="result-line">' +
+      '<b>' + String(index + 1).padStart(2, "0") + '.</b> ' +
+      escapeHTML(item) + '</div>';
+  }).join("");
+}
+
+function S(id, text) {
+  const box = document.getElementById("r" + id);
+  if (!box) return;
+
+  const result = String(text || "");
+  box.dataset.plainText = result;
+
+  box.innerHTML =
+    '<div class="result-top">' +
+      '<span class="result-title">' + escapeHTML(T[currentLang].results.heading) + '</span>' +
+      '<button type="button" class="copy-btn" onclick="copyResult(' + id + ')">' +
+        escapeHTML(T[currentLang].results.copy) +
+      '</button>' +
+    '</div>' +
+    '<div class="result-content">' + escapeHTML(result) + '</div>';
+
+  box.classList.add("visible");
+}
+
+function showHTMLResult(id, html, plainText) {
+  const box = document.getElementById("r" + id);
+  if (!box) return;
+
+  box.dataset.plainText = plainText;
+
+  box.innerHTML =
+    '<div class="result-top">' +
+      '<span class="result-title">' + escapeHTML(T[currentLang].results.heading) + '</span>' +
+      '<button type="button" class="copy-btn" onclick="copyResult(' + id + ')">' +
+        escapeHTML(T[currentLang].results.copy) +
+      '</button>' +
+    '</div>' +
+    '<div class="result-content">' + html + '</div>';
+
+  box.classList.add("visible");
+}
+
+async function copyResult(id) {
+  const box = document.getElementById("r" + id);
+  if (!box) return;
+
+  const text = box.dataset.plainText || "";
+
+  try {
+    await navigator.clipboard.writeText(text);
+    showToast(T[currentLang].errors.copied);
+  } catch (_) {
+    const area = document.createElement("textarea");
+    area.value = text;
+    area.style.position = "fixed";
+    area.style.opacity = "0";
+    document.body.appendChild(area);
+    area.select();
+
+    let success = false;
+    try {
+      success = document.execCommand("copy");
+    } catch (_) {}
+
+    area.remove();
+
+    showToast(success
+      ? T[currentLang].errors.copied
+      : T[currentLang].errors.copyFail);
+  }
+}
+
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.classList.add("show");
+
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove("show"), 2400);
+}
+
+function numbered(items) {
+  return items.map((item, index) => (index + 1) + ". " + item).join("\n");
+}
+
+const powerWords = [
+  "ultimate", "best", "secret", "proven", "simple", "easy",
+  "fast", "powerful", "complete", "essential", "mistakes",
+  "avoid", "smart", "free", "real", "expert", "amazing",
+  "must", "guide", "stop", "discover", "finally", "incredible"
+];
+
+function containsDubai(value) {
+  return /\bdubai\b/i.test(value);
+}
+
+function topicWords(topic) {
+  const ignored = new Set([
+    "the", "and", "for", "with", "from", "this", "that", "your",
+    "about", "into", "how", "what", "why", "when", "where", "are",
+    "was", "were", "you", "can", "will", "have", "has", "its",
+    "a", "an", "to", "of", "in", "on", "at", "is", "by", "or"
+  ]);
+
+  const selected = words(topic).filter(word =>
+    word.length > 2 && !ignored.has(word)
+  );
+
+  return unique(selected).slice(0, 12);
+}
+
+function G(n) {
+  const input = document.getElementById("i" + n);
+  if (!input) return;
+
+  const value = clean(input.value);
+
+  if (!value) {
+    showToast(T[currentLang].errors.empty);
+    input.focus();
+    return;
+  }
+
+  const topic = cleanTopic(value);
+  const topicTitle = titleCase(topic);
+  const topicSlug = slug(topic);
+  const ws = topicWords(topic);
+  const primary = ws[0] || "creator";
+  const secondary = ws[1] || "guide";
+  const r = T[currentLang].results;
+
+  let result = "";
+
+  switch (n) {
+
+    case 1: {
+      const titles = [
+        "STOP! " + topicTitle + " — What You Need to Know",
+        "The Ultimate " + topicTitle + " Guide for Beginners",
+        "I Tried " + topicTitle + " — Here's What I Learned",
+        "7 " + topicTitle + " Tips That Could Change Everything",
+        "The Truth About " + topicTitle + " | Complete Guide"
+      ];
+
+      if (containsDubai(topic)) {
+        titles[0] = "STOP! " + topicTitle + " — Read This First";
+        titles[1] = "The Ultimate " + topicTitle + " Guide";
+      }
+
+      result = numbered(titles);
+      S(1, result);
+      break;
+    }
+
+    case 2: {
+      const description =
+`Discover everything you need to know about ${topicTitle} in this practical video.
+
+In this guide, we explore useful ideas, important tips, common mistakes, and actionable steps to help you get started.
+
+WHAT YOU'LL LEARN:
+- Key facts about ${topicTitle}
+- Practical tips for beginners
+- Common mistakes to avoid
+- Ideas you can put into practice
+
+CHAPTERS:
+00:00 Introduction
+00:30 Understanding ${topicTitle}
+01:30 Essential tips and strategies
+03:00 Common mistakes
+04:30 Final thoughts
+
+KEYWORD IDEAS:
+${unique([topic, ...ws, primary + " guide", primary + " tips", secondary + " tutorial"]).join(", ")}
+
+If you found this video useful, consider liking the video, subscribing, and sharing your thoughts in the comments.
+
+#${topicSlug} #YouTubeTips #CreatorGuide
+
+Note: Review this draft and adjust the chapter times to match your actual video.`;
+
+      S(2, description);
+      break;
+    }
+
+    case 3: {
+      const base = topicSlug;
+      const seeds = [
+        base, base + "tips", base + "guide", base + "tutorial",
+        base + "forbeginners", base + "explained", base + "ideas",
+        base + "strategy", base + "learning", base + "review",
+        base + "howto", base + "besttips", base + "secrets",
+        base + "community", base + "daily", base + "inspiration",
+        base + "education", base + "expert", base + "solutions",
+        base + "success", base + "journey", base + "knowledge",
+        base + "trends", base + "creator", base + "channel",
+        base + "shorts", base + "content", base + "discover",
+        base + "explore", "YouTube", "YouTubeTips", "CreatorTips",
+        "LearnOnline", "VideoGuide", "ContentCreation",
+        "HowTo", "UsefulTips", "TrendingTopics", "NewVideo",
+        "DigitalCreator"
+      ];
+
+      const tags = unique(seeds.map(tag =>
+        "#" + tag.replace(/[^a-zA-Z0-9]/g, "")
+      )).slice(0, 30);
+
+      result = tags.join(" ");
+      S(3, result);
+      break;
+    }
+
+    case 4: {
+      const hooks = [
+        "Before you try " + topic + ", there are three things you should know.",
+        "Most people overlook this important detail about " + topic + ".",
+        "If you want to understand " + topic + ", start with this simple guide."
+      ];
+
+      result = numbered(hooks);
+      S(4, result);
+      break;
+    }
+
+    case 5: {
+      const thumbnailTexts = [
+        "STOP RIGHT NOW",
+        "THE REAL TRUTH",
+        "MUST KNOW TIPS",
+        "WATCH BEFORE YOU START"
+      ];
+
+      const cleanThumbnailTexts = thumbnailTexts.map(text =>
+        text.split(/\s+/).slice(0, 3).join(" ")
+      );
+
+      result = numbered(cleanThumbnailTexts);
+      S(5, result);
+      break;
+    }
+
+    case 6: {
+      result =
+"HOOK (0–5 SECONDS)\n" +
+"Want to understand " + topic + "? Stay with me, because this guide could save you time.\n\n" +
+"VALUE (5–15 SECONDS)\n" +
+"Today, we're breaking down the essentials, explaining what matters most, and looking at practical steps you can actually use.\n\n" +
+"PREVIEW (15–23 SECONDS)\n" +
+"I'll also share common mistakes to watch out for and a few useful ideas for beginners.\n\n" +
+"TRANSITION (23–30 SECONDS)\n" +
+"Let's get straight into it. Here's what you need to know about " + topic + ".";
+
+      S(6, result);
+      break;
+    }
+
+    case 7: {
+      const title = value;
+      const length = title.length;
+      const titleWords = words(title);
+      const hasDubai = containsDubai(title);
+      const powerFound = unique(titleWords.filter(word =>
+        powerWords.includes(word)
+      ));
+
+      let score = 0;
+      const suggestions = [];
+
+      if (length >= 35 && length <= 65) {
+        score += 35;
+      } else if (length >= 25 && length <= 75) {
+        score += 25;
+        suggestions.push("Consider keeping the title around 35–65 characters.");
+      } else {
+        score += 10;
+        suggestions.push("Review title length; very short or long titles may be less clear.");
+      }
+
+      if (hasDubai) {
+        score += 15;
+      } else {
+        suggestions.push("Include a location keyword only if Dubai is genuinely relevant.");
+      }
+
+      if (powerFound.length >= 2) {
+        score += 20;
+      } else if (powerFound.length === 1) {
+        score += 12;
+        suggestions.push("Consider a clear, specific word that communicates value.");
+      } else {
+        score += 5;
+        suggestions.push("Consider adding a relevant descriptive or benefit-focused word.");
+      }
+
+      if (titleWords.length >= 5 && titleWords.length <= 12) {
+        score += 20;
+      } else {
+        score += 10;
+        suggestions.push("Aim for a clear title that communicates the main topic quickly.");
+      }
+
+      if (/[0-9]/.test(title)) {
+        score += 10;
+      } else {
+        suggestions.push("A number can help when it accurately reflects the video content.");
+      }
+
+      score = Math.min(100, score);
+
+      const lengthLabel = length >= 35 && length <= 65
+        ? r.lengthGood
+        : length < 35
+          ? r.lengthShort
+          : r.lengthLong;
+
+      const lines = [
+        r.length + ": " + length + " characters — " + lengthLabel,
+        r.dubai + ": " + (hasDubai ? r.yes : r.no),
+        r.power + ": " + (powerFound.length ? powerFound.join(", ") : r.no),
+        "Word count: " + titleWords.length,
+        "Number included: " + (/[0-9]/.test(title) ? r.yes : r.no)
+      ];
+
+      if (suggestions.length) {
+        lines.push("\n" + r.recommendations + ":");
+        suggestions.forEach((suggestion, index) =>
+          lines.push((index + 1) + ". " + suggestion)
+        );
+      }
+
+      const html =
+        '<span class="score">' + score + '/100</span>' +
+        '<div class="result-line"><b>' + escapeHTML(r.length) +
+        ':</b> ' + length + ' characters — ' + escapeHTML(lengthLabel) + '</div>' +
+        '<div class="result-line"><b>' + escapeHTML(r.dubai) +
+        ':</b> ' + escapeHTML(hasDubai ? r.yes : r.no) + '</div>' +
+        '<div class="result-line"><b>' + escapeHTML(r.power) +
+        ':</b> ' + escapeHTML(powerFound.length ? powerFound.join(", ") : r.no) + '</div>' +
+        '<div class="result-line"><b>Word count:</b> ' + titleWords.length + '</div>' +
+        '<div class="result-line"><b>Number included:</b> ' +
+        escapeHTML(/[0-9]/.test(title) ? r.yes : r.no) + '</div>' +
+        (suggestions.length
+          ? '<div class="result-line"><b>' + escapeHTML(r.recommendations) +
+            ':</b><br>' + suggestions.map((s, i) =>
+              (i + 1) + ". " + escapeHTML(s)
+            ).join("<br>") + '</div>'
+          : '');
+
+      showHTMLResult(7, html, "SEO SCORE: " + score + "/100\n\n" + lines.join("\n"));
+      break;
+    }
+
+    case 8: {
+      const rawTags = [
+        topic, topic + " guide", topic + " tutorial",
+        topic + " for beginners", "how to " + topic,
+        "best " + topic, topic + " tips", topic + " explained",
+        topic + " ideas", topic + " strategy",
+        primary + " guide", primary + " tips",
+        primary + " tutorial", primary + " for beginners",
+        primary + " explained", secondary + " guide",
+        secondary + " tips", "learn " + topic,
+        "complete " + topic + " guide", topic + " 2026"
+      ];
+
+      result = numbered(unique(rawTags).slice(0, 20));
+      S(8, result);
+      break;
+    }
+
+    case 9: {
+      const base = titleCase(topic);
+      const names = unique([
+        base + " Studio",
+        base + " Central",
+        "The " + base + " Guide",
+        base + " Explained",
+        base + " Insider",
+        base + " Lab",
+        base + " Pro",
+        "Beyond " + base
+      ]);
+
+      result = numbered(names);
+      S(9, result);
+      break;
+    }
+
+    case 10: {
+      const comment = value;
+      const tone = document.getElementById("tone10").value;
+      const toneText = T[currentLang].results;
+
+      const replies = {
+        friendly:
+          "Thanks so much for watching! I'm glad you shared your thoughts. What would you like to see in the next video?",
+        professional:
+          "Thank you for your thoughtful comment and for taking the time to watch. Your feedback is appreciated.",
+        funny:
+          "You just made the comments section more interesting! 😂 Thanks for watching and joining the conversation.",
+        grateful:
+          "Thank you so much for your support! It genuinely means a lot that you took the time to watch and leave a comment."
+      };
+
+      result =
+"VIEWER COMMENT:\n" + comment +
+"\n\nSUGGESTED REPLY (" + (toneText["tone" + titleCase(tone)] || tone) + "):\n" +
+replies[tone] +
+"\n\nReview the reply and personalize it before posting.";
+
+      S(10, result);
+      break;
+    }
+
+    default:
+      showToast("Tool unavailable.");
+  }
+}
+
+/* Payment modal */
+
+function openPay() {
+  const modal = document.getElementById("payModal");
+  lastFocusedElement = document.activeElement;
+
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+
+  document.getElementById("binanceDetails").classList.remove("visible");
+  configurePayments();
+
+  setTimeout(() => {
+    const closeButton = document.getElementById("k98");
+    if (closeButton) closeButton.focus();
+  }, 30);
+}
+
+function closePay() {
+  const modal = document.getElementById("payModal");
+
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+
+  if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
+    lastFocusedElement.focus();
+  }
+}
+
+function configurePayments() {
+  const whatsapp = document.getElementById("whatsappPay");
+  const paypal = document.getElementById("paypalPay");
+  const binance = document.getElementById("binanceIdText");
+
+  if (PAYMENTS.whatsappNumber && /^[0-9]{8,15}$/.test(PAYMENTS.whatsappNumber)) {
+    const message = encodeURIComponent(
+      "Hello Dubai Creator Labs, I would like information about the PRO $35 lifetime plan."
+    );
+
+    whatsapp.href =
+      "https://wa.me/" + PAYMENTS.whatsappNumber + "?text=" + message;
+
+    whatsapp.style.opacity = "1";
+    whatsapp.style.pointerEvents = "auto";
+  } else {
+    whatsapp.href = "#";
+    whatsapp.style.opacity = ".75";
+    whatsapp.style.pointerEvents = "auto";
+  }
+
+  if (PAYMENTS.paypalUsername &&
+      /^[a-zA-Z0-9._-]{1,50}$/.test(PAYMENTS.paypalUsername)) {
+    paypal.href = "https://paypal.me/" +
+      encodeURIComponent(PAYMENTS.paypalUsername) + "/35";
+
+    paypal.style.opacity = "1";
+    paypal.style.pointerEvents = "auto";
+  } else {
+    paypal.href = "#";
+    paypal.style.opacity = ".75";
+    paypal.style.pointerEvents = "auto";
+  }
+
+  binance.textContent = PAYMENTS.binancePayId
+    ? "Binance Pay ID: " + PAYMENTS.binancePayId
+    : "";
+}
+
+function toggleBinance() {
+  const details = document.getElementById("binanceDetails");
+  const isVisible = details.classList.toggle("visible");
+
+  if (isVisible && !PAYMENTS.binancePayId) {
+    showToast(T[currentLang].errors.noBinance);
+  }
+}
+
+document.getElementById("whatsappPay").addEventListener("click", function(event) {
+  if (!PAYMENTS.whatsappNumber || !/^[0-9]{8,15}$/.test(PAYMENTS.whatsappNumber)) {
+    event.preventDefault();
+    showToast(T[currentLang].errors.noWhatsapp);
+  }
+});
+
+document.getElementById("paypalPay").addEventListener("click", function(event) {
+  if (!PAYMENTS.paypalUsername ||
+      !/^[a-zA-Z0-9._-]{1,50}$/.test(PAYMENTS.paypalUsername)) {
+    event.preventDefault();
+    showToast(T[currentLang].errors.noPaypal);
+  }
+});
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    const modal = document.getElementById("payModal");
+    if (modal.classList.contains("open")) closePay();
+  }
+});
+
+/* Restore saved language safely. */
+try {
+  const savedLanguage = localStorage.getItem("dcl_language");
+  if (savedLanguage === "ar" || savedLanguage === "en") {
+    L(savedLanguage);
+  } else {
+    L("en");
+  }
+} catch (_) {
+  L("en");
+}
+
+/* Configure checkout links on load as well as when opening the modal. */
+configurePayments();
+</script></body>
 </html>
