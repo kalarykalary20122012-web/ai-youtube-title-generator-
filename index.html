@@ -7924,5 +7924,74 @@ window.addEventListener("DOMContentLoaded", () => {
 <!-- ===== EXPANSION END ===== -->
 
   
+<!-- ===== FINAL FIX - MENU + 2026 - START ===== -->
+<style>
+#megaMenuBtn{position:fixed;top:14px;left:14px;z-index:99999;background:#0d0d0f;border:1px solid #252529;color:#f5f5f7;padding:10px 14px;border-radius:12px;font-weight:800;cursor:pointer}
+#megaMenu{position:fixed;inset:0;z-index:99998;background:rgba(7,7,7,.92);backdrop-filter:blur(12px);display:none;padding:18px}
+#megaMenu.open{display:block}
+.megaWrap{max-width:1100px;margin:60px auto;background:#101012;border:1px solid #252529;border-radius:18px;padding:18px}
+.megaGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-top:12px}
+.megaGrid a{display:block;padding:12px 12px;border:1px solid #252529;border-radius:12px;background:#0d0d0f;color:#f5f5f7;text-decoration:none;font-weight:600}
+.megaGrid a:hover{border-color:#ff8a38;transform:translateY(-1px)}
+.megaHead{display:flex;justify-content:space-between;align-items:center}
+</style>
+
+<button id="megaMenuBtn">☰ Menu</button>
+<div id="megaMenu">
+  <div class="megaWrap">
+    <div class="megaHead">
+      <h2 style="margin:0;color:#f5f5f7">Dubai Creator Labs - Tools</h2>
+      <button id="megaClose" style="background:#ff8a38;border:0;padding:8px 12px;border-radius:10px;font-weight:800;cursor:pointer">✕ Close</button>
+    </div>
+    <div class="megaGrid">
+      <a href="#generator">🎬 Title Generator</a>
+      <a href="#templates-marketplace">📚 Templates (300+)</a>
+      <a href="#analytics">📊 Analytics</a>
+      <a href="#thumbnail">🖼️ Thumbnail Ideas</a>
+      <a href="#seo">🔍 SEO Checker</a>
+      <a href="#hashtags"> #️⃣ Hashtags</a>
+      <a href="#hooks">🪝 Hooks</a>
+      <a href="#scripts">📝 Scripts</a>
+      <a href="#trends">🔥 Trends</a>
+      <a href="#history">🕘 History</a>
+      <a href="#favorites">⭐ Favorites</a>
+      <a href="#export">⬇️ Export</a>
+    </div>
+    <p style="color:#96969f;margin-top:14px">Independent digital project · 2026 · Creator tools for a global audience</p>
+  </div>
+</div>
+
+<script>
+// 1. FORCE YEAR 2026 EVERYWHERE - FIX k1 k2
+(function(){
+  function fixYear(){
+    try{
+      const k1=document.getElementById('k1');
+      const k2=document.getElementById('k2');
+      if(k1) k1.textContent='Creator tools for a global audience · Independent digital project · 2026';
+      if(k2) k2.textContent='Independent digital project · 2026';
+      document.body.innerHTML = document.body.innerHTML.replaceAll('· 2024','· 2026').replaceAll('2024','2026');
+      // also title bar
+      let walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+      let n; while(n=walker.nextNode()){ if(n.nodeValue.includes('2024')) n.nodeValue=n.nodeValue.replaceAll('2024','2026'); }
+    }catch(e){}
+  }
+  fixYear();
+  setTimeout(fixYear,500);
+  setTimeout(fixYear,2000);
+
+  // 2. MENU LOGIC
+  const btn=document.getElementById('megaMenuBtn');
+  const menu=document.getElementById('megaMenu');
+  const closeBtn=document.getElementById('megaClose');
+  if(btn&&menu){
+    btn.onclick=()=>menu.classList.add('open');
+    closeBtn.onclick=()=>menu.classList.remove('open');
+    menu.onclick=(e)=>{ if(e.target===menu) menu.classList.remove('open'); }
+  }
+  console.log('✅ MENU + 2026 FIX APPLIED');
+})();
+</script>
+<!-- ===== FINAL FIX - MENU + 2026 - END ===== -->
 </body>
 </html>
