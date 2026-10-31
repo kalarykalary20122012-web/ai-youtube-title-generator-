@@ -8002,5 +8002,28 @@ window.addEventListener("DOMContentLoaded", () => {
 })();
 // ===== v5.0 END =====
 </script>
+<script>
+// ===== FIX LANGUAGE - v5.1 =====
+(() => {
+  const fixLang = () => {
+    document.querySelectorAll('#lang-en, #lang-ar, #lang-ku, [data-lang]').forEach(btn => {
+      btn.onclick = (e) => {
+        e.preventDefault();
+        let lang = btn.dataset.lang || btn.id.replace('lang-','') || 'en';
+        if(!['en','ar','ku'].includes(lang)) lang='en';
+        localStorage.setItem('lang', lang);
+        localStorage.setItem('language', lang);
+        document.documentElement.lang = lang;
+        document.documentElement.dir = (lang==='ar'||lang==='ku')?'rtl':'ltr';
+        if(typeof setLanguage==='function') setLanguage(lang);
+        if(typeof switchLang==='function') switchLang(lang);
+        location.reload();
+      };
+    });
+  };
+  setTimeout(fixLang, 600);
+  document.addEventListener('DOMContentLoaded', fixLang);
+})();
+</script>  
 </body>
 </html>
