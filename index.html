@@ -7960,38 +7960,47 @@ window.addEventListener("DOMContentLoaded", () => {
     <p style="color:#96969f;margin-top:14px">Independent digital project · 2026 · Creator tools for a global audience</p>
   </div>
 </div>
-
 <script>
-// 1. FORCE YEAR 2026 EVERYWHERE - FIX k1 k2
-(function(){
-  function fixYear(){
-    try{
+// ===== AI POWER UPGRADE v5.0 - ALL IN ONE =====
+(() => { 'use strict';
+  try {
+    console.log('🚀 DUBAI CREATOR LABS - v5.0');
+    const safe = (fn) => { try { return fn(); } catch(e){ return null; } };
+    const addSafe = (el,ev,cb,key) => {
+      if(!el||!cb) return false;
+      const mk=`_ai_${key||ev}`;
+      if(el[mk]) return false;
+      el.addEventListener(ev,cb);
+      el[mk]=true; return true;
+    };
+    const fixYear = () => safe(() => {
       const k1=document.getElementById('k1');
       const k2=document.getElementById('k2');
       if(k1) k1.textContent='Creator tools for a global audience · Independent digital project · 2026';
       if(k2) k2.textContent='Independent digital project · 2026';
-      document.body.innerHTML = document.body.innerHTML.replaceAll('· 2024','· 2026').replaceAll('2024','2026');
-      // also title bar
-      let walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-      let n; while(n=walker.nextNode()){ if(n.nodeValue.includes('2024')) n.nodeValue=n.nodeValue.replaceAll('2024','2026'); }
-    }catch(e){}
-  }
-  fixYear();
-  setTimeout(fixYear,500);
-  setTimeout(fixYear,2000);
-
-  // 2. MENU LOGIC
-  const btn=document.getElementById('megaMenuBtn');
-  const menu=document.getElementById('megaMenu');
-  const closeBtn=document.getElementById('megaClose');
-  if(btn&&menu){
-    btn.onclick=()=>menu.classList.add('open');
-    closeBtn.onclick=()=>menu.classList.remove('open');
-    menu.onclick=(e)=>{ if(e.target===menu) menu.classList.remove('open'); }
-  }
-  console.log('✅ MENU + 2026 FIX APPLIED');
+      if(!document.body) return;
+      const w=document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+      let n,c=0;
+      while((n=w.nextNode()) && c<8000){ c++;
+        if(n.nodeValue && n.nodeValue.includes('2024')) n.nodeValue=n.nodeValue.replace(/2024/g,'2026');
+      }
+    });
+    const fixMenu = () => safe(() => {
+      const b=document.getElementById('megaMenuBtn');
+      const m=document.getElementById('megaMenu');
+      const x=document.getElementById('megaClose');
+      if(!b||!m) return;
+      addSafe(b,'click',(e)=>{ e.preventDefault(); e.stopPropagation(); m.classList.add('open'); b.setAttribute('aria-expanded','true'); },'open');
+      addSafe(x,'click',(e)=>{ e.preventDefault(); m.classList.remove('open'); b.setAttribute('aria-expanded','false'); },'close');
+      addSafe(m,'click',(e)=>{ if(e.target===m) m.classList.remove('open'); },'back');
+      addSafe(document,'keydown',(e)=>{ if(e.key==='Escape') m.classList.remove('open'); },'esc');
+    });
+    const init=()=>{ fixYear(); fixMenu(); console.log('✅ v5.0 FIXED'); };
+    if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded',init); } else { init(); }
+    setTimeout(init,1000);
+  } catch(e){ console.error(e); }
 })();
+// ===== v5.0 END =====
 </script>
-<!-- ===== FINAL FIX - MENU + 2026 - END ===== -->
 </body>
 </html>
